@@ -44,10 +44,24 @@
                     What will the users do with the web app? What kind of interactive features are you expecting to provide? Remember that you app will need to include at least "two and a half" significant features; be sure to explicitly identify and explain what all of them are! Remember:
                     Remember that "viewing" information or navigating ("going to") to something isn't a feature!
                 </li>
+                <div class="components">
+                    <p>Below are some the possible interactive features we intend to implement</p>
+                    <ul>
+                        <li>Allow users to input a kpop song or artist, and based off those inputs, it generates similar music.</li>
+                        <li>Login feature using Google oAuth or account creation with email and password to allow users to save their music session history.</li>
+                        <li>Implement EmailJS to allow users to transfer their outputs to a designated email.</li>
+                        <li>Natural language comprehension using OpenAI’s whisper and process that through ChatGPT to create functional commands to navigate through the frontend UI or either find songs based off matched lyrics.</li>
+                    </ul>
+                </div>
                 <li>
                      What kind of information will the users be viewing? If intend to use data from an external source (a csv file or an API), include a link and citation to that data.
                     If you insist on using an API, confirm that you'll be able to access it from a client-side app by testing it at https://joelwross.github.io/cors-test/Links to an external site.. If you can't get data back from this testing site, then it won't work with your project.
                 </li>
+                <p>
+                    The information that we will be using is kpop data taken from a dataset in kaggle and from an existing database found at <a href="https://dbkpop.com/">dbkpop</a>. 
+                    Some data values include the artist/group, album, song, date released, and hopefully other features like lyrics.
+                     We intend to import this data from a csv which can be found from dbkpop which was mentioned earlier and <a href="https://www.kaggle.com/datasets/romainfonta2/kpop-song-rankings">kaggle-kpop</a>
+                </p>
                 <li>
                     How will using this app help to solve your chosen problem? That is, how is it a solution to the problem you described?
                     Remember the app doesn't need to have "business value". But as Informatics students we care about the practical usage and impacts of systems, not just their implementation. Be sure to consider that in your proposal!
