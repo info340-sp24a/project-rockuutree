@@ -2,23 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="Nathan, Dylan, Ricardo, Ethan">
+    <meta name="author" content="Ryan Vu, Carlos A. Carrillo-Sandoval, Cleo Reyes, Thien Tran">
     <meta name="description" content="INFO 340 Project proposal">
-    <link href="project.css" rel="stylesheet" />
-    <title>INFO 340 Project proposal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One" rel="stylesheet">
+    <link href="proposal.css" rel="stylesheet" />
+    <title>INFO 340 Project Proposal</title>
 </head>
 <header>
-    <h1>Kpop Kollectors</h1>
+    <h1>K-pop Kollectors</h1>
 </header>
 <body>
     <section>
         <h2>Problem/Data Domain</h2>
         <p>
-            <h3>Your proposal will contain a short description of the topic domain and the information/data you'll be presenting, explaining the problem to someone who doesn't know anything about it! Your description should include enough information to:</h3>
+            <h3>Overview</h3>
             <ol>
-                <li> Provide an overview of the general topic or question of interest (e.g., "what is meant by 'homelessness' and why is it a particular problem in Seattle?").</li>
-                <li> Identify an information technology problem in that space (e.g., "what information problems related to homelessness are unaddressed?").</li>
-                <li> Identify at least 1 previous or existing attempt to solve this problem (e.g., "what other web apps attempt to address homelessness? What has already been tried?")</li>
+                <li>Often times users have a difficult time identifying songs or selecting a song they wish to play. This can cause users to spend time readjusting playlist or looking up a song to the best of their abilities. This will facilitate these task of users that listen to the K-pop genre.
+                </li>
+                <li>An information technology problem in the space of the K-Pop genre is that there is no ongoing effort project that serves as a song recommender for the community. K-pop is a large genre of music that encompasses a plethora of music styles and genres from around the world. This makes it difficult for listeners both new and old to find songs and artists that fit their style and preferences. Additionally, the K-pop community includes trading “photocards” of their favorite artists, and identifying where a photocard comes from is a difficult task for those who are unfamiliar.
+                    .</li>
+                <li>Spotify has several features that offer reccomended songs, but are not catered to the diverse genre of K-pop. With our website, you could get reccomendations not just from generic preferences, but also from specific members of a group that you like or reccomendations similar to a particular album you enjoy.</li>
             </ol>
             <p>
                 In short: let us know what you are interested in, and identify a problem that you think needs solving (and that might be amenable to a technological intervention) while also considering what has come before.
@@ -33,25 +36,37 @@
     <section>
         <h2>App Description</h2>
         <p>
-            <p>  
-                Be sure and review the overall project requirements for more details about the scope and requirements for your project.
-                Your proposal will also contain a description of the web app that you will create to help address your chosen problem (a proposed "solution"). Think about what kind of a web app would help with this problem, and how people would use that app to make their lives better in some way. What is the "use case" or "user story"Links to an external site. for the app?
-                Remember that this app will be interactive—it will need to contain buttons, forms, etc that let the user provide some kind of input and modify how data is presented to them. Thus your app will need to do more than just be something for the user to read; it needs to give the user something to do.
+            <h3>Our Users</h3>
+            <p>
+                Our main users will be those that listen and enjoy usic of the K-pop genre. We are looking to minimize their time looking up songs to which they may not have all the information of, generate playlist based off of their preferences, and reduce the need for customizing their current playlist. 
             </p>
-            <h3>Your app should also be described in 2-3 paragraphs. In particular, you should make sure to address:</h3>
             <ol>
-                <li> Who are the users of the application? That is, who will be accessing the website? What impacts might this app have on minority groups?</li>
                 <li>
-                    What will the users do with the web app? What kind of interactive features are you expecting to provide? Remember that you app will need to include at least "two and a half" significant features; be sure to explicitly identify and explain what all of them are! Remember:
-                    Remember that "viewing" information or navigating ("going to") to something isn't a feature!
+                    Below are some the possible interactive features we intend to implement
                 </li>
+                <div class="components">
+                    <ul>
+                        <li>Allow users to input a K-pop song or artist, and based off those inputs, it generates similar music.</li>
+                        <li>Login feature using Google oAuth or account creation with email and password to allow users to save their music session history.</li>
+                        <li>Implement EmailJS to allow users to transfer their outputs to a designated email.</li>
+                        <li>Natural language comprehension using OpenAI’s whisper and process that through ChatGPT to create functional commands to navigate through the frontend UI or either find songs based off matched lyrics.</li>
+                    </ul>
+                </div>
                 <li>
-                     What kind of information will the users be viewing? If intend to use data from an external source (a csv file or an API), include a link and citation to that data.
-                    If you insist on using an API, confirm that you'll be able to access it from a client-side app by testing it at https://joelwross.github.io/cors-test/Links to an external site.. If you can't get data back from this testing site, then it won't work with your project.
+
+                    The information that we will be using is K-pop data taken from a dataset in kaggle and from an existing database found at <a href="https://dbkpop.com/">dbkpop</a>. 
+                    Some data values include the artist/group, album, song, date released, and hopefully other features like lyrics.
+                    We intend to import this data from a csv which can be found from dbkpop which was mentioned earlier and <a href="https://www.kaggle.com/datasets/romainfonta2/kpop-song-rankings">kaggle-kpop</a>
+            
                 </li>
+
                 <li>
                     How will using this app help to solve your chosen problem? That is, how is it a solution to the problem you described?
                     Remember the app doesn't need to have "business value". But as Informatics students we care about the practical usage and impacts of systems, not just their implementation. Be sure to consider that in your proposal!
+                </li>
+                <li>
+                    The app's ability to generate playlists based on user preferences helps in curating personalized music experiences. Users can specify their favorite artists, albums, or even individual group members to receive recommendations tailored to their tastes. 
+                    Users often struggle to identify Kpop songs or select ones they want to play due to the vast and diverse nature of the genre. By allowing users to input a song or artist, the app generates similar music recommendations, thus streamlining the song selection process. This saves users time and effort in manually searching for songs, enhancing their overall music listening experience.
                 </li>
             </ol>
             
