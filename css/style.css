@@ -1,0 +1,29 @@
+body{
+    background-color: #FAF9F6;
+    font-family: 'Work Sans', 'Arial', sans-serif;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    background-color: #9A8C98;
+    padding: 0.5em;
+}
+
+img{
+    max-height: 300px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Oswald', 'Heveltica Nue', sans-serif;
+}
+
+main{
+    margin: 1em;
+}
+
+nav a{
+    color: #FAF9F6;
+    padding-left: 2em;
+    padding-right: 2em;
+}
