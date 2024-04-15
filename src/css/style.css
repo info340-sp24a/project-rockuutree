@@ -43,6 +43,13 @@ nav a {
     justify-content: space-around;
     font-size: 13px;
   }
+  .quiz {
+    background: #bbd0ff;
+    border-radius: 2em;
+    border: none;
+    color: #555b6e;
+    padding: 10px 10px;
+  }
 }
 
 @media (min-width: 768px) {
