@@ -1,0 +1,55 @@
+body {
+  background-color: #faf9f6;
+  font-family: "Work Sans", "Arial", sans-serif;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  background-color: #9a8c98;
+  padding: 0.5em;
+}
+
+img {
+  max-height: 300px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", "Heveltica Nue", sans-serif;
+}
+
+main {
+  margin: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  color: #faf9f6;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+@media (min-width: 568px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: white;
+  }
+}
+
+@media (min-width: 992px) {
+}
