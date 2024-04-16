@@ -1,17 +1,29 @@
 body {
+  padding-top: 1.5rem;
   background-color: #faf9f6;
   font-family: "Work Sans", "Arial", sans-serif;
   margin: 0;
 }
 
 nav {
+  position: fixed;
   display: flex;
   background-color: #9a8c98;
-  padding: 0.5em;
+  top: 0;
+  width: 100%;
+}
+
+.quiz {
+  background: #bbd0ff;
+  border-radius: 2em;
+  border: none;
+  color: #555b6e;
+  padding: 10px 10px;
 }
 
 img {
-  max-height: 300px;
+  height: 250px;
+  width: 200px;
 }
 
 h1,
@@ -38,17 +50,13 @@ nav a {
 }
 
 @media (min-width: 568px) {
-  nav {
+  nav #items {
     display: flex;
-    justify-content: space-around;
     font-size: 13px;
-  }
-  .quiz {
-    background: #bbd0ff;
-    border-radius: 2em;
-    border: none;
-    color: #555b6e;
-    padding: 10px 10px;
+    padding-top: 1rem;
+    display: inline;
+    padding: 0;
+    margin: 0 0.5rem;
   }
 }
 
