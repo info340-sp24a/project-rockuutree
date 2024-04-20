@@ -91,3 +91,23 @@ nav a{
     justify-content: right;
     align-items: center;
 }
+
+#landing-logo {
+    font-size: 5.5em;
+}
+
+.form-group {
+    width: 66%;
+}
+
+#log-in-section {
+    position: absolute;
+    top: 15%;
+    padding-left: 1em;
+    width: 100%;
+}
+
+.landing-btn {
+    padding: 0.5em 2em;
+    font-size: 16px;
+}
