@@ -3,9 +3,9 @@
 }
 
 body {
-  padding-top: 2rem;
-  background-color: #faf9f6;
+  background-color: #fff;
   font-family: 'HCo Gotham', sans-serif;
+  overflow-x: hidden;
 }
 
 nav {
@@ -41,10 +41,10 @@ nav .logo {
 }
 
 .quiz {
-  background: #bbd0ff;
+  background: #37de8f;
   border-radius: 2em;
   border: none;
-  color: #555b6e;
+  color: #fff;
   padding: 10px 20px;
   margin-top: 1rem;
 }
@@ -52,7 +52,8 @@ nav .logo {
 .card {
   text-align: center;
   flex-direction: row;
-  padding: 1rem;
+  padding: 3rem;
+  padding-top: 5rem;
   width: 100%;
 }
 
@@ -86,8 +87,16 @@ nav .logo {
 }
 
 .card img {
-  width: 75%;
+  width: 50%;
   height: auto;
+}
+
+.left-container #rack {
+  width: 75%
+}
+
+.right-container #tech {
+  display: none;
 }
 
 .card p {
@@ -96,7 +105,7 @@ nav .logo {
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Oswald", "Heveltica Nue", sans-serif;
+  font-family: 'HCo Gotham', sans-serif;
 }
 
 .container .card .left-container .image-content .overlay {
@@ -131,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   font-size: 1rem;
   text-align: center;
-  padding: .55rem 0;
+  padding: .5rem 0;
   cursor: pointer;
   text-decoration: none;
   width: 123px;
@@ -140,6 +149,36 @@ h1, h2, h3, h4, h5, h6 {
 .left-container #rack {
   padding: 1rem;
   height: auto; /* Maintain aspect ratio */
+}
+
+footer {
+  background-color: #9a8c98;
+  color: #faf9f6;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 5em;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.footer-links a {
+  color: #faf9f6;
+  text-decoration: none;
 }
 
 @media (min-width: 598px) {
@@ -193,6 +232,13 @@ h1, h2, h3, h4, h5, h6 {
 
   .card .bottom {
     width: 100%;
+  }
+
+  .right-container #tech {
+    position: absolute;
+    width: 60%;
+    left: 50%;
+    display: block;
   }
 }
 
