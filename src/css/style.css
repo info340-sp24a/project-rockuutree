@@ -1,6 +1,7 @@
 * {
   margin: 0;
 }
+
 body {
   padding-top: 5rem;
   background-color: #faf9f6;
@@ -15,10 +16,24 @@ nav {
   width: 100%;
   position: absolute;
   padding: 0.5em;
-  justify-content: space-between;
   margin: auto;
   align-items: center;
   padding-bottom: 1.0rem;
+}
+
+.components_header {
+  display: none;
+}
+
+nav a {
+  color: #faf9f6;
+  padding-right: 1em;
+  text-decoration: none;
+}
+
+nav .logo {
+  padding-right: 4em;
+  padding-left: 1rem;
 }
 
 .logo a {
@@ -36,7 +51,7 @@ nav {
 }
 
 .card {
-  display: flex;
+  text-align: center;
   flex-direction: row;
   margin-bottom: 2rem;
   padding: 1rem;
@@ -47,11 +62,26 @@ nav {
   margin-left: auto;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: -27em;
+}
+
+
 .left-container,
 .right-container {
+  display: flex;
   width: 50%;
   padding: 2rem 1rem;
+  flex-direction: column;
 }
+
+.left-container {
+  position: relative;
+}
+
 
 .image-content {
   text-align: center;
@@ -71,22 +101,25 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", "Heveltica Nue", sans-serif;
 }
 
-nav a {
-  color: #faf9f6;
-  padding-right: 1em;
-  text-decoration: none;
+.container .card .left-container .image-content .overlay {
+  position: absolute;
+  border-radius: 14px;
+  padding: .75rem 1.5rem;
 }
 
-.components_header {
-  display: none;
+.container .card .left-container .image-content .overlay.overlay-2 {
+  top: 60%;
+  left: 5%;
+  background: rgba(28, 246, 168, .65);
+  opacity: 1;
 }
 
-nav .logo {
-  padding-right: 4em;
-  padding-left: 2rem;
+
+
+.left-container #rack {
+  padding: 1rem;
+  height: auto; /* Maintain aspect ratio */
 }
-
-
 
 @media (min-width: 598px) {
   nav .components_header {
@@ -94,9 +127,13 @@ nav .logo {
     justify-content: center;
     flex-grow: 1;
   }
+  .container {
+    margin-right: 0rem;
+  }
   
   .card {
     flex-direction: row;
+    display: flex;
   }
   
   .card p {
@@ -109,14 +146,22 @@ nav .logo {
     margin-right: 1rem;
     margin-bottom: 0;
   }
+
+  .left-container #rack {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
   
   nav .logo {
     padding-right: 0em;
-    margin-left: -2em;
   }
 
   nav {
     width: 100%;
+  }
+
+  .container .card .left-container .image-content .overlay.overlay-2 {
+    transform: scale(.8);
   }
 }
 
