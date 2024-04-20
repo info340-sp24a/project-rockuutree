@@ -3,10 +3,9 @@
 }
 
 body {
-  padding-top: 5rem;
+  padding-top: 2rem;
   background-color: #faf9f6;
-  font-family: "Work Sans", "Arial", sans-serif;
-  padding-right: 2rem;
+  font-family: 'HCo Gotham', sans-serif;
 }
 
 nav {
@@ -53,7 +52,6 @@ nav .logo {
 .card {
   text-align: center;
   flex-direction: row;
-  margin-bottom: 2rem;
   padding: 1rem;
   width: 100%;
 }
@@ -109,12 +107,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .container .card .left-container .image-content .overlay.overlay-2 {
   top: 60%;
-  left: 5%;
+  left: 10%;
   background: rgba(28, 246, 168, .65);
   opacity: 1;
 }
 
+.container .card .left-container .image-content .overlay.overlay-1 {
+  top: 35%;
+  right: 10%;
+  background: rgba(28, 246, 168, .65);
+  opacity: 1;
+}
 
+.card .bottom {
+  width: 50%;
+}
+
+#explore {
+  border: none;
+  color: #fff;
+  border-radius: 41px;
+  background: #275f4b;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  padding: .55rem 0;
+  cursor: pointer;
+  text-decoration: none;
+  width: 123px;
+}
 
 .left-container #rack {
   padding: 1rem;
@@ -161,7 +182,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .container .card .left-container .image-content .overlay.overlay-2 {
+    left: 5%;
     transform: scale(.8);
+  }
+
+  .container .card .left-container .image-content .overlay.overlay-1 {
+    right: -5%;
+    transform: scale(.8);
+  }
+
+  .card .bottom {
+    width: 100%;
   }
 }
 
