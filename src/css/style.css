@@ -268,5 +268,30 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* Add any additional styles for larger screens */
+  .right-container #tech {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    display: block;
+  }
+
+  .card {
+    padding: 5rem;
+  }
+  .card .bottom {
+    font-size: 30px;
+  }
+
+  @media (min-width: 1200px) {
+
+    .right-container #tech {
+      position: absolute;
+      width: 40%;
+      left: 50%;
+      display: block;
+    }
+
+    .card {
+      padding: 10rem;
+    }
 }
