@@ -41,11 +41,13 @@ nav a {
 nav .logo {
   padding-right: 4em;
   padding-left: 0.5rem;
-}
-
-.logo a {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.hamburger-menu {
+  display: block;
+  margin-left: auto;
 }
 
 /* Card Stuff */
@@ -59,17 +61,18 @@ nav .logo {
   margin-top: 1rem;
 }
 
-.card {
-  text-align: center;
-  flex-direction: row;
-  padding-top: 5rem;
-  width: 100%;
+
+.left-container .rack {
+  width: 75%;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  height: auto; /* Maintain aspect ratio */
 }
 
-.hamburger-menu {
-  display: block;
-  margin-left: auto;
+.right-container .tech {
+  display: none;
 }
+
 
 .container {
   display: flex;
@@ -90,22 +93,20 @@ nav .logo {
   position: relative;
 }
 
-
 .image-content {
   text-align: center;
+}
+
+.card {
+  text-align: center;
+  flex-direction: row;
+  padding-top: 5rem;
+  width: 100%;
 }
 
 .card img {
   width: 50%;
   height: auto;
-}
-
-.left-container .rack {
-  width: 75%
-}
-
-.right-container .tech {
-  display: none;
 }
 
 .card p {
@@ -148,12 +149,6 @@ nav .logo {
   cursor: pointer;
   text-decoration: none;
   width: 123px;
-}
-
-.left-container .rack {
-  padding-left: 2rem;
-  padding-bottom: 2rem;
-  height: auto; /* Maintain aspect ratio */
 }
 
 /* Footer */
