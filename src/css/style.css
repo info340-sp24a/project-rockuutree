@@ -22,7 +22,7 @@ nav {
   width: 100%;
   position: absolute;
   justify-content: space-between;
-  padding: 0.5em;
+  padding-top: 1rem;
   margin: auto;
   align-items: center;
   padding-bottom: 1.0rem;
@@ -40,7 +40,7 @@ nav a {
 
 nav .logo {
   padding-right: 4em;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
 }
 
 .logo a {
