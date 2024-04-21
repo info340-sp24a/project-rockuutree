@@ -8,6 +8,12 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'HCo Gotham', sans-serif;
+}
+
+/* Nav Bar */
+
 nav {
   display: flex;
   background-color: #9a8c98;
@@ -39,6 +45,8 @@ nav .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+/* Card Stuff */
 
 .quiz {
   background: #37de8f;
@@ -100,11 +108,6 @@ nav .logo {
   font-size: 20px;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'HCo Gotham', sans-serif;
-}
-
 .container .card .left-container .image-content .overlay {
   position: absolute;
   border-radius: 14px;
@@ -148,6 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   height: auto; /* Maintain aspect ratio */
 }
 
+/* Footer */
 footer {
   background-color: #9a8c98;
   color: #faf9f6;
