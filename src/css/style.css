@@ -20,6 +20,7 @@ nav {
   top: 0;
   width: 100%;
   position: absolute;
+  justify-content: space-between;
   padding: 0.5em;
   margin: auto;
   align-items: center;
@@ -64,7 +65,8 @@ nav .logo {
   width: 100%;
 }
 
-#hamburger-menu {
+.hamburger-menu {
+  display: block;
   margin-left: auto;
 }
 
@@ -73,6 +75,7 @@ nav .logo {
   flex-direction: column;
   align-items: center;
   margin-right: -27em;
+  padding: 1rem;
 }
 
 .left-container,
@@ -96,11 +99,11 @@ nav .logo {
   height: auto;
 }
 
-.left-container #rack {
+.left-container .rack {
   width: 75%
 }
 
-.right-container #tech {
+.right-container .tech {
   display: none;
 }
 
@@ -132,7 +135,7 @@ nav .logo {
   width: 50%;
 }
 
-#explore {
+.explore {
   border: none;
   color: #fff;
   border-radius: 41px;
@@ -146,8 +149,9 @@ nav .logo {
   width: 123px;
 }
 
-.left-container #rack {
-  padding: 1rem;
+.left-container .rack {
+  padding-left: 2rem;
+  padding-bottom: 2rem;
   height: auto; /* Maintain aspect ratio */
 }
 
@@ -189,13 +193,13 @@ footer {
     flex-grow: 1;
   }
   .container {
-    margin-right: 0rem;
+    margin-right: 0;
   }
   
   .card {
     flex-direction: row;
     display: flex;
-    padding: 3rem;
+    padding: 2.5rem;
   }
   
   .card p {
@@ -210,17 +214,17 @@ footer {
   }
 
   .left-container,
-.right-container {
+  .right-container {
   padding: 2rem 1rem;
 }
 
-  .left-container #rack {
+  .left-container .rack {
     width: 100%; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
   }
   
   nav .logo {
-    padding-right: 0em;
+    padding-right: 0;
   }
 
   nav {
@@ -241,7 +245,7 @@ footer {
     width: 100%;
   }
 
-  .right-container #tech {
+  .right-container .tech {
     position: absolute;
     width: 60%;
     left: 50%;
@@ -255,9 +259,7 @@ footer {
     align-items: center;
   }
   
-  #hamburger-menu {
-    display: block;
-    color: #faf9f6;
+  .hamburger-menu {
     font-size: 1.5rem;
   }
 
@@ -272,10 +274,14 @@ footer {
   .left-container .text-content {
     padding-left: 1em;
   }
+
+  .card {
+    padding: 4rem;
+  }
 }
 
 @media (min-width: 992px) {
-  .right-container #tech {
+  .right-container .tech {
     position: absolute;
     width: 50%;
     left: 50%;
@@ -292,7 +298,7 @@ footer {
 
   @media (min-width: 1200px) {
 
-    .right-container #tech {
+    .right-container .tech {
       position: absolute;
       width: 40%;
       left: 50%;
