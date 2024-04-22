@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'HCo Gotham', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'HCo Gotham', sans-serif;
+  font-size: 30px;
+}
+
+/* Nav Bar */
+
+nav {
+  display: flex;
+  background-color: #9a8c98;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin: auto;
+  align-items: center;
+  padding-bottom: 1.0rem;
+}
+
+.components_header {
+  display: none;
+}
+
+nav a {
+  color: #faf9f6;
+  padding-right: 1em;
+  text-decoration: none;
+}
+
+nav .logo {
+  padding-right: 4em;
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hamburger-menu {
+  display: block;
+  margin-left: auto;
+}
+
+/* Card Stuff */
+
+.quiz {
+  background: #37de8f;
+  border-radius: 2em;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 1rem;
+}
+
+
+.left-container .rack {
+  width: 75%;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.right-container .tech {
+  display: none;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: -27em;
+  padding: 1rem;
+}
+
+.left-container,
+.right-container {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+
+.left-container {
+  position: relative;
+}
+
+.image-content {
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+  flex-direction: row;
+  padding-top: 5rem;
+  width: 100%;
+}
+
+.card img {
+  width: 50%;
+  height: auto;
+}
+
+.card p {
+  font-size: 20px;
+}
+
+.container .card .left-container .image-content .overlay {
+  position: absolute;
+  border-radius: 14px;
+  padding: .75rem 1.5rem;
+}
+
+.container .card .left-container .image-content .overlay.overlay-2 {
+  top: 60%;
+  left: 10%;
+  background: rgba(28, 246, 168, .65);
+  opacity: 1;
+}
+
+.container .card .left-container .image-content .overlay.overlay-1 {
+  top: 35%;
+  right: 10%;
+  background: rgba(28, 246, 168, .65);
+  opacity: 1;
+}
+
+.card .bottom {
+  width: 50%;
+}
+
+.explore {
+  border: none;
+  color: #fff;
+  border-radius: 41px;
+  background: #275f4b;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  padding: .5rem 0;
+  cursor: pointer;
+  text-decoration: none;
+  width: 123px;
+}
+
+/* Footer */
+footer {
+  background-color: #9a8c98;
+  color: #faf9f6;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 5em;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.footer-links a {
+  color: #faf9f6;
+  text-decoration: none;
+}
+
+@media (min-width: 598px) {
+  nav .components_header {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  .container {
+    margin-right: 0;
+  }
+  
+  .card {
+    flex-direction: row;
+    display: flex;
+    padding: 2.5rem;
+  }
+  
+  .card p, h1, h2{
+    text-align: left;
+  }
+  
+  .card img {
+    text-align: center;
+    width: 50%;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  .bottom h3 {
+    padding-bottom: 0.5em;
+  }
+
+  .left-container,
+  .right-container {
+  padding: 2rem 1rem;
+  }
+
+  .left-container .rack {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  nav .logo {
+    padding-right: 0;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .container .card .left-container .image-content .overlay.overlay-2 {
+    left: 5%;
+    transform: scale(.8);
+  }
+
+  .container .card .left-container .image-content .overlay.overlay-1 {
+    right: -5%;
+    transform: scale(.8);
+  }
+
+  .card .bottom {
+    width: 100%;
+  }
+
+  .right-container .tech {
+    position: absolute;
+    width: 60%;
+    left: 50%;
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  nav {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hamburger-menu {
+    font-size: 1.5rem;
+  }
+
+  .components_header {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 30px;
+  }
+
+  .left-container .text-content {
+    padding-left: 1em;
+  }
+
+  .card {
+    padding: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .right-container .tech {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    display: block;
+  }
+
+  .card {
+    padding: 5rem;
+  }
+  .card .bottom {
+    font-size: 30px;
+  }
+}
+
+  @media (min-width: 1200px) {
+
+    .right-container .tech {
+      position: absolute;
+      width: 700px;
+      left: 50%;
+      display: block;
+    }
+
+    .card {
+      padding: 7rem;
+    }
+}

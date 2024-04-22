@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #FAF9F6;
+    font-family: 'HCo Gotham', 'Work Sans', 'Arial', sans-serif;
+    margin: 0;
+  }
+  
+  img {
+    max-height: 300px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'HCo Gotham', 'Oswald', 'Heveltica Nue', sans-serif;
+  }
+  
+  nav {
+    display: flex;
+    background-color: #9A8C98;
+    padding: 0.5em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+  }
+  
+  nav a {
+    color: #FAF9F6;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  
+  main {
+    margin: 1em;
+  }
+  
+  .material-symbols-outlined {
+    font-size: 40px;
+  }
+  
+  .back {
+    background-color: #F2E9E4;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .back img {
+    max-height: 400px;
+  }
+  
+  .choices {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .selection {
+    background-color: white;
+    font-size: 20px;
+  }
+  
+  .quiz-bottom {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
