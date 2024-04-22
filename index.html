@@ -13,7 +13,8 @@
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="src/css/style_home.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <!-- <link rel="stylesheet" href="src/css/style_home.css" /> -->
     <title>styleU</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="src/images/mapleMeFace.png" />
@@ -24,19 +25,19 @@
             <a href="#">styleU</a>
         </div>
         <div class="components_header text-center">
-            <a href="">Style Quiz</a>
-            <a href="">Color Analysis Quiz</a>
-            <a href="">Styles</a>
-            <a href="">Palletes</a>
+          <a href="index.html">Home</a>
+          <a href="style-quiz.html">Style Quiz</a>
+          <a href="palette-analysis-index.html">Color Analysis Quiz</a>
+          <a href="style-page.html">Styles</a>
         </div>
         <div class="hamburger-menu" aria-label="Toggle Menu">
             <a href="#"><span class="material-symbols-outlined">menu</span></a>
         </div>
     </nav>
     <main>
-        <div class="container">
+        <div class="home_container">
                 <!-- Card 1 -->
-      <div class="card mb-4">
+      <div class="home_card mb-4">
         <div class="left-container">
           <div class="text-content">
           <h1>Pallette Quiz</h1>
@@ -51,7 +52,7 @@
         </div>
       </div>
                 <!-- Card 2 -->
-    <div class="card mb-4">
+    <div class="home_card mb-4">
               <div class="left-container">
                 <div class="image-content">
                     <img id="rack" src="src/images/hoodie.png" alt="clothing on a rack with a pink backdrop" class="rack pb-3" />
@@ -80,10 +81,10 @@
               </div>
         </div>
                 <!-- Card 3 -->
-                <div class="card mb-4">
+                <div class="home_card mb-4">
                   <div class="bottom">
                     <h3>Want to Explore and Experiment?</h3>
-                    <button class="explore" aria-label="Toggle Color">Color Palletes</button>
+                    <button class="explore" aria-label="Toggle Color" onclick="window.location.href='palette-results-index.html';">Color Palletes</button>
                     <button class="explore" aria-label="Toggle Style Closet">Style Closet</button>
                   </div>
                 </div>
