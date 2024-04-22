@@ -128,7 +128,7 @@ main {
   align-items: center;
 }
 
-/* Palette */
+/* Palette Quiz */
 
 
 .material-symbols-outlined {
@@ -165,7 +165,7 @@ main {
 }
 
 
-/* End of Palette */
+/* End of Palette Quiz */
 
 /* Style Quiz */
 
@@ -201,7 +201,7 @@ main {
 
 /* Style Page */
 
-#search-bar{
+.search-bar {
   display: flex;
   align-items: center;
   padding: 1em 2em 1em 2em;
@@ -209,14 +209,15 @@ main {
   width: 100%;
   margin: 0 auto;
 }
-#search-bar input{
+
+.search-bar input {
   border-radius: 4px;
   width: 100%;
   height: 32px;
 
 }
 
-#search-bar button{
+.search-bar button {
   height: 32px;
   width: 32px;
   display: flex;
@@ -229,7 +230,7 @@ main {
   margin-top: 1em;
 }
 
-#search-bar .material-symbols-outlined{
+.search-bar .material-symbols-outlined{
   font-size: 100%;
 }
 
@@ -350,7 +351,7 @@ main {
 
 /* Landing */
 
-#landing-logo {
+.landing-logo {
   font-size: 5.5em;
 }
 
@@ -358,7 +359,7 @@ main {
   width: 66%;
 }
 
-#log-in-section {
+.log-in-section {
   position: absolute;
   top: 15%;
   padding-left: 1em;
