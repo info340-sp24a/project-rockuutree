@@ -39,13 +39,13 @@ const HomePage = () => {
           />
         </div>
         </div>
-        
+
         <div className="home_container">
           {/* Card 1 */}
           <div className="home_card mb-4">
             <div className="left-container">
               <div className="text-content">
-                <h1>Pallette Quiz</h1>
+                <h1 class="h1-core text-4xl">Pallette Quiz</h1>
                 <p>
                   Picking the correct color pallette for your personal features is essential for your personal style.
                   Figure out what compliments you the most and take this quiz!
