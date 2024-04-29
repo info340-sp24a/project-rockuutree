@@ -365,6 +365,11 @@ width: 123px;
         text-align: left;
     }
 
+    .home_card h1, h2 {
+      font-size: 2.25rem;
+      padding-bottom: 1rem;
+    }
+
     .home_card img {
         text-align: center;
         width: 50%;
