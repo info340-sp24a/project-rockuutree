@@ -1,5 +1,5 @@
 * {
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     margin: 0;
   }
   
@@ -54,6 +54,114 @@ nav .logo {
   display: block;
   margin-left: auto;
 }
+
+.menu-tab {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #9a8c98;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+
+.menu-tab.open {
+  transform: translateX(0);
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.menu-header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+.close-icon span {
+  font-size: 24px;
+  color: #fff;
+}
+
+.menu-tab ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.menu-tab li {
+  margin-bottom: 1em;
+}
+
+.menu-tab a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.menu-tab a:hover {
+  color: #007bff;
+}
+
+.menu-tab-divider {
+  display: block;
+  height: 1px;
+  padding: 0;
+  margin: 1em -8px 8px;
+  list-style: none;
+  background: rgba(224, 224, 224, 0.5);
+  border: 0;
+}
+
+.menu-tab-footer {
+  margin-top: 2em;
+}
+
+.menu-tab-footer .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.menu-tab-footer .footer-links li, .menu-tab-footer p{
+  margin-bottom: 10px;
+}
+
+.menu-tab-footer .footer-links a, .menu-tab-footer p {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: color 0.3s;
+  
+}
+
+.menu-tab-footer .footer-links a {
+  color: #007bff;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: text-bottom;
+}
+
+
 
 /* End of Nav Bar*/
 
@@ -243,6 +351,7 @@ flex-direction: column;
 align-items: center;
 margin-right: -27em;
 padding: 1rem;
+
 }
 
 .left-container,
@@ -453,8 +562,13 @@ width: 123px;
         display: block;
     }
 
+    .home_container {
+      
+    }
+
     .home_card {
         padding: 5rem;
+        width: 1200px;
     }
     .home_card .bottom {
         font-size: 30px;
@@ -469,6 +583,18 @@ width: 123px;
         left: 50%;
         display: block;
     }
+
+  .home_container .home_card .left-container .image-content .overlay.overlay-1 {
+      right: -5%;
+      top: 35%;
+      transform: scale(.8);
+  }
+
+    .left-container .rack {
+      width: 500px;
+      height: auto;
+      padding-left: 0;
+  }
 
     .home_card {
         padding: 7rem;
