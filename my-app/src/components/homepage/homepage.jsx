@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../../css/style.css';
+import '../../css/homestyle.css';
 import techImage from '../../assets/tech.jpeg';
 import hoodieImage from '../../assets/hoodie.png';
 import Lottie from "react-lottie";
