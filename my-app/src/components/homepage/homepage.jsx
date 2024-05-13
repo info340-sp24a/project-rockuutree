@@ -71,10 +71,7 @@ const HomePage = () => {
       Profile
     </Link>
     <li role="presentation" aria-hidden="true" className="menu-tab-divider"></li>
-    <Link to="/logout" onClick={toggleMenu}>
-      <img src={person} alt="Log Out" className="menu-icon" />
-      Log Out
-    </Link>
+    <Link to="/styles">Sign Out</Link>
     {/* <li role="presentation" aria-hidden="true" className="menu-tab-divider"></li> */}
   </ul>
   <div className="menu-tab-footer">
