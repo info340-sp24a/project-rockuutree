@@ -12,6 +12,7 @@ import store from "../../assets/store.svg";
 import person from "../../assets/person.svg";
 
 const HomePage = () => {
+  /* Nav Bar Stuff */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -72,7 +73,7 @@ const HomePage = () => {
     </Link>
     <li role="presentation" aria-hidden="true" className="menu-tab-divider"></li>
     <Link to="/styles">Sign Out</Link>
-    {/* <li role="presentation" aria-hidden="true" className="menu-tab-divider"></li> */}
+    {/* <li role="presentation" aria-hidden="true" className="menu-tab-divider"></li> */} 
   </ul>
   <div className="menu-tab-footer">
     <p>&copy; 2024 styleU, Inc.</p>
@@ -89,6 +90,8 @@ const HomePage = () => {
     </ul>
   </div>
 </div>
+      {/* /* Nav Bar stuff end*/}
+
 
 
       
