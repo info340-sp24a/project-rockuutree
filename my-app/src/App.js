@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import HomePage from './components/homepage/homepage';
+import StylePage from './components/StylePage.js';
 
-function App() {
+function App(props) {
+  const {style_data} =props;
   return (
       <div className="App">
-        <HomePage />
+        <StylePage style_data={style_data}/>
+        <h1>hi</h1>
       </div>
     );
   }
