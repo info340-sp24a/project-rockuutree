@@ -16,7 +16,7 @@ const HomePage = () => {
         <div className="components_header text-center">
           <a href="index.html">Home</a>
           <a href="style-quiz.html">Style Quiz</a>
-          <a href="palette-analysis-index.html">Color Analysis Quiz</a>
+          <a href="palette-analysis">Color Analysis Quiz</a>
           <a href="style-page.html">Styles</a>
         </div>
         <div className="hamburger-menu" aria-label="Toggle Menu">

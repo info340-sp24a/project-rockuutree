@@ -1,19 +1,22 @@
+import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './components/homepage/homepage';
-import StyleQuiz from './components/stylequiz/StyleQuiz';
-import ColorPalette from './components/colorpalette/colorpalette';
-
+// import StyleQuizPage from './components/styles-page/StyleCardList';
+import PaletteAnalysisPage from './components/colorpalette/colorpalette';
+// import StyleQuiz from './components/stylequiz/StyleQuiz';
 
 function App() {
   return (
-      <div className="App">
-        <ColorPalette />
-        {/* <StyleQuiz /> */}
-        {/* <HomePage /> */}
-      </div>
-    );
-  }
-  
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/style-quiz" element={<StyleQuizPage />} /> */}
+        <Route path="/palette-analysis" element={<PaletteAnalysisPage />} />
+        {/* <Route path="/styles" element={<StyleQuiz />} /> */}
+      </Routes>
+    </Router>
+  );
+}
 
 export default App;

@@ -348,6 +348,12 @@ width: 123px;
   background-color: #80ED99;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @media (min-width: 598px) {
     nav .components_header {

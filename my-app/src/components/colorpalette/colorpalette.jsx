@@ -17,7 +17,7 @@ const ColorPalette = (props) => {
             <a href="#">styleU</a>
         </div>
         <div className="components_header text-center">
-          <a href="index.html">Home</a>
+          <a href="/">Home</a>
           <a href="style-quiz.html">Style Quiz</a>
           <a href="palette-analysis-index.html">Color Analysis Quiz</a>
           <a href="style-page.html">Styles</a>
@@ -130,7 +130,9 @@ function Question(props) {
           {newThing}
           <div>
             {questionNumber === "6" ? (
+              <div className="center">
                 <button className="submit-button rounded px-5 py-2 my-2">Submit</button>
+              </div>
             ) : (
               <div>
                 <div className="quiz-bottom">
