@@ -458,7 +458,7 @@ width: 123px;
     nav .components_header {
         display: flex;
         justify-content: center;
-        flex-grow: 1;
+        font-weight: bold;
     }
     .home_container {
         margin-right: 0;
@@ -526,6 +526,16 @@ width: 123px;
         left: 50%;
         display: block;
     }
+
+    .menu-tab ul li:nth-child(1),
+    .menu-tab ul li:nth-child(2),
+    .menu-tab ul li:nth-child(3),
+    .menu-tab ul li:nth-child(4),
+    .menu-tab ul li:nth-child(5) {
+      display: none;
+    }
+
+    
 }
 @media (min-width: 768px) {
     nav {
@@ -537,8 +547,9 @@ width: 123px;
         font-size: 1.5rem;
     }
 
-    .components_header {
+    .components_header a{
         font-size: 20px;
+        padding: 0rem 1rem;
     }
 
     .home_card p {
@@ -562,10 +573,6 @@ width: 123px;
         display: block;
     }
 
-    .home_container {
-      
-    }
-
     .home_card {
         padding: 5rem;
         width: 1200px;
@@ -573,6 +580,11 @@ width: 123px;
     .home_card .bottom {
         font-size: 30px;
     }
+
+    .components_header a{
+      font-size: 20px;
+      padding: 0rem 2rem;
+  }
 }
 
 @media (min-width: 1200px) {
