@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../../css/homestyle.css';
+import '../../css/style.css';
 import techImage from '../../assets/tech.jpeg';
 import hoodieImage from '../../assets/hoodie.png';
 import Lottie from "react-lottie";
 import animationData from "../bounce.json";
-import NavBar from '../nav/nav';
-import { Footer } from '../footer/footer';
+import NavBar from '../nav/Nav';
+import { Footer } from '../footer/Footer';
 
 const HomePage = () => {
   /* Nav Bar Stuff */
@@ -17,7 +17,6 @@ const HomePage = () => {
   return (
     <>
       <NavBar />
-
       <main>
         <div className="home_container">
 

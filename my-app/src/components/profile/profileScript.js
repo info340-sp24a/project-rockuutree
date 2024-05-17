@@ -1,4 +1,4 @@
-import COLORS from './color';
+import COLORS from './Color';
 
 // profile.js
 let userProfile = {

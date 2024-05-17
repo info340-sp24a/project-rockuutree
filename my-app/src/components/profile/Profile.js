@@ -1,10 +1,10 @@
 // Profile.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getUserProfile, updateUserProfile, addColorCard, addStyleCard } from './profileScript';
-import '../../css/homestyle.css';
+import { getUserProfile, updateUserProfile, addColorCard, addStyleCard } from './ProfileScript';
+import '../../css/style.css';
 import me from '../../assets/mapleMeFace.png';
-import NavBar from '../nav/nav';
+import NavBar from '../nav/Nav';
 const Profile = () => {
   const [userProfile, setUserProfile] = useState(getUserProfile());
   const [name, setName] = useState(userProfile.name);

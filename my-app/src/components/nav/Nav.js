@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useNavigation } from './navScript';
-import '../../css/homestyle.css';
+import { useNavigation } from './NavScript';
+import '../../css/style.css';
 import home from "../../assets/home.svg";
 import shirt from "../../assets/shirt.svg";
 import palette from "../../assets/palette.svg";
