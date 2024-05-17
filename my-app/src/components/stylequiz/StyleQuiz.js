@@ -1,23 +1,12 @@
 import React from 'react';
 import '../../css/style.css';
+import NavBar from '../nav/Nav';
+import { Footer } from '../footer/Footer';
 
 const StyleQuiz = () => {
     return (
         <>
-            <nav>
-            <div class="logo">
-                <a href="#">styleU</a>
-            </div>
-            <div class="components_header text-center">
-                <a href="index.html">Home</a>
-                <a href="style-quiz.html">Style Quiz</a>
-                <a href="palette-analysis-index.html">Color Analysis Quiz</a>
-                <a href="style-page.html">Styles</a>
-            </div>
-            <div class="hamburger-menu" aria-label="Toggle Menu">
-                <a href="#"><span class="material-symbols-outlined">menu</span></a>
-            </div>
-        </nav>
+            <NavBar />
             <main>
                 <p class="text-center h1 fw-semibold fs-1">Style Quiz</p>
                 <div class="back w-75 shadow-sm d-flex flex-column">
@@ -70,16 +59,7 @@ const StyleQuiz = () => {
                     </div>
                 </div>
             </main>
-            <footer>
-            <div class="footer-content">
-                <p>&copy; 2023 styleU. All rights reserved.</p>
-                <ul class="footer-links">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            </footer>
+            <Footer />
         </>
     );
 };
