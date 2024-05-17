@@ -1,33 +1,23 @@
-import React from 'react';
-import '../../css/style.css';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../../css/homestyle.css';
 import techImage from '../../assets/tech.jpeg';
 import hoodieImage from '../../assets/hoodie.png';
 import Lottie from "react-lottie";
 import animationData from "../bounce.json";
-
+import NavBar from '../nav/nav';
+import { Footer } from '../footer/footer';
 
 const HomePage = () => {
+  /* Nav Bar Stuff */
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <>
-      <nav>
-        <div className="logo">
-          <a href="#">styleU</a>
-        </div>
-        <div className="components_header text-center">
-          <a href="index.html">Home</a>
-          <a href="style-quiz.html">Style Quiz</a>
-          <a href="palette-analysis-index.html">Color Analysis Quiz</a>
-          <a href="style-page.html">Styles</a>
-        </div>
-        <div className="hamburger-menu" aria-label="Toggle Menu">
-          <a href="#">
-            <span className="material-symbols-outlined">menu</span>
-          </a>
-        </div>
-      </nav>
+      <NavBar />
 
-
-      
       <main>
       <div className="flex flex-col w-full items-start justify-start gap-8 max-w-4xl px-3 py-16 lg:py-12">
         <div className="flex w-full items-start justify-start cursor-default">
@@ -111,22 +101,7 @@ const HomePage = () => {
           </div>
         </div>
       </main>
-      <footer>
-        <div className="footer-content">
-          <p>&copy; 2024 styleU. All rights reserved.</p>
-          <ul className="footer-links">
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Privacy Policy</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+      <Footer/>
     </>
   );
 };

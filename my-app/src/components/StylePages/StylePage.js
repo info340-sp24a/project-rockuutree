@@ -18,6 +18,7 @@ function StylePage(props){
             <main>
                 <StyleCardList style_data={style_data} />
             </main>
+            <Footer />
         </div>
     );
     
