@@ -1,3 +1,5 @@
+import COLORS from './color';
+
 // profile.js
 let userProfile = {
   name: 'Ryan Doe',
@@ -5,12 +7,14 @@ let userProfile = {
   profilePicture: 'path/to/profile-picture.jpg',
   colors: [
     {
-      name: 'Blue',
+      name: 'Deep Sky Blue',
       description: 'Calm and serene',
+      hexCode: '#00BFFF',
     },
     {
-      name: 'Green',
+      name: 'Light Green',
       description: 'Fresh and natural',
+      hexCode: '#90EE90',
     },
   ],
   styles: [
@@ -34,7 +38,14 @@ export const updateUserProfile = (updatedProfile) => {
 };
 
 export const addColorCard = (newColor) => {
-  userProfile.colors.push(newColor);
+  const colorName = newColor.name.toLowerCase().replace(/\s+/g, '');
+  const colorDetails = COLORS.find(([name]) => name === colorName);
+  if (colorDetails) {
+    const [, hexCode] = colorDetails;
+    userProfile.colors.push({ ...newColor, hexCode });
+  } else {
+    userProfile.colors.push(newColor);
+  }
   return userProfile.colors;
 };
 

@@ -86,7 +86,7 @@ const Profile = () => {
         <h2>Colors</h2>
         <div className="card-container">
           {userProfile.colors.map((color, index) => (
-            <div key={index} className="card">
+            <div key={index} className="card" style={{ backgroundColor: color.hexCode || '#FFFFFF' }}>
               <div className="card-content">
                 <h3>{color.name}</h3>
                 <p>{color.description}</p>
