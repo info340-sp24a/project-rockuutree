@@ -19,18 +19,16 @@ const HomePage = () => {
       <NavBar />
 
       <main>
-      <div className="flex flex-col w-full items-start justify-start gap-8 max-w-4xl px-3 py-16 lg:py-12">
-        <div className="flex w-full items-start justify-start cursor-default">
+        <div className="home_container">
+
+          <div className="animationDecor">
           <Lottie
             options={{ animationData }}
             isClickToPauseDisabled
-            height={400}
-            width={800}
+            height='100%'
+            width='100%'
           />
         </div>
-        </div>
-
-        <div className="home_container">
           {/* Card 1 */}
           <div className="home_card mb-4">
             <div className="left-container">

@@ -86,7 +86,7 @@ const Profile = () => {
         <h2>Colors</h2>
         <div className="card-container">
           {userProfile.colors.map((color, index) => (
-            <div key={index} className="card" style={{ backgroundColor: color.hexCode || '#FFFFFF' }}>
+            <div key={index} className="card" style={{ backgroundColor: color.hexCode || '#f5f5f5' }}>
               <div className="card-content">
                 <h3>{color.name}</h3>
                 <p>{color.description}</p>
@@ -107,7 +107,7 @@ const Profile = () => {
             value={newColorDescription}
             onChange={(e) => setNewColorDescription(e.target.value)}
           />
-          <button onClick={handleAddColorCard}>Add Color Card</button>
+          <button onClick={handleAddColorCard}>Save Color Card</button>
         </div>
       </div>
       <div className="card-section">
@@ -135,7 +135,7 @@ const Profile = () => {
             value={newStyleDescription}
             onChange={(e) => setNewStyleDescription(e.target.value)}
           />
-          <button onClick={handleAddStyleCard}>Add Style Card</button>
+          <button onClick={handleAddStyleCard}>Save Style Card</button>
         </div>
       </div>
     </div>
