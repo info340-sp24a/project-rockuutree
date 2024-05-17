@@ -45,7 +45,7 @@ nav a {
 
 nav .logo {
   padding-right: 4em;
-  padding-left: 2rem;
+  padding-left: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -164,7 +164,7 @@ nav .logo {
 
 
 /* End of Nav Bar*/
-
+ 
 
 /* Footer */
 footer {
@@ -204,10 +204,6 @@ main {
   margin: 1em;
 }
 
-.material-symbols-outlined {
-  font-size: 40px;
-}
-
 .back {
   background-color: #F2E9E4;
   margin: auto;
@@ -235,43 +231,6 @@ main {
   justify-content: right;
   align-items: center;
 }
-
-/* Palette Quiz */
-
-
-.material-symbols-outlined {
-  font-size: 40px;
-}
-
-.back {
-  background-color: #F2E9E4;
-  margin: auto;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-.back img {
-  max-height: 400px;
-  
-}
-
-.choices {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.selection {
-  background-color: white;
-  font-size: 20px;
-}
-
-.quiz-bottom {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-}
-
 
 /* End of Palette Quiz */
 
@@ -453,12 +412,129 @@ width: 123px;
   font-size: 16px;
 }
 
+/* profile.css */
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: calc(33.33% - 20px);
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* profile.css */
+/* ... (previous CSS styles remain the same) */
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 2px solid black;
+}
+
+.profile-form {
+  margin-bottom: 20px;
+}
+
+.profile-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.profile-form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-section {
+  margin-bottom: 20px;
+}
+
+.add-card-form {
+  margin-top: 10px;
+}
+
+.add-card-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.add-card-form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 
 @media (min-width: 598px) {
     nav .components_header {
         display: flex;
         justify-content: center;
         font-weight: bold;
+        flex-grow: 1;
     }
     .home_container {
         margin-right: 0;
@@ -486,9 +562,12 @@ width: 123px;
         margin-bottom: 0;
     }
 
-    .left-container,
+    .left-container {
+      padding: 2rem 2rem 2rem 0;
+    }
+
     .right-container {
-    padding: 2rem 1rem;
+      padding: 2rem 1rem;
     }
 
     .left-container .rack {
