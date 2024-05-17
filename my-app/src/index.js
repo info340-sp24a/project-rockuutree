@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import style_data from './style_data.json';
+import stylesData from './assets/style_data.json'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App style_data={style_data}/>
+    <App style_data={stylesData}/>
   </React.StrictMode>
 );
 
