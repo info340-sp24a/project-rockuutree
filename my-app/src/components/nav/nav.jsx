@@ -61,7 +61,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li role="presentation" aria-hidden="true" className="menu-tab-divider"></li>
-          <Link to="/login" onClick={toggleMenu}>
+          <Link to="/profile" onClick={toggleMenu}>
             <img src={person} alt="Profile" className="menu-icon" />
             Profile
           </Link>
