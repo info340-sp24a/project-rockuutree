@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../../css/style.css';
-import techImage from '../../assets/tech.jpeg';
-import hoodieImage from '../../assets/hoodie.png';
+import '../index.css';
+import techImage from '../assets/tech.jpeg';
+import hoodieImage from '../assets/hoodie.png';
 import Lottie from "react-lottie";
-import animationData from "../bounce.json";
-import NavBar from '../nav/Nav';
-import { Footer } from '../footer/Footer';
+import animationData from "./bounce.json";
+import NavBar from './Nav';
+import { Footer } from './Footer';
 
 const HomePage = () => {
   /* Nav Bar Stuff */

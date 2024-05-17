@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
-import NavBar from '../nav/Nav';
-import { Footer } from '../footer/Footer';
-import '../../css/style.css';
+import NavBar from './Nav';
+import { Footer } from './Footer';
+import '../index.css';
 
 import StyleCardList from './StyleCardList';
 

@@ -8,7 +8,7 @@ export function StyleCard(props){
         <div className='style-Cards'>
             <div className='style-card-container'>
                 <div>
-                    <img className='style-card-image' src={require(`../../assets/${style_data.Main_img}`)} alt={`a model in ${style_data.Style_Name} fashion`}/>
+                    <img className='style-card-image' src={require(`../assets/${style_data.Main_img}`)} alt={`a model in ${style_data.Style_Name} fashion`}/>
                 </div>
                 <div className='style-card-content'>
                     <h2 className='style-card-title'>{style_data.Style_Name}</h2>
