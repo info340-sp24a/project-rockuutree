@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './components/homepage/Homepage';
-import Profile from './components/profile/Profile'; //
-import StyleQuiz from './components/stylequiz/StyleQuiz';
-import StylePage from './components/StylePages/StylePage';
+import HomePage from './components/Homepage';
+import Profile from './components/Profile'; //
+import StyleQuiz from './components/StyleQuiz';
+import StylePage from './components/StylePage';
 
 
 function App(props) {

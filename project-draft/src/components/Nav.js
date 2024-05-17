@@ -1,15 +1,25 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useNavigation } from './NavScript';
-import '../../css/style.css';
-import home from "../../assets/home.svg";
-import shirt from "../../assets/shirt.svg";
-import palette from "../../assets/palette.svg";
-import store from "../../assets/store.svg";
-import person from "../../assets/person.svg";
+import '../index.css';
+import home from "../assets/home.svg";
+import shirt from "../assets/shirt.svg";
+import palette from "../assets/palette.svg";
+import store from "../assets/store.svg";
+import person from "../assets/person.svg";
+
+export const useNavigation = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  
+  return { isMenuOpen, toggleMenu };
+};
 
 const NavBar = () => {
   const { isMenuOpen, toggleMenu } = useNavigation();
-
+  
   return (
     <>
       <nav>
@@ -67,7 +77,6 @@ const NavBar = () => {
           </Link>
           <li role="presentation" aria-hidden="true" className="menu-tab-divider"></li>
           <Link to="/styles">Sign Out</Link>
-          {/* <li role="presentation" aria-hidden="true" className="menu-tab-divider"></li> */}
         </ul>
         <div className="menu-tab-footer">
           <p>&copy; 2024 styleU, Inc.</p>
@@ -84,7 +93,6 @@ const NavBar = () => {
           </ul>
         </div>
       </div>
-      {/* /* Nav Bar stuff end*/}
     </>
   );
 };

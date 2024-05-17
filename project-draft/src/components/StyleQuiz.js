@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../css/style.css';
-import NavBar from '../nav/Nav';
-import { Footer } from '../footer/Footer';
+import '../index.css';
+import NavBar from './Nav';
+import { Footer } from './Footer';
 
 const StyleQuiz = () => {
     return (
