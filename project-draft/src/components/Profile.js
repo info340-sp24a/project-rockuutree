@@ -6,7 +6,7 @@ import NavBar from './Nav';
 import COLORS from './Color';
 
 let userProfile = {
-  name: 'Ryan Doe',
+  name: 'Ryan Smith',
   email: 'styleu@cool.com',
   profilePicture: 'path/to/profile-picture.jpg',
   colors: [
