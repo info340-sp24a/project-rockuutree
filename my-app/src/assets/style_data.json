@@ -63,6 +63,13 @@
     "Main_img": "punk.jpeg"
   },
   {
+    "Style_Name": "Casual Chic",
+    "Description": "Effortlessly stylish and comfortable, casual chic combines relaxed clothing with sophisticated elements to create a polished yet laid-back look.",
+    "Common_Clothing_Pieces": "Jeans, blazers, simple T-shirts, ballet flats, statement handbags, minimalistic jewelry.",
+    "Short_Description": "Relaxed and stylish with a polished touch.",
+    "Main_img": "casual_chic.webp"
+  },
+  {
     "Style_Name": "Hip-hop",
     "Description": "Influenced by urban music and culture, hip-hop fashion is characterized by baggy silhouettes, bold logos, and flashy accessories, often reflecting a sense of confidence and self-expression.",
     "Common_Clothing_Pieces": "Oversized T-shirts, baggy jeans, tracksuits, sneakers (e.g., Air Jordans, Yeezys), baseball caps, chains, sunglasses, bomber jackets.",
