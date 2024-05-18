@@ -6,7 +6,7 @@ import hoodieImage from '../../assets/hoodie.png';
 import Lottie from "react-lottie";
 import animationData from "../bounce.json";
 import NavBar from '../nav/nav';
-import { Footer } from '../footer/footer';
+import Footer from '../footer/footer';
 
 const HomePage = () => {
   /* Nav Bar Stuff */

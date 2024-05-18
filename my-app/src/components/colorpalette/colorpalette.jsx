@@ -1,46 +1,27 @@
 import React from 'react';
 import { useState } from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
+import NavBar from '../nav/nav';
+import Footer from '../footer/footer';
 import '../../css/style.css';
 import hairColor from '../../assets/hair-color.jpeg';
 import eyeColor from '../../assets/eyes.jpeg';
 import veins from '../../assets/veins.jpeg';
-import jewelry from '../../assets/veins.jpeg';
+import jewelry from '../../assets/jewelry.jpeg';
 import tanning from '../../assets/tanning.jpeg';
 import colors from '../../assets/colors.jpeg';
 
-const ColorPalette = (props) => {
+const ColorPaletteQuiz = (props) => {
+  
   return (
     <div>
-      <nav>
-        <div className="logo">
-            <a href="#">styleU</a>
-        </div>
-        <div className="components_header text-center">
-          <a href="/">Home</a>
-          <a href="style-quiz.html">Style Quiz</a>
-          <a href="palette-analysis-index.html">Color Analysis Quiz</a>
-          <a href="style-page.html">Styles</a>
-        </div>
-        <div className="hamburger-menu" aria-label="Toggle Menu">
-            <a href="#"><span className="material-symbols-outlined">menu</span></a>
-        </div>
-      </nav>
+      <NavBar />
 
       <main>
         <Quiz />
       </main>
-
-      <footer>
-        <div className="footer-content">
-          <p>&copy; 2023 styleU. All rights reserved.</p>
-          <ul className="footer-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </footer>
+      
+      <Footer />
     </div>
   )
 };
@@ -93,7 +74,7 @@ function Quiz() {
 
 function Question(props) {
   const { questionNumber, question, image, options, back, next } = props;
-  const newThing = options.map((option) => { 
+  const arrOfOptions = options.map((option) => { 
     const transformed = (
     <div className="col-md-4">
       <div className="form-check selection rounded px-5 py-2 my-2">
@@ -113,7 +94,8 @@ function Question(props) {
             {questionNumber === "1" ? (
               ""
             ) : (
-              <span onClick={back} className="position-absolute top-0 start-0 material-symbols-outlined">arrow_back</span>
+              <button onClick={back} className="position-absolute top-0 start-0 material-symbols-outlined bg-transparent border border-0">arrow_back
+              </button>
             )}
           </div>
         </div>
@@ -127,7 +109,7 @@ function Question(props) {
         </div>
 
         <div className="choices row justify-content-center">
-          {newThing}
+          {arrOfOptions}
           <div>
             {questionNumber === "6" ? (
               <div className="center">
@@ -136,8 +118,12 @@ function Question(props) {
             ) : (
               <div>
                 <div className="quiz-bottom">
-                  <p className="h5 mt-2">Next</p>
-                  <span onClick={next} className="material-symbols-outlined">arrow_forward</span>
+                  <button onClick={next} className="bg-transparent border border-0">
+                  <div className="d-flex">
+                    <p className="h5 mt-2">Next</p>
+                    <span className="material-symbols-outlined">arrow_forward</span>
+                  </div>
+                  </button>
                 </div>
               </div>
             )}
@@ -148,12 +134,4 @@ function Question(props) {
   )
 }
 
-function IntroductionPage(props) {
-  return (
-    <div>
-      
-    </div>
-  );
-}
-
-export default ColorPalette;
+export default ColorPaletteQuiz;

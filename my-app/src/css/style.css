@@ -164,6 +164,21 @@ justify-content: right;
 align-items: center;
 }
 
+.text-bubble {
+    background-color: #D9D9D9;
+}
+
+.ready-statement {
+    padding: 0px 400px
+}
+
+.begin-quiz {
+    background-color: #80ED99;
+}
+
+.begin-quiz:hover {
+    background-color: #B6FAC5;
+}
 
 /* End of Palette Quiz */
 
@@ -352,6 +367,10 @@ font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.quiz-intro {
+    background-color: #4A4E69;
 }
 
 
