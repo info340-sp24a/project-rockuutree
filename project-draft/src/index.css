@@ -441,8 +441,10 @@ code {
   border-radius: 2em;
   border: none;
   color: #fff;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   margin-top: 1rem;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .left-container .rack {
@@ -529,12 +531,11 @@ code {
   color: #fff;
   border-radius: 41px;
   background: #275f4b;
-  font-weight: 500;
-  font-size: 1rem;
+  margin: 1rem;
   text-align: center;
-  padding: .5rem 0;
-  cursor: pointer;
+  padding: 1rem 0.5rem;
   text-decoration: none;
+  display: inline-block;
   width: 123px;
 }
     
@@ -649,7 +650,7 @@ h2 {
 
 .profile-form button {
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #37de8f;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -672,7 +673,7 @@ h2 {
 
 .add-card-form button {
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #37de8f;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -827,14 +828,12 @@ h2 {
         padding: 5rem;
         width: 1200px;
     }
-    .home_card .bottom {
-        font-size: 30px;
-    }
 
     .components_header a{
       font-size: 20px;
       padding: 0rem 2rem;
   }
+
 }
 
 @media (min-width: 1200px) {

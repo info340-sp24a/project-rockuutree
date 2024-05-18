@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../index.css';
+import { Link } from 'react-router-dom';
 import techImage from '../assets/tech.jpeg';
 import hoodieImage from '../assets/hoodie.png';
 import Lottie from "react-lottie";
-import animationData from "./bounce.json";
+import animationData from "../assets/bounce.json";
 import NavBar from './Nav';
 import { Footer } from './Footer';
 
-const HomePage = () => {
+const HomePage = (props) => {
   /* Nav Bar Stuff */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -37,9 +37,11 @@ const HomePage = () => {
                   Picking the correct color pallette for your personal features is essential for your personal style.
                   Figure out what compliments you the most and take this quiz!
                 </p>
-                <button className="quiz" aria-label="Toggle Palette">
-                  Pallette Quiz
-                </button>
+                <div>                
+                </div>
+                <Link to="/palette" className="quiz" aria-label="Toggle Style">
+                  Palette Quiz
+                </Link>
               </div>
             </div>
             <div className="right-container">
@@ -77,9 +79,9 @@ const HomePage = () => {
                 <h2>Style Quiz</h2>
                 <p>Don't be buying pieces that don't fit your vibe. Figure out what you like with this quiz!</p>
                 <div className="text-center">
-                  <button className="quiz" aria-label="Toggle Style">
-                    Style Quiz
-                  </button>
+                <Link to="/style-quiz" className="quiz" aria-label="Toggle Style">
+                  Style Quiz
+                </Link>
                 </div>
               </div>
             </div>
@@ -88,12 +90,12 @@ const HomePage = () => {
           <div className="home_card mb-4">
             <div className="bottom">
               <h3>Want to Explore and Experiment?</h3>
-              <button className="explore" aria-label="Toggle Color" onClick={() => window.location.href = 'palette-results-index.html'}>
-                Color Palletes
-              </button>
-              <button className="explore" aria-label="Toggle Style Closet">
-                Style Closet
-              </button>
+                <Link to="/palette" className="explore" aria-label="Toggle Color">
+                  Color Palettes
+                </Link>
+                <Link to="/styles" className="explore" aria-label="Toggle Style Closet">
+                  Style Closet
+                </Link>
             </div>
           </div>
         </div>
