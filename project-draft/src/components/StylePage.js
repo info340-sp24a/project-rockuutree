@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import ReactDOM from 'react-dom/client';
 import NavBar from './Nav';
 import { Footer } from './Footer';
 import '../index.css';

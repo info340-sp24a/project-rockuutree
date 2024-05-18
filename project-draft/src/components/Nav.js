@@ -17,7 +17,7 @@ export const useNavigation = () => {
   return { isMenuOpen, toggleMenu };
 };
 
-const NavBar = () => {
+const NavBar = (props) => {
   const { isMenuOpen, toggleMenu } = useNavigation();
   
   return (

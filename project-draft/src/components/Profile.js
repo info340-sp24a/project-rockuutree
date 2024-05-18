@@ -1,6 +1,5 @@
 // Profile.jsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../index.css';
 import me from '../assets/mapleMeFace.png';
 import NavBar from './Nav';
