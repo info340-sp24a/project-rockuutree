@@ -4,6 +4,7 @@ import HomePage from './components/Homepage';
 import Profile from './components/Profile'; //
 import StylePage from './components/StylePage';
 import StyleQuiz from './components/StyleQuiz';
+import ColorPalette from './components/ColorPalette';
 
 
 function App(props) {
@@ -14,8 +15,8 @@ function App(props) {
         <Route path="/" element={<HomePage />} />
         <Route path="/styles" element={<StylePage style_data={style_data} />} />
         <Route path="/style-quiz" element={<StyleQuiz />} />
-        {/* ... (other routes) */}
-        <Route path="/profile" element={<Profile />} /> {/* Add the profile route */}
+        <Route path="/palette-analysis" element={<ColorPalette />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
