@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD:project-draft/src/components/Homepage.js
 import '../index.css';
 import { Link } from 'react-router-dom';
 import techImage from '../assets/tech.jpeg';
@@ -10,18 +9,6 @@ import NavBar from './Nav';
 import { Footer } from './Footer';
 
 const HomePage = (props) => {
-=======
-import { Link } from 'react-router-dom';
-import '../../css/homestyle.css';
-import techImage from '../../assets/tech.jpeg';
-import hoodieImage from '../../assets/hoodie.png';
-import Lottie from "react-lottie";
-import animationData from "../bounce.json";
-import NavBar from '../nav/nav';
-import { Footer } from '../footer/footer';
-
-const HomePage = () => {
->>>>>>> Carlos:my-app/src/components/homepage/homepage.jsx
   /* Nav Bar Stuff */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -30,10 +17,6 @@ const HomePage = () => {
   return (
     <>
       <NavBar />
-<<<<<<< HEAD:project-draft/src/components/Homepage.js
-=======
-
->>>>>>> Carlos:my-app/src/components/homepage/homepage.jsx
       <main>
         <div className="home_container">
 
