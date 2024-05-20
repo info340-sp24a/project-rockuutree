@@ -95,6 +95,28 @@ code {
 .common-clothing-pieces{
   display: none;
 }
+
+.read-more-button a{
+  color:#9A8C98;
+  text-decoration: none;
+}
+
+
+
+.style-page .content-container {
+  width: 80%;
+  margin: 0 auto; 
+  padding: 20px;
+}
+
+.style-page .search-bar {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 
 
@@ -125,19 +147,8 @@ code {
 
 }
 
-.style-page .content-container {
-  width: 80%;
-  margin: 0 auto; 
-  padding: 20px;
-}
 
-.style-page .search-bar {
-  width: 100%;
-  margin-bottom: 20px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -216,6 +227,10 @@ code {
     margin: 0 24px 0 24px;
   }
   
+  p.read-more-button {
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
 
 }
 
