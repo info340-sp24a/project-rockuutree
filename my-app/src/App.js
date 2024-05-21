@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './components/homepage/homepage';
@@ -6,15 +7,23 @@ import HomePage from './components/homepage/homepage';
 import PaletteAnalysisPage from './components/colorpalette/colorpalette';
 import StyleQuiz from './components/stylequiz/StyleQuiz';
 import IntroductionPage from './components/colorpalette/IntroductionPage';
+import ColorResultsPage from './components/colorpalette/results';
 
 function App() {
+  const [userColorPalette, setUserColorPalette] = useState(null);
+
+  function changeUserColorPalette(colorPalette) {
+    setUserColorPalette(colorPalette);
+  }
+
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/style-quiz" element={<StyleQuizPage />} /> */}
-        <Route path="/palette-analysis/quiz" element={<PaletteAnalysisPage />} />
+        <Route path="/palette-analysis/quiz" element={<PaletteAnalysisPage changeUserColorPalette={changeUserColorPalette}/>} />
         <Route path="/palette-analysis/introduction" element={<IntroductionPage />} />
+        <Route path="/palette-analysis/results" element={<ColorResultsPage result={userColorPalette}/>} />
         <Route path="/styles" element={<StyleQuiz />} />
       </Routes>
     </Router>

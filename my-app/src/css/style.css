@@ -122,9 +122,15 @@ background-color: white;
 font-size: 20px;
 }
 
-.quiz-bottom {
+.quiz-bottom-right {
 display: flex;
 justify-content: right;
+align-items: center;
+}
+
+.quiz-bottom-left {
+display: flex;
+justify-content: left;
 align-items: center;
 }
 
