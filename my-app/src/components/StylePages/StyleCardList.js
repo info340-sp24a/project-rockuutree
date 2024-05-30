@@ -1,15 +1,29 @@
-import React from 'react';
-
+import React, {useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Button } from 'react-bootstrap';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 export function StyleCard(props){
     const { style_data } = props;
+    const [isFavorited, setIsFavorited ] = useState(false);
+
+    const handleFavoritedButtonClick = (event) => {
+        setIsFavorited(!isFavorited);
+    }
+
+    let buttonColor = '#FAF9F6';
 
     return(
         <div className='style-Cards'>
             <div className='style-card-container'>
-                <div>
+            <div className='image-icon-container'>
                     <img className='style-card-image' src={require(`../../assets/${style_data.Main_img}`)} alt={`a model in ${style_data.Style_Name} fashion`}/>
+                    <i 
+                        className="bi bi-heart-fill favoriteIcon" 
+                        onClick={handleFavoritedButtonClick}
+                        style={{ color: isFavorited ? 'red' : '#FAF9F6' }}
+                    ></i>
                 </div>
                 <div className='style-card-content'>
                     <h2 className='style-card-title'>{style_data.Style_Name}</h2>
