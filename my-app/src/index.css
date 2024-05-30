@@ -117,6 +117,12 @@ code {
   border-radius: 4px;
 }
 
+.favoriteIcon{
+  display: none;
+}
+
+
+
 /* Extra small devices (phones, 600px and down) */
 
 
@@ -152,6 +158,28 @@ code {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) {
+  .favoriteIcon{
+    display:block;
+  }
+
+  .image-icon-container {
+    position: relative;
+  }
+  
+  .style-card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px 0 0 16px;
+  }
+  
+  .favoriteIcon {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: color 0.3s;
+  }
   .long-description{
     display: block;
   }
@@ -231,6 +259,8 @@ code {
     margin-top: 12px;
     margin-bottom: 16px;
   }
+
+  
 
 }
 
