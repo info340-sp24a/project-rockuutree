@@ -7,6 +7,7 @@ import HomePage from './components/homepage/homepage';
 // import PaletteAnalysisPage from './components/PaletteAnalysisPage';
 import StyleQuiz from './components/stylequiz/StyleQuiz';
 import StylePage from './components/StylePages/StylePage.js';
+import { StyleCardDetailPage } from './components/StylePages/StyleCardDetailPage.js';
 
 function App(props) {
   const {style_data} = props;
@@ -17,6 +18,7 @@ function App(props) {
         {/* <Route path="/style-quiz" element={<StyleQuizPage />} />
         <Route path="/palette-analysis" element={<PaletteAnalysisPage />} /> */}
         <Route path="/styles" element={<StylePage style_data={style_data} />} />
+        <Route path="/styles/:styleName" element={<StyleCardDetailPage style_data={style_data} />} />
       </Routes>
     </Router>
     
