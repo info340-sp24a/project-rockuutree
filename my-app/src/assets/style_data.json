@@ -8,6 +8,8 @@
     "Short_Description": "Timeless sophistication with tailored fits and traditional patterns.",
     "Styling_Tips": ["Pair a button-down shirt with a plaid skirt for a classic look.", "Add a blazer over a polo shirt for a polished touch.", "Wear loafers with tailored trousers for a refined appearance.", "Accessorize with pearls to elevate your outfit.", "Choose A-line skirts for a flattering silhouette."],
     "Related_Styles": ["Casual Chic", "Urban Chic", "Vintage Glamour"],
+    "Recommended_Stores": ["J.Crew", "Brooks Brothers", "Ralph Lauren", "Lands' End"],
+    "Recommended_Store_Links": ["https://www.jcrew.com", "https://www.brooksbrothers.com", "https://www.ralphlauren.com", "https://www.landsend.com"],
     "Main_img": "preppy.jpeg"
   },
   {
@@ -19,6 +21,8 @@
     "Short_Description": "Relaxed and stylish with a polished touch.",
     "Styling_Tips": ["Combine a simple T-shirt with a blazer for a chic look.", "Pair jeans with ballet flats for a comfortable yet stylish outfit.", "Use minimalistic jewelry to enhance your ensemble without overwhelming it.", "Carry a statement handbag to add a touch of sophistication.", "Opt for casual dresses with refined cuts for a balanced appearance."],
     "Related_Styles": ["Classic/Preppy", "Urban Chic", "Minimalist"],
+    "Recommended_Stores": ["Zara", "H&M", "Madewell", "Banana Republic"],
+    "Recommended_Store_Links": ["https://www.zara.com", "https://www.hm.com", "https://www.madewell.com", "https://www.bananarepublic.com"],
     "Main_img": "casual_chic.webp"
   },
   {
@@ -30,6 +34,8 @@
     "Short_Description": "Soft elegance with lace and floral prints.",
     "Styling_Tips": ["Opt for floral dresses to enhance the romantic vibe.", "Wear lace blouses with chiffon skirts for a delicate look.", "Accessorize with pearls and pastel colors for added elegance.", "Add ribbon headbands to your hairstyle for a whimsical touch.", "Choose ballet flats to complete the graceful ensemble."],
     "Related_Styles": ["Bohemian", "Vintage", "Cottagecore"],
+    "Recommended_Stores": ["Anthropologie", "Free People", "Reformation", "ASOS"],
+    "Recommended_Store_Links": ["https://www.anthropologie.com", "https://www.freepeople.com", "https://www.thereformation.com", "https://www.asos.com"],
     "Main_img": "romantic.png"
   },
   {
@@ -41,6 +47,8 @@
     "Short_Description": "Modern sophistication with sleek designs and statement accessories.",
     "Styling_Tips": ["Pair tailored blazers with high-waisted trousers for a sharp look.", "Opt for structured dresses for a polished appearance.", "Use statement heels to elevate your outfit.", "Add oversized sunglasses for a chic urban touch.", "Accessorize with metallic jewelry to complete your ensemble."],
     "Related_Styles": ["Casual Chic", "Minimalist", "Techwear"],
+    "Recommended_Stores": ["Mango", "Topshop", "AllSaints", "COS"],
+    "Recommended_Store_Links": ["https://shop.mango.com", "https://www.topshop.com", "https://www.us.allsaints.com", "https://www.cosstores.com"],
     "Main_img": "urban_chic.webp"
   },
   {
@@ -52,6 +60,8 @@
     "Short_Description": "Rugged yet stylish Western-inspired attire.",
     "Styling_Tips": ["Pair denim jackets with plaid shirts for a classic Western look.", "Wear cowboy boots with suede skirts for a chic touch.", "Add fringed vests for an extra layer of style.", "Accessorize with Stetson hats to complete the cowboy look.", "Choose leather belts with buckle accents for authenticity."],
     "Related_Styles": ["Bohemian", "Vintage Americana", "Utilitarian"],
+    "Recommended_Stores": ["Sheplers", "Boot Barn", "Cavender's", "Levi's"],
+    "Recommended_Store_Links": ["https://www.sheplers.com", "https://www.bootbarn.com", "https://www.cavenders.com", "https://www.levi.com"],
     "Main_img": "western.jpeg"
   },
   {
@@ -63,6 +73,8 @@
     "Short_Description": "Dark and dramatic allure with black clothing and lace.",
     "Styling_Tips": ["Wear black dresses with lace details for a dramatic effect.", "Pair corsets with velvet skirts for a Victorian-inspired look.", "Add lace-up boots for a gothic touch.", "Accessorize with chokers and dark lipstick to enhance the mystery.", "Choose ornate jewelry to complete the dramatic style."],
     "Related_Styles": ["Punk", "Avant-Garde", "Vintage"],
+    "Recommended_Stores": ["Hot Topic", "Killstar", "RebelsMarket", "Dolls Kill"],
+    "Recommended_Store_Links": ["https://www.hottopic.com", "https://www.killstar.com", "https://www.rebelsmarket.com", "https://www.dollskill.com"],
     "Main_img": "gothic.jpg"
   },
   {
@@ -74,6 +86,8 @@
     "Short_Description": "Urban edge with plain tees and oversized coats.",
     "Styling_Tips": ["Combine hoodies with jogger pants for a relaxed look.", "Wear graphic T-shirts to showcase personal style.", "Add bomber jackets for an extra layer of edge.", "Choose sneakers to complete the streetwear outfit.", "Accessorize with baseball caps and oversized accessories for a bold statement."],
     "Related_Styles": ["Techwear", "Hip-hop", "Casual Chic"],
+    "Recommended_Stores": ["Supreme", "Off-White", "Nike", "Adidas"],
+    "Recommended_Store_Links": ["https://www.supremenewyork.com", "https://www.off---white.com", "https://www.nike.com", "https://www.adidas.com"],
     "Main_img": "streetwear.jpeg"
   },
   {
@@ -85,6 +99,8 @@
     "Short_Description": "Nostalgic pastoral aesthetic with soft, romantic silhouettes.",
     "Styling_Tips": ["Wear flowy floral dresses for a soft, romantic look.", "Pair lace-trimmed blouses with midi skirts for a vintage touch.", "Add straw sun hats to complete the pastoral aesthetic.", "Choose knitted cardigans for layering.", "Accessorize with wicker basket bags for a wholesome feel."],
     "Related_Styles": ["Bohemian", "Romantic", "Vintage"],
+    "Recommended_Stores": ["Etsy", "Free People", "Urban Outfitters", "ModCloth"],
+    "Recommended_Store_Links": ["https://www.etsy.com", "https://www.freepeople.com", "https://www.urbanoutfitters.com", "https://www.modcloth.com"],
     "Main_img": "cottagecore.jpeg"
   },
   {
@@ -96,6 +112,8 @@
     "Short_Description": "Clean and understated fashion with neutral colors.",
     "Styling_Tips": ["Opt for plain T-shirts paired with tailored trousers for a sleek look.", "Wear shift dresses for a simple yet elegant appearance.", "Add oversized coats for a chic touch.", "Choose monochromatic outfits for a cohesive style.", "Accessorize with minimalistic jewelry to keep the look understated."],
     "Related_Styles": ["Urban Chic", "Casual Chic", "Techwear"],
+    "Recommended_Stores": ["Uniqlo", "Everlane", "COS", "Muji"],
+    "Recommended_Store_Links": ["https://www.uniqlo.com", "https://www.everlane.com", "https://www.cosstores.com", "https://www.muji.com"],
     "Main_img": "minimalist.png"
   },
   {
@@ -107,6 +125,8 @@
     "Short_Description": "Free-spirited style with flowy silhouettes and vibrant prints.",
     "Styling_Tips": ["Wear maxi dresses for a relaxed and flowy look.", "Pair peasant blouses with flared jeans for a vintage touch.", "Add fringe vests to enhance the Boho vibe.", "Choose floppy hats for a stylish accessory.", "Accessorize with layered jewelry to complete the eclectic style."],
     "Related_Styles": ["Cottagecore", "Romantic", "Vintage"],
+    "Recommended_Stores": ["Free People", "Anthropologie", "Spell & The Gypsy", "Urban Outfitters"],
+    "Recommended_Store_Links": ["https://www.freepeople.com", "https://www.anthropologie.com", "https://www.spelldesigns.com", "https://www.urbanoutfitters.com"],
     "Main_img": "Bohemian-Style.jpeg"
   },
   {
@@ -118,6 +138,8 @@
     "Short_Description": "Luxurious and sophisticated fashion for formal occasions.",
     "Styling_Tips": ["Opt for sequined gowns to stand out at formal events.", "Wear silk evening dresses for a touch of elegance.", "Add crystal-embellished heels to elevate your outfit.", "Choose clutch purses for a refined accessory.", "Accessorize with chandelier earrings and statement necklaces to complete the glamorous look."],
     "Related_Styles": ["Vintage Glamour", "Classic/Preppy", "Urban Chic"],
+    "Recommended_Stores": ["Nordstrom", "Saks Fifth Avenue", "Bloomingdale's", "Neiman Marcus"],
+    "Recommended_Store_Links": ["https://www.nordstrom.com", "https://www.saksfifthavenue.com", "https://www.bloomingdales.com", "https://www.neimanmarcus.com"],
     "Main_img": "glamourous.jpeg"
   },
   {
@@ -129,6 +151,8 @@
     "Short_Description": "Nostalgic mix of past fashion trends.",
     "Styling_Tips": ["Wear A-line dresses for a classic vintage look.", "Pair high-waisted pants with retro blouses for a nostalgic touch.", "Add cat-eye glasses to enhance the retro vibe.", "Choose platform shoes for an authentic vintage feel.", "Accessorize with vintage jewelry to complete the nostalgic style."],
     "Related_Styles": ["Vintage Americana", "Vintage Glamour", "Romantic"],
+    "Recommended_Stores": ["ModCloth", "Unique Vintage", "Beyond Retro", "Rokit"],
+    "Recommended_Store_Links": ["https://www.modcloth.com", "https://www.unique-vintage.com", "https://www.beyondretro.com", "https://www.rokit.co.uk"],
     "Main_img": "vintage.jpg"
   },
   {
@@ -140,6 +164,8 @@
     "Short_Description": "Sporty comfort for everyday wear.",
     "Styling_Tips": ["Pair leggings with oversized sweatshirts for a relaxed look.", "Wear sports bras under track jackets for a sporty ensemble.", "Choose jogger pants for a comfortable yet stylish outfit.", "Add sneakers to complete the athleisure look.", "Accessorize with baseball caps for a sporty touch."],
     "Related_Styles": ["Streetwear", "Techwear", "Casual Chic"],
+    "Recommended_Stores": ["Lululemon", "Nike", "Adidas", "Athleta"],
+    "Recommended_Store_Links": ["https://www.lululemon.com", "https://www.nike.com", "https://www.adidas.com", "https://athleta.gap.com"],
     "Main_img": "athleisure.jpg"
   },
   {
@@ -151,6 +177,8 @@
     "Short_Description": "Retro-inspired Americana style celebrating classic American fashion.",
     "Styling_Tips": ["Wear denim overalls with chambray shirts for a classic look.", "Add varsity jackets for an all-American touch.", "Pair high-waisted denim shorts with vintage bandanas for a nostalgic feel.", "Choose cowboy boots to complete the Americana style.", "Accessorize with retro baseball caps for a sporty look."],
     "Related_Styles": ["Western", "Vintage", "Bohemian"],
+    "Recommended_Stores": ["Levi's", "Wrangler", "Carhartt", "Pendleton"],
+    "Recommended_Store_Links": ["https://www.levi.com", "https://www.wrangler.com", "https://www.carhartt.com", "https://www.pendleton-usa.com"],
     "Main_img": "vintage_americana.webp"
   },
   {
@@ -162,6 +190,8 @@
     "Short_Description": "Rebellious attitude with DIY elements and bold prints.",
     "Styling_Tips": ["Wear studded jackets with ripped jeans for a classic punk look.", "Pair band T-shirts with plaid skirts for a rebellious touch.", "Add leather boots to enhance the edgy vibe.", "Choose fishnet stockings for a bold statement.", "Accessorize with spiked jewelry and Mohawk hairstyles to complete the punk style."],
     "Related_Styles": ["Gothic", "Streetwear", "Avant-Garde"],
+    "Recommended_Stores": ["Hot Topic", "Killstar", "Tripp NYC", "Attitude Clothing"],
+    "Recommended_Store_Links": ["https://www.hottopic.com", "https://www.killstar.com", "https://www.trippnyc.com", "https://www.attitudeclothing.co.uk"],
     "Main_img": "punk.jpeg"
   },
   {
@@ -173,6 +203,8 @@
     "Short_Description": "Functional fashion inspired by military uniforms.",
     "Styling_Tips": ["Wear cargo pants with utility jackets for a practical look.", "Pair combat boots with camo prints for an authentic feel.", "Add structured vests to enhance the utilitarian style.", "Choose khaki shirts for a military-inspired touch.", "Accessorize with aviator sunglasses to complete the look."],
     "Related_Styles": ["Techwear", "Urban Chic", "Western"],
+    "Recommended_Stores": ["Army Surplus World", "5.11 Tactical", "Carhartt", "Patagonia"],
+    "Recommended_Store_Links": ["https://www.armysurplusworld.com", "https://www.511tactical.com", "https://www.carhartt.com", "https://www.patagonia.com"],
     "Main_img": "utilitarian.jpg"
   },
   {
@@ -184,6 +216,8 @@
     "Short_Description": "Vacation-ready with bright colors and lightweight fabrics.",
     "Styling_Tips": ["Wear flowy maxi dresses for a relaxed vacation look.", "Pair Hawaiian shirts with linen shorts for a tropical vibe.", "Add straw hats to complete the beachwear ensemble.", "Choose espadrilles for comfortable and stylish footwear.", "Accessorize with oversized sunglasses for a chic touch."],
     "Related_Styles": ["Bohemian", "Cottagecore", "Casual Chic"],
+    "Recommended_Stores": ["Tommy Bahama", "J.Crew", "H&M", "Zara"],
+    "Recommended_Store_Links": ["https://www.tommybahama.com", "https://www.jcrew.com", "https://www.hm.com", "https://www.zara.com"],
     "Main_img": "tropical.jpeg"
   },
   {
@@ -195,6 +229,8 @@
     "Short_Description": "Experimental and unconventional boundary-pushing aesthetics.",
     "Styling_Tips": ["Wear asymmetric garments to create a bold look.", "Opt for architectural silhouettes for an avant-garde vibe.", "Add avant-garde accessories to enhance your outfit.", "Choose mixed textures for a unique and artistic appearance.", "Accessorize with conceptual jewelry to complete the avant-garde style."],
     "Related_Styles": ["Punk", "Gothic", "Techwear"],
+    "Recommended_Stores": ["Comme des Garçons", "Rick Owens", "Yohji Yamamoto", "Maison Margiela"],
+    "Recommended_Store_Links": ["https://www.comme-des-garcons.com", "https://www.rickowens.eu", "https://www.yohjiyamamoto.co.jp", "https://www.maisonmargiela.com"],
     "Main_img": "avant-garde.jpg"
   },
   {
@@ -206,6 +242,8 @@
     "Short_Description": "Functional fashion infused with technology for urban adventurers.",
     "Styling_Tips": ["Wear waterproof jackets for practical and stylish protection.", "Choose cargo pants with modular attachments for versatility.", "Add tech-enhanced backpacks to complete the look.", "Opt for reflective sneakers for a futuristic touch.", "Accessorize with utility belts for added functionality."],
     "Related_Styles": ["Utilitarian", "Urban Chic", "Minimalist"],
+    "Recommended_Stores": ["Acronym", "Nike ACG", "Guerrilla-Group", "Stone Island"],
+    "Recommended_Store_Links": ["https://acrnm.com", "https://www.nike.com/acg", "https://www.guerrilla-group.co", "https://www.stoneisland.com"],
     "Main_img": "techwear-fashion.jpg"
   },
   {
@@ -217,6 +255,8 @@
     "Short_Description": "Elegance and glamour reminiscent of old Hollywood.",
     "Styling_Tips": ["Wear satin bias-cut gowns for a luxurious look.", "Pair fur stoles with embellished cocktail dresses for a glamorous appearance.", "Add velvet opera coats to elevate your outfit.", "Choose pearl necklaces for a touch of elegance.", "Accessorize with feathered headpieces to complete the vintage glamour style."],
     "Related_Styles": ["Glamorous", "Classic/Preppy", "Vintage"],
+    "Recommended_Stores": ["Revolve", "BHLDN", "Nordstrom", "Farfetch"],
+    "Recommended_Store_Links": ["https://www.revolve.com", "https://www.bhldn.com", "https://www.nordstrom.com", "https://www.farfetch.com"],
     "Main_img": "vintage_glamour.jpeg"
   },
   {
@@ -228,6 +268,8 @@
     "Short_Description": "Confident style with baggy silhouettes and flashy accessories.",
     "Styling_Tips": ["Wear oversized T-shirts with baggy jeans for a classic hip-hop look.", "Pair tracksuits with sneakers for a sporty vibe.", "Add bomber jackets to enhance the urban style.", "Choose baseball caps and chains for a bold statement.", "Accessorize with sunglasses and bucket hats to complete the hip-hop outfit."],
     "Related_Styles": ["Streetwear", "Punk", "Techwear"],
+    "Recommended_Stores": ["Supreme", "Nike", "Adidas", "Puma"],
+    "Recommended_Store_Links": ["https://www.supremenewyork.com", "https://www.nike.com", "https://www.adidas.com", "https://us.puma.com"],
     "Main_img": "hip-hop.jpeg"
   }
 ]

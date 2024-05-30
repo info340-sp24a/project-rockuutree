@@ -122,6 +122,34 @@ code {
 }
 
 
+.store-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.store-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.store-card:hover {
+  transform: scale(1.05);
+}
+
+.store-card-content {
+  padding: 16px;
+}
+
+.store-card img {
+  width: 100%;
+  height: auto;
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 

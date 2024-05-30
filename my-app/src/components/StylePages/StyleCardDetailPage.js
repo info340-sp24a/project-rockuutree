@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import NavBar from '../nav/nav';
 import { Footer } from '../footer/footer';
 import { StyleCard } from "./StyleCardList";
+import StoreCardList from './StoreCardList';
 
 export function StyleCardDetailPage(props){
     const {style_data} = props;
@@ -28,6 +29,8 @@ export function StyleCardDetailPage(props){
                     <p className='detailed-description'>{style.Detailed_Description}</p>
                     <CommonClothingPieces commonClothingPieces={style.Common_Clothing_Pieces} />
                     <StylingTips stylingTips={style.Styling_Tips} />
+                    <StoreCardList recommendedStores={style.Recommended_Stores} recommendedStoreLinks={style.Recommended_Store_Links} 
+                    />
                     <RelatedStyles relatedStyles={style.Related_Styles} styleData={style_data} />
                 </div>
             </main>
