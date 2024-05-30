@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -29,8 +30,11 @@ export function StyleCard(props){
                     <h2 className='style-card-title'>{style_data.Style_Name}</h2>
                     <p className='long-description'>{style_data.Description}</p>
                     <p className='short-description'>{style_data.Short_Description}</p>
-                    <p className='common-clothing-pieces'>{`Common Clothing Pieces: ${style_data.Common_Clothing_Pieces}`}</p>
-                    <p className='read-more-button'><a href=''>Read More</a></p>
+                    {/* I think this will fit better in the individual style card page when users click read more */}
+                    {/* <p className='common-clothing-pieces'>{`Common Clothing Pieces: ${style_data.Common_Clothing_Pieces}`}</p> */}
+                    <p className='read-more-button'>
+                        <Link to={`/styles/${style_data.URL_Name}`}>Read More</Link>
+                    </p>
                 </div>
             </div>
         </div>
