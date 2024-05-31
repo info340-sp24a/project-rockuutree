@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import NavBar from '../nav/nav';
 import { Footer } from '../footer/footer';
@@ -15,22 +15,36 @@ export function StyleCardDetailPage(props){
      const toggleMenu = () => {
          setIsMenuOpen(!isMenuOpen);
      };
+
+     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [styleName]);
  
 
     return(
         <div className="style-card-detail-page">
             <NavBar/>
             <main>
-                <div className="main-image-header-container">
-                    {/* <img className='style-card-image' src={require(`../../assets/${style_data.Main_img}`)} alt={`a model in ${style_data.Style_Name} fashion`}/> */}
                     <h1 className="style-page-title">{style.Style_Name}</h1>
-                </div>
+                    <div className="main-image-detail-container">
+                        <img className='style-page-image' src={require(`../../assets/${style.Main_img}`)} alt={`a model in ${style.Style_Name} fashion`}/>
+                        <p className='detailed-description'>{style.Detailed_Description}</p>
+                    </div>
                     <div className='style-card-detail-content'>
-                    <p className='detailed-description'>{style.Detailed_Description}</p>
-                    <CommonClothingPieces commonClothingPieces={style.Common_Clothing_Pieces} />
-                    <StylingTips stylingTips={style.Styling_Tips} />
-                    <StoreCardList recommendedStores={style.Recommended_Stores} recommendedStoreLinks={style.Recommended_Store_Links} 
-                    />
+                    
+                    <div className="lists-container">
+                        <div className="clothing-list">
+                            <h2 className="style-page-deatil-subheader">Common Clothing Pieces</h2>
+                            <CommonClothingPieces commonClothingPieces={style.Common_Clothing_Pieces} />
+                        </div>
+                        <div className="tips-list">
+                            <h2 className="style-page-deatil-subheader">Styling Tips</h2>
+                            <StylingTips stylingTips={style.Styling_Tips} />
+                        </div>
+                    </div>
+                    <h2 className="style-page-deatil-subheader">Recommended Stores</h2>
+                    <StoreCardList recommendedStores={style.Recommended_Stores} recommendedStoreLinks={style.Recommended_Store_Links} recommendedStoreImages={style.Store_Images} />
+                    <h2 className="style-page-deatil-subheader">Related Styles</h2>
                     <RelatedStyles relatedStyles={style.Related_Styles} styleData={style_data} />
                 </div>
             </main>
@@ -42,15 +56,11 @@ export function StyleCardDetailPage(props){
 export function CommonClothingPieces(props){
     const { commonClothingPieces } = props;
 
-    const makeCommonClothingPiecesList = () => {
-        return commonClothingPieces.map((piece, index) => (
-            <li key={index}>{piece}</li>
-        ));
-    };
-
     return (
-        <ul>
-            {makeCommonClothingPiecesList()}
+        <ul className="common-clothing-pieces">
+            {commonClothingPieces.map((piece, index) => (
+                <li key={index}>{piece}</li>
+            ))}
         </ul>
     );
 }
@@ -65,7 +75,7 @@ export function StylingTips(props) {
     };
 
     return (
-        <ul>
+        <ul className="style-tip">
             {makeStylingTipsList()}
         </ul>
     );
@@ -83,7 +93,7 @@ export function RelatedStyles(props) {
 
     return (
         <div className="related-styles">
-            <h2>Related Styles</h2>
+           
             <div className="related-styles-list">
                 {makeRelatedStylesList()}
             </div>

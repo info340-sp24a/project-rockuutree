@@ -10,7 +10,8 @@
     "Related_Styles": ["Casual Chic", "Urban Chic", "Vintage Glamour"],
     "Recommended_Stores": ["J.Crew", "Brooks Brothers", "Ralph Lauren", "Lands' End"],
     "Recommended_Store_Links": ["https://www.jcrew.com", "https://www.brooksbrothers.com", "https://www.ralphlauren.com", "https://www.landsend.com"],
-    "Main_img": "preppy.jpeg"
+    "Main_img": "preppy.jpeg",
+    "Store_Images": ["jcrew.jpeg", "brooksbrothers.jpeg", "ralphlauren.jpeg", "landsend.jpeg"]
   },
   {
     "Style_Name": "Casual Chic",
@@ -23,7 +24,8 @@
     "Related_Styles": ["Classic/Preppy", "Urban Chic", "Minimalist"],
     "Recommended_Stores": ["Zara", "H&M", "Madewell", "Banana Republic"],
     "Recommended_Store_Links": ["https://www.zara.com", "https://www.hm.com", "https://www.madewell.com", "https://www.bananarepublic.com"],
-    "Main_img": "casual_chic.webp"
+    "Main_img": "casual_chic.webp",
+    "Store_Images": ["zara.webp", "h&m.jpeg", "madewell.png", "bananarepublic.webp"]
   },
   {
     "Style_Name": "Romantic",
@@ -36,7 +38,8 @@
     "Related_Styles": ["Bohemian", "Vintage", "Cottagecore"],
     "Recommended_Stores": ["Anthropologie", "Free People", "Reformation", "ASOS"],
     "Recommended_Store_Links": ["https://www.anthropologie.com", "https://www.freepeople.com", "https://www.thereformation.com", "https://www.asos.com"],
-    "Main_img": "romantic.png"
+    "Main_img": "romantic.png",
+    "Store_Images": ["anthropologie.webp", "freepeople.webp", "reformation.webp", "asos.png"]
   },
   {
     "Style_Name": "Urban Chic",
@@ -49,7 +52,8 @@
     "Related_Styles": ["Casual Chic", "Minimalist", "Techwear"],
     "Recommended_Stores": ["Mango", "Topshop", "AllSaints", "COS"],
     "Recommended_Store_Links": ["https://shop.mango.com", "https://www.topshop.com", "https://www.us.allsaints.com", "https://www.cosstores.com"],
-    "Main_img": "urban_chic.webp"
+    "Main_img": "urban_chic.webp",
+    "Store_Images": ["mango.webp", "topshop.jpeg", "allsaints.jpeg", "cos.jpeg"]
   },
   {
     "Style_Name": "Western",
@@ -62,7 +66,8 @@
     "Related_Styles": ["Bohemian", "Vintage Americana", "Utilitarian"],
     "Recommended_Stores": ["Sheplers", "Boot Barn", "Cavender's", "Levi's"],
     "Recommended_Store_Links": ["https://www.sheplers.com", "https://www.bootbarn.com", "https://www.cavenders.com", "https://www.levi.com"],
-    "Main_img": "western.jpeg"
+    "Main_img": "western.jpeg",
+    "Store_Images": ["sheplers.jpeg", "bootbarn.jpeg", "cavenders.jpg", "levis.webp"]
   },
   {
     "Style_Name": "Gothic",
@@ -75,7 +80,8 @@
     "Related_Styles": ["Punk", "Avant-Garde", "Vintage"],
     "Recommended_Stores": ["Hot Topic", "Killstar", "RebelsMarket", "Dolls Kill"],
     "Recommended_Store_Links": ["https://www.hottopic.com", "https://www.killstar.com", "https://www.rebelsmarket.com", "https://www.dollskill.com"],
-    "Main_img": "gothic.jpg"
+    "Main_img": "gothic.jpg",
+    "Store_Images": ["hottopic.png", "killstar.jpeg", "rebelsmarket.png", "dollskill.webp"]
   },
   {
     "Style_Name": "Streetwear",
@@ -88,7 +94,8 @@
     "Related_Styles": ["Techwear", "Hip-hop", "Casual Chic"],
     "Recommended_Stores": ["Supreme", "Off-White", "Nike", "Adidas"],
     "Recommended_Store_Links": ["https://www.supremenewyork.com", "https://www.off---white.com", "https://www.nike.com", "https://www.adidas.com"],
-    "Main_img": "streetwear.jpeg"
+    "Main_img": "streetwear.jpeg",
+    "Store_Images": ["supreme.jpeg", "offwhite.png", "nike.jpeg", "addidas.png"]
   },
   {
     "Style_Name": "Cottagecore",
@@ -101,7 +108,8 @@
     "Related_Styles": ["Bohemian", "Romantic", "Vintage"],
     "Recommended_Stores": ["Etsy", "Free People", "Urban Outfitters", "ModCloth"],
     "Recommended_Store_Links": ["https://www.etsy.com", "https://www.freepeople.com", "https://www.urbanoutfitters.com", "https://www.modcloth.com"],
-    "Main_img": "cottagecore.jpeg"
+    "Main_img": "cottagecore.jpeg",
+    "Store_Images": ["etsy.webp", "freepeople.webp", "urbanoutfitters.jpeg", "modcloth.webp"]
   },
   {
     "Style_Name": "Minimalist",
@@ -114,7 +122,8 @@
     "Related_Styles": ["Urban Chic", "Casual Chic", "Techwear"],
     "Recommended_Stores": ["Uniqlo", "Everlane", "COS", "Muji"],
     "Recommended_Store_Links": ["https://www.uniqlo.com", "https://www.everlane.com", "https://www.cosstores.com", "https://www.muji.com"],
-    "Main_img": "minimalist.png"
+    "Main_img": "minimalist.png",
+    "Store_Images": ["uniqlo.webp", "everlane.jpeg", "cos.jpeg", "muji.jpeg"]
   },
   {
     "Style_Name": "Bohemian",
@@ -127,7 +136,8 @@
     "Related_Styles": ["Cottagecore", "Romantic", "Vintage"],
     "Recommended_Stores": ["Free People", "Anthropologie", "Spell & The Gypsy", "Urban Outfitters"],
     "Recommended_Store_Links": ["https://www.freepeople.com", "https://www.anthropologie.com", "https://www.spelldesigns.com", "https://www.urbanoutfitters.com"],
-    "Main_img": "Bohemian-Style.jpeg"
+    "Main_img": "Bohemian-Style.jpeg",
+    "Store_Images": ["freepeople.webp", "anthropologie.webp", "spelldesign.webp", "urbanoutfitters.jpeg"]
   },
   {
     "Style_Name": "Glamorous",
@@ -140,7 +150,8 @@
     "Related_Styles": ["Vintage Glamour", "Classic/Preppy", "Urban Chic"],
     "Recommended_Stores": ["Nordstrom", "Saks Fifth Avenue", "Bloomingdale's", "Neiman Marcus"],
     "Recommended_Store_Links": ["https://www.nordstrom.com", "https://www.saksfifthavenue.com", "https://www.bloomingdales.com", "https://www.neimanmarcus.com"],
-    "Main_img": "glamourous.jpeg"
+    "Main_img": "glamourous.jpeg",
+    "Store_Images": ["nordstrom.jpeg", "saks-fifth-avenue.webp", "bloomingdales.webp", "neimanmarcus.webp"]
   },
   {
     "Style_Name": "Vintage",
@@ -153,12 +164,13 @@
     "Related_Styles": ["Vintage Americana", "Vintage Glamour", "Romantic"],
     "Recommended_Stores": ["ModCloth", "Unique Vintage", "Beyond Retro", "Rokit"],
     "Recommended_Store_Links": ["https://www.modcloth.com", "https://www.unique-vintage.com", "https://www.beyondretro.com", "https://www.rokit.co.uk"],
-    "Main_img": "vintage.jpg"
+    "Main_img": "vintage.jpg",
+    "Store_Images": ["modcloth.webp", "uniquevintage.png", "beyondretro.webp", "rokit.jpeg"]
   },
   {
     "Style_Name": "Athleisure",
     "URL_Name": "Athleisure",
-    "Description": "Blending athletic wear with everyday apparel, athleisure fashion is comfortable, sporty, and versatile, suitable for both exercise and casual wear",
+    "Description": "Blending athletic wear with everyday apparel, athleisure fashion is comfortable, sporty, and versatile, suitable for both exercise and casual wear.",
     "Detailed_Description": "Athleisure is the perfect blend of athletic wear and everyday apparel. This style is comfortable, sporty, and versatile, suitable for both exercise and casual wear. It’s ideal for those who want to stay active while looking stylish and put-together.",
     "Common_Clothing_Pieces": ["Leggings", "Sweatshirts", "Sports bras", "Track jackets", "Jogger pants", "Sneakers", "Baseball caps", "Hooded vests", "Athletic shorts", "Compression shirts"],
     "Short_Description": "Sporty comfort for everyday wear.",
@@ -166,7 +178,8 @@
     "Related_Styles": ["Streetwear", "Techwear", "Casual Chic"],
     "Recommended_Stores": ["Lululemon", "Nike", "Adidas", "Athleta"],
     "Recommended_Store_Links": ["https://www.lululemon.com", "https://www.nike.com", "https://www.adidas.com", "https://athleta.gap.com"],
-    "Main_img": "athleisure.jpg"
+    "Main_img": "athleisure.jpg",
+    "Store_Images": ["lululemon.jpg", "nike.jpeg", "addidas.png", "athletagap.png"]
   },
   {
     "Style_Name": "Vintage Americana",
@@ -179,7 +192,8 @@
     "Related_Styles": ["Western", "Vintage", "Bohemian"],
     "Recommended_Stores": ["Levi's", "Wrangler", "Carhartt", "Pendleton"],
     "Recommended_Store_Links": ["https://www.levi.com", "https://www.wrangler.com", "https://www.carhartt.com", "https://www.pendleton-usa.com"],
-    "Main_img": "vintage_americana.webp"
+    "Main_img": "vintage_americana.webp",
+    "Store_Images": ["levis.webp", "wrangler.jpeg", "carhartt.webp", "pendelton.jpeg"]
   },
   {
     "Style_Name": "Punk",
@@ -192,7 +206,8 @@
     "Related_Styles": ["Gothic", "Streetwear", "Avant-Garde"],
     "Recommended_Stores": ["Hot Topic", "Killstar", "Tripp NYC", "Attitude Clothing"],
     "Recommended_Store_Links": ["https://www.hottopic.com", "https://www.killstar.com", "https://www.trippnyc.com", "https://www.attitudeclothing.co.uk"],
-    "Main_img": "punk.jpeg"
+    "Main_img": "punk.jpeg",
+    "Store_Images": ["hottopic.png", "killstar.jpeg", "trippnyc.webp", "attitude.jpeg"]
   },
   {
     "Style_Name": "Utilitarian",
@@ -205,7 +220,8 @@
     "Related_Styles": ["Techwear", "Urban Chic", "Western"],
     "Recommended_Stores": ["Army Surplus World", "5.11 Tactical", "Carhartt", "Patagonia"],
     "Recommended_Store_Links": ["https://www.armysurplusworld.com", "https://www.511tactical.com", "https://www.carhartt.com", "https://www.patagonia.com"],
-    "Main_img": "utilitarian.jpg"
+    "Main_img": "utilitarian.jpg",
+    "Store_Images": ["armysurplusworld.png", "511tactical.jpg", "carhartt.webp", "patagonia.jpeg"]
   },
   {
     "Style_Name": "Tropical Wear",
@@ -218,7 +234,8 @@
     "Related_Styles": ["Bohemian", "Cottagecore", "Casual Chic"],
     "Recommended_Stores": ["Tommy Bahama", "J.Crew", "H&M", "Zara"],
     "Recommended_Store_Links": ["https://www.tommybahama.com", "https://www.jcrew.com", "https://www.hm.com", "https://www.zara.com"],
-    "Main_img": "tropical.jpeg"
+    "Main_img": "tropical.jpeg",
+    "Store_Images": ["tommybahama.jpeg", "jcrew.jpeg", "h&m.jpeg", "zara.webp"]
   },
   {
     "Style_Name": "Avant-Garde",
@@ -231,7 +248,8 @@
     "Related_Styles": ["Punk", "Gothic", "Techwear"],
     "Recommended_Stores": ["Comme des Garçons", "Rick Owens", "Yohji Yamamoto", "Maison Margiela"],
     "Recommended_Store_Links": ["https://www.comme-des-garcons.com", "https://www.rickowens.eu", "https://www.yohjiyamamoto.co.jp", "https://www.maisonmargiela.com"],
-    "Main_img": "avant-garde.jpg"
+    "Main_img": "avant-garde.jpg",
+    "Store_Images": ["commedesgarcons.webp", "rickowens.png", "yohji.jpeg", "maisonmargiela.jpeg"]
   },
   {
     "Style_Name": "Techwear",
@@ -244,7 +262,8 @@
     "Related_Styles": ["Utilitarian", "Urban Chic", "Minimalist"],
     "Recommended_Stores": ["Acronym", "Nike ACG", "Guerrilla-Group", "Stone Island"],
     "Recommended_Store_Links": ["https://acrnm.com", "https://www.nike.com/acg", "https://www.guerrilla-group.co", "https://www.stoneisland.com"],
-    "Main_img": "techwear-fashion.jpg"
+    "Main_img": "techwear-fashion.jpg",
+    "Store_Images": ["acrnm.jpeg", "nike.jpeg", "guerrilla.jpeg", "stoneisland.jpeg"]
   },
   {
     "Style_Name": "Vintage Glamour",
@@ -257,7 +276,8 @@
     "Related_Styles": ["Glamorous", "Classic/Preppy", "Vintage"],
     "Recommended_Stores": ["Revolve", "BHLDN", "Nordstrom", "Farfetch"],
     "Recommended_Store_Links": ["https://www.revolve.com", "https://www.bhldn.com", "https://www.nordstrom.com", "https://www.farfetch.com"],
-    "Main_img": "vintage_glamour.jpeg"
+    "Main_img": "vintage_glamour.jpeg",
+    "Store_Images": ["revolve.jpeg", "bhldn.jpeg", "nordstrom.jpeg", "farfetch.jpg"]
   },
   {
     "Style_Name": "Hip-hop",
@@ -270,6 +290,7 @@
     "Related_Styles": ["Streetwear", "Punk", "Techwear"],
     "Recommended_Stores": ["Supreme", "Nike", "Adidas", "Puma"],
     "Recommended_Store_Links": ["https://www.supremenewyork.com", "https://www.nike.com", "https://www.adidas.com", "https://us.puma.com"],
-    "Main_img": "hip-hop.jpeg"
+    "Main_img": "hip-hop.jpeg",
+    "Store_Images": ["supreme.jpeg", "nike.jpeg", "addidas.png", "puma.jpeg"]
   }
 ]

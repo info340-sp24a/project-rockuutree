@@ -13,6 +13,7 @@ code {
 }
 
 
+
 .style-Cards {
   max-width: 100%; 
   width:348px;
@@ -121,18 +122,20 @@ code {
   display: none;
 }
 
-
 .store-card-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 36px;
+  justify-content: center;
 }
 
 .store-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 200px;
+  background-color: #9A8C98;
+  border-radius: 16px;
+  max-width: 100%;
+  width: 348px;
+  box-sizing: border-box;
+  margin: 8px;
   text-align: center;
   transition: transform 0.2s;
 }
@@ -142,13 +145,103 @@ code {
 }
 
 .store-card-content {
-  padding: 16px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #9A8C98;
+  color: #FAF9F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.store-card p {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 16px 0;
+  text-decoration: none;
 }
 
 .store-card img {
   width: 100%;
   height: auto;
 }
+
+.store-card a{
+  text-decoration: none;
+  font-family: 'Oswald', 'HCo Gotham', 'Work Sans', 'Arial', sans-serif;;
+}
+
+.related-styles-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.style-page-title{
+  font-size: 3em;
+  font-family:'Oswald', 'HCo Gotham', 'Work Sans', 'Arial', sans-serif;
+  font-weight: bolder;
+  color:#9A8C98;
+  margin-bottom: 20px;
+}
+
+.main-image-detail-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.style-page-image {
+  border-radius: 16px;
+  margin: 16px 0 16px 0;
+}
+
+.style-page-deatil-subheader{
+  font-size: 2em;
+  font-family:'Oswald', 'HCo Gotham', 'Work Sans', 'Arial', sans-serif;
+  color:#9A8C98;
+  margin: 12px 0 12px 12px;
+}
+
+.common-clothing-pieces {
+  display: flex;
+  flex-wrap: wrap
+}
+
+.common-clothing-pieces li {
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.lists-container{
+  background-color: #9A8C98;
+  border-radius: 28px;
+  color: #FAF9F6;
+  padding: 1em;
+  margin-top: 16px;
+}
+
+.style-card-detail-page h2{
+  margin: 1em;
+}
+
+.lists-container h2{
+  color: #FAF9F6;
+  margin: 16px;
+}
+
+.detailed-description{
+  background-color: #9A8C98;
+  padding: 2em;
+  border-radius: 28px;
+  color: #FAF9F6;
+}
+
+
+
+
 
 
 /* Extra small devices (phones, 600px and down) */
@@ -179,7 +272,33 @@ code {
     font-size: 24px;
   }
 
+  .store-card {
+    width: 448px
+  }
+
+  .main-image-detail-container{
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .main-image-detail-container p{
+    margin: 0 16px 0 16px;
+  }
+
+  .common-clothing-pieces {
+    display: flex;
+    flex-wrap: wrap;
 }
+
+  .common-clothing-pieces li {
+    width: 40%; 
+    box-sizing: border-box;
+    margin: 8px;
+}
+
+}
+
+
 
 
 
@@ -288,7 +407,41 @@ code {
     margin-bottom: 16px;
   }
 
-  
+  .store-card {
+    width: 312px
+  }
+
+  .related-styles-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  .common-clothing-pieces {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+  .common-clothing-pieces li {
+    width: 40%; 
+    box-sizing: border-box;
+    margin: 8px;
+}
+.lists-container {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.tips-list{
+  width: 40%;
+  margin-right: 20%;
+}
+
+
+
 
 }
 
