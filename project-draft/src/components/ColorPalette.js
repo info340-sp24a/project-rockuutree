@@ -159,7 +159,7 @@ function Quiz(props) {
 function Question({ questionNumber, question, image, alt, options, back, next, handleAnswer, selectedAnswer, submit }) {
   const arrOfOptions = options.map((option, index) => (
     <div className="col-md-4" key={index}>
-      <div className="form-check selection rounded px-5 py-2 my-2">
+      <div className="form-check selection rounded px-5 py-2 my-2 text-size">
         <input 
           className="form-check-input" 
           type="radio" 
@@ -176,28 +176,28 @@ function Question({ questionNumber, question, image, alt, options, back, next, h
 
   return (
     <div>
-      <div className="back w-75 shadow-sm d-flex flex-column">
+      <div className="back d-flex flex-column question-box-size shadow-lg">
         <div className="position-relative">
           <p className="h2 text-center">{"Question " + questionNumber}</p>
         </div>
-        <div className="text-center">
-          <img className="img-fluid rounded" src={image} alt={alt}/>
+        <div className="text-center px-3">
+          <img className="img-fluid rounded quiz-image border border-5 border-white" src={image} alt={alt}/>
         </div>
 
         <div>
-          <p className="fs-4 text-center">{question}</p>
+          <p className="text-center quiz-question">{question}</p>
         </div>
 
-        <div className="choices row justify-content-center">
+        <div className="row justify-content-center px-5 choices">
           {arrOfOptions}
         </div>
         <div className='d-flex justify-content-between'>
           {questionNumber > "1" ? (
             <div className="quiz-bottom-left">
             <button onClick={back} className="bg-transparent border border-0">
-              <div className="d-flex">
-                <p className="h5 mt-2">Back</p>
-                <span className="material-symbols-outlined">arrow_back</span>
+              <div className="d-flex align-items-center">
+                <span className="material-symbols-outlined quiz-question">arrow_back</span>
+                <p className="h5 mt-2 quiz-question">Back</p>
               </div>
             </button>
             </div>
@@ -207,15 +207,15 @@ function Question({ questionNumber, question, image, alt, options, back, next, h
           {questionNumber === "6" ? (
             <Link to="/palette-analysis/results">
               <div className="center">
-                <button onClick={submit} className="submit-button rounded px-5 py-2 my-2">Submit</button>
+                <button onClick={submit} className="rounded px-5 py-2 all-buttons rounded">Submit</button>
               </div>
             </Link>
           ) : (
             <div className="quiz-bottom-right">
               <button onClick={next} className="bg-transparent border border-0">
-                <div className="d-flex">
-                  <p className="h5 mt-2">Next</p>
-                  <span className="material-symbols-outlined">arrow_forward</span>
+                <div className="d-flex align-items-center">
+                  <p className="h5 mt-2 quiz-question">Next</p>
+                  <span className="material-symbols-outlined quiz-question">arrow_forward</span>
                 </div>
               </button>
             </div>

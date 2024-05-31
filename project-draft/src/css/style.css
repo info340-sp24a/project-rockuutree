@@ -112,9 +112,10 @@ max-height: 400px;
 }
 
 .choices {
-display: flex;
-justify-content: space-around;
-flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .selection {
@@ -164,7 +165,100 @@ justify-content: right;
 align-items: center;
 }
 
+.quiz-intro {
+    background-color: #4A4E69;
+    width: 100%;
+    border-radius: 25px;
+}
 
+.all-buttons {
+    background-color: #80ED99;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+.question-box-size {
+    width: 100%;
+}
+
+.text-bubble {
+    margin: 0rem 0.5rem;
+    padding: 1rem 1rem;
+}
+
+.text-bubble p {
+    font-size: 14px;
+}
+
+.text-size {
+    font-size: 14px;
+}
+
+.quiz-image {
+    max-width: 275px;
+}
+
+.quiz-question {
+    font-size: 16px;
+}
+
+@media (min-width: 598px) {
+    .question-box-size {
+        width: 75%;
+    }
+
+    .text-bubble {
+        margin: 0rem 3rem;
+        padding: 2rem 3rem;
+    }
+
+    .text-bubble {
+        margin: 0rem 2rem;
+        padding: 2rem 3rem;
+    }
+
+    .text-bubble p {
+        font-size: 18px;
+    }
+
+    .text-size {
+        font-size: 18px;
+    }
+
+    .quiz-image {
+        max-width: 300px;
+    }
+    
+    .quiz-question {
+        font-size: 24px;
+    }
+
+}
+@media (min-width: 768px) {
+    .question-box-size {
+        width: 66%;
+    }
+
+    .text-bubble p {
+        font-size: 24px;
+    }
+
+    .text-size {
+        font-size: 24px;
+    }
+
+    .quiz-image {
+        max-width: 350px;
+    }
+    
+    .quiz-question {
+        font-size: 30px;
+    }
+
+}
 /* End of Palette Quiz */
 
 /* Style Quiz */
