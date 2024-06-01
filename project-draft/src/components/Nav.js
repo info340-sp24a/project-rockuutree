@@ -77,6 +77,8 @@ const NavBar = (props) => {
           </Link>
           <li role="presentation" aria-hidden="true" className="menu-tab-divider"></li>
           <Link to="/styles">Sign Out</Link>
+          <li role="presentation" aria-hidden="true" className="menu-tab-divider"></li>
+          <Link to="/sign-in">Sign In</Link>
         </ul>
         <div className="menu-tab-footer">
           <p>&copy; 2024 styleU, Inc.</p>
