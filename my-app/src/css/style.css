@@ -342,6 +342,19 @@ width: 100%;
 .landing-btn {
 padding: 0.5em 2em;
 font-size: 16px;
+<<<<<<< HEAD
+=======
+}
+
+.submit-button {
+  background-color: #80ED99;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+>>>>>>> thien
 }
 
 
