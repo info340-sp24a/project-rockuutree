@@ -15,7 +15,7 @@ function App(props) {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/style-quiz" element={<StyleQuiz />} />
+        <Route path="/style-quiz" element={<StyleQuiz style_data={style_data} />} />
         {/* <Route path="/palette-analysis" element={<PaletteAnalysisPage />} /> */}
         <Route path="/styles" element={<StylePage style_data={style_data} />} />
         <Route path="/styles/:styleName" element={<StyleCardDetailPage style_data={style_data} />} />

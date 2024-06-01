@@ -11,7 +11,8 @@
     "Recommended_Stores": ["J.Crew", "Brooks Brothers", "Ralph Lauren", "Lands' End"],
     "Recommended_Store_Links": ["https://www.jcrew.com", "https://www.brooksbrothers.com", "https://www.ralphlauren.com", "https://www.landsend.com"],
     "Main_img": "preppy.jpeg",
-    "Store_Images": ["jcrew.jpeg", "brooksbrothers.jpeg", "ralphlauren.jpeg", "landsend.jpeg"]
+    "Store_Images": ["jcrew.jpeg", "brooksbrothers.jpeg", "ralphlauren.jpeg", "landsend.jpeg"],
+    "style_options": ["Slim", "Fitted", "Loafers", "Neutral", "Dress Shirts", "Blazer", "Minimal Jewelry"]
   },
   {
     "Style_Name": "Casual Chic",
@@ -25,7 +26,8 @@
     "Recommended_Stores": ["Zara", "H&M", "Madewell", "Banana Republic"],
     "Recommended_Store_Links": ["https://www.zara.com", "https://www.hm.com", "https://www.madewell.com", "https://www.bananarepublic.com"],
     "Main_img": "casual_chic.webp",
-    "Store_Images": ["zara.webp", "h&m.jpeg", "madewell.png", "bananarepublic.webp"]
+    "Store_Images": ["zara.webp", "h&m.jpeg", "madewell.png", "bananarepublic.webp"],
+    "style_options": ["Relaxed", "Regular", "Sneakers", "Earth Tones", "T-shirts", "Denim jacket", "A Bag"]
   },
   {
     "Style_Name": "Romantic",
@@ -39,7 +41,8 @@
     "Recommended_Stores": ["Anthropologie", "Free People", "Reformation", "ASOS"],
     "Recommended_Store_Links": ["https://www.anthropologie.com", "https://www.freepeople.com", "https://www.thereformation.com", "https://www.asos.com"],
     "Main_img": "romantic.png",
-    "Store_Images": ["anthropologie.webp", "freepeople.webp", "reformation.webp", "asos.png"]
+    "Store_Images": ["anthropologie.webp", "freepeople.webp", "reformation.webp", "asos.png"],
+    "style_options": ["Straight", "Fitted", "Loafers", "Pastel", "Long Sleeves", "Leather jacket", "Statement Jewelry"]
   },
   {
     "Style_Name": "Urban Chic",
@@ -53,7 +56,8 @@
     "Recommended_Stores": ["Mango", "Topshop", "AllSaints", "COS"],
     "Recommended_Store_Links": ["https://shop.mango.com", "https://www.topshop.com", "https://www.us.allsaints.com", "https://www.cosstores.com"],
     "Main_img": "urban_chic.webp",
-    "Store_Images": ["mango.webp", "topshop.jpeg", "allsaints.jpeg", "cos.jpeg"]
+    "Store_Images": ["mango.webp", "topshop.jpeg", "allsaints.jpeg", "cos.jpeg"],
+    "style_options": ["Slim", "Cropped", "Trainers", "Monochrome", "Blazer", "Parka", "Minimal Jewelry"]
   },
   {
     "Style_Name": "Western",
@@ -67,7 +71,8 @@
     "Recommended_Stores": ["Sheplers", "Boot Barn", "Cavender's", "Levi's"],
     "Recommended_Store_Links": ["https://www.sheplers.com", "https://www.bootbarn.com", "https://www.cavenders.com", "https://www.levi.com"],
     "Main_img": "western.jpeg",
-    "Store_Images": ["sheplers.jpeg", "bootbarn.jpeg", "cavenders.jpg", "levis.webp"]
+    "Store_Images": ["sheplers.jpeg", "bootbarn.jpeg", "cavenders.jpg", "levis.webp"],
+    "style_options": ["Straight", "Relaxed", "Boots", "Earth Tones", "Denim jacket", "Work Jacket", "Hats"]
   },
   {
     "Style_Name": "Gothic",
@@ -81,7 +86,8 @@
     "Recommended_Stores": ["Hot Topic", "Killstar", "RebelsMarket", "Dolls Kill"],
     "Recommended_Store_Links": ["https://www.hottopic.com", "https://www.killstar.com", "https://www.rebelsmarket.com", "https://www.dollskill.com"],
     "Main_img": "gothic.jpg",
-    "Store_Images": ["hottopic.png", "killstar.jpeg", "rebelsmarket.png", "dollskill.webp"]
+    "Store_Images": ["hottopic.png", "killstar.jpeg", "rebelsmarket.png", "dollskill.webp"],
+    "style_options": ["Skinny", "Fitted", "Boots", "Monochrome", "Dress Shirts", "Leather jacket", "Nothing"]
   },
   {
     "Style_Name": "Streetwear",
@@ -95,7 +101,8 @@
     "Recommended_Stores": ["Supreme", "Off-White", "Nike", "Adidas"],
     "Recommended_Store_Links": ["https://www.supremenewyork.com", "https://www.off---white.com", "https://www.nike.com", "https://www.adidas.com"],
     "Main_img": "streetwear.jpeg",
-    "Store_Images": ["supreme.jpeg", "offwhite.png", "nike.jpeg", "addidas.png"]
+    "Store_Images": ["supreme.jpeg", "offwhite.png", "nike.jpeg", "addidas.png"],
+    "style_options": ["Baggy", "Oversized", "Sneakers", "Primary", "Hoodies", "Denim jacket", "Nothing"]
   },
   {
     "Style_Name": "Cottagecore",
@@ -109,7 +116,8 @@
     "Recommended_Stores": ["Etsy", "Free People", "Urban Outfitters", "ModCloth"],
     "Recommended_Store_Links": ["https://www.etsy.com", "https://www.freepeople.com", "https://www.urbanoutfitters.com", "https://www.modcloth.com"],
     "Main_img": "cottagecore.jpeg",
-    "Store_Images": ["etsy.webp", "freepeople.webp", "urbanoutfitters.jpeg", "modcloth.webp"]
+    "Store_Images": ["etsy.webp", "freepeople.webp", "urbanoutfitters.jpeg", "modcloth.webp"],
+    "style_options": ["Relaxed", "Regular", "Loafers", "Pastel", "Sweaters", "Parka", "Minimal Jewelry"]
   },
   {
     "Style_Name": "Minimalist",
@@ -123,7 +131,8 @@
     "Recommended_Stores": ["Uniqlo", "Everlane", "COS", "Muji"],
     "Recommended_Store_Links": ["https://www.uniqlo.com", "https://www.everlane.com", "https://www.cosstores.com", "https://www.muji.com"],
     "Main_img": "minimalist.png",
-    "Store_Images": ["uniqlo.webp", "everlane.jpeg", "cos.jpeg", "muji.jpeg"]
+    "Store_Images": ["uniqlo.webp", "everlane.jpeg", "cos.jpeg", "muji.jpeg"],
+    "style_options": ["Slim", "Fitted", "Sneakers", "Neutral", "T-shirts", "Blazer", "Nothing"]
   },
   {
     "Style_Name": "Bohemian",
@@ -137,7 +146,8 @@
     "Recommended_Stores": ["Free People", "Anthropologie", "Spell & The Gypsy", "Urban Outfitters"],
     "Recommended_Store_Links": ["https://www.freepeople.com", "https://www.anthropologie.com", "https://www.spelldesigns.com", "https://www.urbanoutfitters.com"],
     "Main_img": "Bohemian-Style.jpeg",
-    "Store_Images": ["freepeople.webp", "anthropologie.webp", "spelldesign.webp", "urbanoutfitters.jpeg"]
+    "Store_Images": ["freepeople.webp", "anthropologie.webp", "spelldesign.webp", "urbanoutfitters.jpeg"],
+    "style_options": ["Relaxed", "Oversized", "Boots", "Earth Tones", "Long Sleeves", "Denim jacket", "Statement Jewelry"]
   },
   {
     "Style_Name": "Glamorous",
@@ -151,7 +161,8 @@
     "Recommended_Stores": ["Nordstrom", "Saks Fifth Avenue", "Bloomingdale's", "Neiman Marcus"],
     "Recommended_Store_Links": ["https://www.nordstrom.com", "https://www.saksfifthavenue.com", "https://www.bloomingdales.com", "https://www.neimanmarcus.com"],
     "Main_img": "glamourous.jpeg",
-    "Store_Images": ["nordstrom.jpeg", "saks-fifth-avenue.webp", "bloomingdales.webp", "neimanmarcus.webp"]
+    "Store_Images": ["nordstrom.jpeg", "saks-fifth-avenue.webp", "bloomingdales.webp", "neimanmarcus.webp"],
+    "style_options": ["Fitted", "Regular", "Heels", "Neutral", "Dress Shirts", "Leather jacket", "Statement Jewelry"]
   },
   {
     "Style_Name": "Vintage",
@@ -165,7 +176,8 @@
     "Recommended_Stores": ["ModCloth", "Unique Vintage", "Beyond Retro", "Rokit"],
     "Recommended_Store_Links": ["https://www.modcloth.com", "https://www.unique-vintage.com", "https://www.beyondretro.com", "https://www.rokit.co.uk"],
     "Main_img": "vintage.jpg",
-    "Store_Images": ["modcloth.webp", "uniquevintage.png", "beyondretro.webp", "rokit.jpeg"]
+    "Store_Images": ["modcloth.webp", "uniquevintage.png", "beyondretro.webp", "rokit.jpeg"],
+    "style_options": ["Straight", "Fitted", "Loafers", "Pastel", "T-shirts", "Blazer", "Minimal Jewelry"]
   },
   {
     "Style_Name": "Athleisure",
@@ -179,7 +191,8 @@
     "Recommended_Stores": ["Lululemon", "Nike", "Adidas", "Athleta"],
     "Recommended_Store_Links": ["https://www.lululemon.com", "https://www.nike.com", "https://www.adidas.com", "https://athleta.gap.com"],
     "Main_img": "athleisure.jpg",
-    "Store_Images": ["lululemon.jpg", "nike.jpeg", "addidas.png", "athletagap.png"]
+    "Store_Images": ["lululemon.jpg", "nike.jpeg", "addidas.png", "athletagap.png"],
+    "style_options": ["Relaxed", "Regular", "Sneakers", "Neutral", "Sweaters", "Parka", "Nothing"]
   },
   {
     "Style_Name": "Vintage Americana",
@@ -193,7 +206,8 @@
     "Recommended_Stores": ["Levi's", "Wrangler", "Carhartt", "Pendleton"],
     "Recommended_Store_Links": ["https://www.levi.com", "https://www.wrangler.com", "https://www.carhartt.com", "https://www.pendleton-usa.com"],
     "Main_img": "vintage_americana.webp",
-    "Store_Images": ["levis.webp", "wrangler.jpeg", "carhartt.webp", "pendelton.jpeg"]
+    "Store_Images": ["levis.webp", "wrangler.jpeg", "carhartt.webp", "pendelton.jpeg"],
+    "style_options": ["Straight", "Regular", "Boots", "Earth Tones", "Denim jacket", "Leather jacket", "Hats"]
   },
   {
     "Style_Name": "Punk",
@@ -207,7 +221,8 @@
     "Recommended_Stores": ["Hot Topic", "Killstar", "Tripp NYC", "Attitude Clothing"],
     "Recommended_Store_Links": ["https://www.hottopic.com", "https://www.killstar.com", "https://www.trippnyc.com", "https://www.attitudeclothing.co.uk"],
     "Main_img": "punk.jpeg",
-    "Store_Images": ["hottopic.png", "killstar.jpeg", "trippnyc.webp", "attitude.jpeg"]
+    "Store_Images": ["hottopic.png", "killstar.jpeg", "trippnyc.webp", "attitude.jpeg"],
+    "style_options": ["Slim", "Fitted", "Boots", "Monochrome", "T-shirts", "Denim jacket", "Statement Jewelry"]
   },
   {
     "Style_Name": "Utilitarian",
@@ -221,7 +236,8 @@
     "Recommended_Stores": ["Army Surplus World", "5.11 Tactical", "Carhartt", "Patagonia"],
     "Recommended_Store_Links": ["https://www.armysurplusworld.com", "https://www.511tactical.com", "https://www.carhartt.com", "https://www.patagonia.com"],
     "Main_img": "utilitarian.jpg",
-    "Store_Images": ["armysurplusworld.png", "511tactical.jpg", "carhartt.webp", "patagonia.jpeg"]
+    "Store_Images": ["armysurplusworld.png", "511tactical.jpg", "carhartt.webp", "patagonia.jpeg"],
+    "style_options": ["Straight", "Relaxed", "Boots", "Earth Tones", "Work Jacket", "Leather jacket", "Hats"]
   },
   {
     "Style_Name": "Tropical Wear",
@@ -235,7 +251,8 @@
     "Recommended_Stores": ["Tommy Bahama", "J.Crew", "H&M", "Zara"],
     "Recommended_Store_Links": ["https://www.tommybahama.com", "https://www.jcrew.com", "https://www.hm.com", "https://www.zara.com"],
     "Main_img": "tropical.jpeg",
-    "Store_Images": ["tommybahama.jpeg", "jcrew.jpeg", "h&m.jpeg", "zara.webp"]
+    "Store_Images": ["tommybahama.jpeg", "jcrew.jpeg", "h&m.jpeg", "zara.webp"],
+    "style_options": ["Relaxed", "Cropped", "Sneakers", "Primary", "T-shirts", "Parka", "Hats"]
   },
   {
     "Style_Name": "Avant-Garde",
@@ -249,7 +266,8 @@
     "Recommended_Stores": ["Comme des Garçons", "Rick Owens", "Yohji Yamamoto", "Maison Margiela"],
     "Recommended_Store_Links": ["https://www.comme-des-garcons.com", "https://www.rickowens.eu", "https://www.yohjiyamamoto.co.jp", "https://www.maisonmargiela.com"],
     "Main_img": "avant-garde.jpg",
-    "Store_Images": ["commedesgarcons.webp", "rickowens.png", "yohji.jpeg", "maisonmargiela.jpeg"]
+    "Store_Images": ["commedesgarcons.webp", "rickowens.png", "yohji.jpeg", "maisonmargiela.jpeg"],
+    "style_options": ["Oversized", "Fitted", "Boots", "Monochrome", "Blazer", "Leather jacket", "Statement Jewelry"]
   },
   {
     "Style_Name": "Techwear",
@@ -263,7 +281,8 @@
     "Recommended_Stores": ["Acronym", "Nike ACG", "Guerrilla-Group", "Stone Island"],
     "Recommended_Store_Links": ["https://acrnm.com", "https://www.nike.com/acg", "https://www.guerrilla-group.co", "https://www.stoneisland.com"],
     "Main_img": "techwear-fashion.jpg",
-    "Store_Images": ["acrnm.jpeg", "nike.jpeg", "guerrilla.jpeg", "stoneisland.jpeg"]
+    "Store_Images": ["acrnm.jpeg", "nike.jpeg", "guerrilla.jpeg", "stoneisland.jpeg"],
+    "style_options": ["Straight", "Relaxed", "Sneakers", "Neutral", "Work Jacket", "Parka", "Minimal Jewelry"]
   },
   {
     "Style_Name": "Vintage Glamour",
@@ -277,7 +296,9 @@
     "Recommended_Stores": ["Revolve", "BHLDN", "Nordstrom", "Farfetch"],
     "Recommended_Store_Links": ["https://www.revolve.com", "https://www.bhldn.com", "https://www.nordstrom.com", "https://www.farfetch.com"],
     "Main_img": "vintage_glamour.jpeg",
-    "Store_Images": ["revolve.jpeg", "bhldn.jpeg", "nordstrom.jpeg", "farfetch.jpg"]
+    "Store_Images": ["revolve.jpeg", "bhldn.jpeg", "nordstrom.jpeg", "farfetch.jpg"],
+    "style_options": ["Slim", "Fitted", "Heels", "Pastel", "Dress Shirts", "Blazer", "Statement Jewelry"]
+
   },
   {
     "Style_Name": "Hip-hop",
@@ -291,6 +312,7 @@
     "Recommended_Stores": ["Supreme", "Nike", "Adidas", "Puma"],
     "Recommended_Store_Links": ["https://www.supremenewyork.com", "https://www.nike.com", "https://www.adidas.com", "https://us.puma.com"],
     "Main_img": "hip-hop.jpeg",
-    "Store_Images": ["supreme.jpeg", "nike.jpeg", "addidas.png", "puma.jpeg"]
+    "Store_Images": ["supreme.jpeg", "nike.jpeg", "addidas.png", "puma.jpeg"],
+    "style_options": ["Baggy", "Oversized", "Sneakers", "Primary", "Hoodies", "Denim jacket", "Hats"]
   }
 ]
