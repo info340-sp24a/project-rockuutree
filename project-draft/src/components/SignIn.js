@@ -1,6 +1,9 @@
 import React from 'react';
 import { StyledFirebaseAuth } from 'react-firebaseui';
 import { GoogleAuthProvider, EmailAuthProvider, getAuth } from 'firebase/auth';
+import { Footer } from './Footer';
+import NavBar from './Nav';
+import '../index.css';
 
 const configObj = {
   signInOptions: [
@@ -35,10 +38,14 @@ export default function SignInPage(props) {
   }
 
   return (
-    <div className="card bg-light">
+    <main>
+    <NavBar currentUser={currentUser} />
+    <div className="sign-in-card bg-light">
       <div className="container card-body">
         <StyledFirebaseAuth uiConfig={configObj} firebaseAuth={auth} />
       </div>
     </div>
+    <Footer />
+    </main>
   );
 }

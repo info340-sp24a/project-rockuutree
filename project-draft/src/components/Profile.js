@@ -3,48 +3,9 @@ import React, { useState } from 'react';
 import '../index.css';
 import me from '../assets/mapleMeFace.png';
 import NavBar from './Nav';
-import COLORS from './Color';
+import { getUserProfile, updateUserProfile, addColorCard, addStyleCard } from './User';
 
-let userProfile = {
-  name: 'Ryan Doe',
-  email: 'styleu@cool.com',
-  profilePicture: 'path/to/profile-picture.jpg',
-  colors: [
-    { name: 'Deep Sky Blue', description: 'Calm and serene', hexCode: '#00BFFF' },
-    { name: 'Light Green', description: 'Fresh and natural', hexCode: '#90EE90' },
-  ],
-  styles: [
-    { name: 'Casual', description: 'Relaxed and comfortable' },
-    { name: 'Formal', description: 'Elegant and sophisticated' },
-  ],
-};
-
-export const getUserProfile = () => {
-  return userProfile;
-};
-
-export const updateUserProfile = (updatedProfile) => {
-  userProfile = updatedProfile;
-};
-
-export const addColorCard = (newColor) => {
-  const colorName = newColor.name.toLowerCase().replace(/\s+/g, '');
-  const colorDetails = COLORS.find(([name]) => name === colorName);
-  if (colorDetails) {
-    const [, hexCode] = colorDetails;
-    userProfile.colors.push({ ...newColor, hexCode });
-  } else {
-    userProfile.colors.push(newColor);
-  }
-  return userProfile.colors;
-};
-
-export const addStyleCard = (newStyle) => {
-  userProfile.styles.push(newStyle);
-  return userProfile.styles;
-};
-
-const Profile = () => {
+const Profile = (props) => {
   const [userProfileState, setUserProfileState] = useState(getUserProfile());
   const [name, setName] = useState(userProfileState.name);
   const [email, setEmail] = useState(userProfileState.email);
@@ -91,10 +52,11 @@ const Profile = () => {
     setNewStyleDescription('');
   };
 
+  const { currentUser } = props;
+
   return (
     <>
-      <NavBar />
-
+      <NavBar currentUser={currentUser} />
       <main>
         <div className="profile-container">
           <div className="profile-header">
