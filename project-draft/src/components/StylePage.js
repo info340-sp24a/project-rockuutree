@@ -25,7 +25,7 @@ function StylePage(props){
 
     return(
         <div className='style-page'>
-            <NavBar/>
+            <NavBar currentUser={props.currentUser} />
             <main>
                 <div className='content-container'>
                     <SearchBar Query={searchQuery} setSearchQuery={setSearchQuery}/>
