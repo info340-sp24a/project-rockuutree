@@ -182,7 +182,7 @@ function Question({ questionNumber, question, image, alt, options, back, next, h
           <p className="h2 text-center">{"Question " + questionNumber}</p>
         </div>
         <div className="text-center px-3">
-          <img className="img-fluid rounded quiz-image border border-5 border-white" src={image} alt={alt}/>
+          <img className="img-fluid rounded quiz-image border border-5 border-white .quiz-image" src={image} alt={alt}/>
         </div>
 
         <div>
