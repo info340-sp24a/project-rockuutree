@@ -33,7 +33,6 @@ export function StyleCardList(props){
             {styleCardList}
         </div>
     );
-    <Footer />
 
     
 }
