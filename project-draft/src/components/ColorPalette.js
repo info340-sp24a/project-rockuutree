@@ -182,7 +182,7 @@ function Quiz(props) {
 
   return (
     <>
-      <p className="text-center h1 fw-semibold fs-1">Palette Analysis</p>
+      <p className="text-center h1 fw-semibold fs-1">Analyzing Color Palette</p>
       {renderQuestion()}
     </>
   );
