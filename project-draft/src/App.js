@@ -11,6 +11,7 @@ import SignInPage from './components/SignIn';
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyBvjZczGvaXO5GHoQvLZDRGy1Qk77UtFo8",
   authDomain: "styleuinfo-83ba6.firebaseapp.com",
@@ -34,6 +35,7 @@ function App(props) {
   useEffect(() => {
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, (user) => {
+      console.log(user); // delete this
       setCurrentUser(user);
       setIsLoading(false);
     });
@@ -66,7 +68,7 @@ function App(props) {
           element={<SignInPage currentUser={currentUser} loginCallback={setCurrentUser} />}
         />
 
-        <Route path="/palette-analysis/quiz" element={<ColorPaletteQuiz changeUserColorPalette={changeUserColorPalette}/>} />
+        <Route path="/palette-analysis/quiz" element={<ColorPaletteQuiz currentUser={currentUser} changeUserColorPalette={changeUserColorPalette}/>} />
         <Route path="/palette-analysis" element={<IntroductionPage />} />
         <Route path="/palette-analysis/results" element={<ColorResultsPage result={userColorPalette}/>} />
       </Routes>

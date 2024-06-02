@@ -1,14 +1,19 @@
-// Profile.jsx
+// Profile.js
 import React, { useState } from 'react';
 import '../index.css';
 import me from '../assets/mapleMeFace.png';
 import NavBar from './Nav';
 import { getUserProfile, updateUserProfile, addColorCard, addStyleCard } from './User';
+import { getDatabase, ref, child, get as firebaseGet } from "firebase/database";
+import { useEffect } from 'react';
+import colorPalettes from "../assets/color_palettes.json"
 
 const Profile = (props) => {
+  const { currentUser } = props;
+  const [palettes, setPalettes] = useState([]);
   const [userProfileState, setUserProfileState] = useState(getUserProfile());
-  const [name, setName] = useState(userProfileState.name);
-  const [email, setEmail] = useState(userProfileState.email);
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
   const [newColorName, setNewColorName] = useState('');
   const [newColorDescription, setNewColorDescription] = useState('');
   const [newStyleName, setNewStyleName] = useState('');
@@ -52,7 +57,41 @@ const Profile = (props) => {
     setNewStyleDescription('');
   };
 
-  const { currentUser } = props;
+  // gets the user's palettes from Firebase Realtime Database
+  useEffect(() => {
+    const dbRef = ref(getDatabase());
+    // gets the children of palettes key
+    firebaseGet(child(dbRef, `users/${currentUser.uid}/palettes`))
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          const data = [];
+          snapshot.forEach((childSnapshot) => {
+            data.push({ key: childSnapshot.key, value: childSnapshot.val() });
+          });
+          setPalettes(data);
+        } else {
+          console.log("No data available");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, [currentUser.uid]);
+
+  const colorPaletteCards = palettes.map(({ key, value }) => {
+    const thisColorPalette = colorPalettes[value];
+    const gradientString = `linear-gradient(to right, ${thisColorPalette.colors.slice(0, 3).map(color => color.hexCode).join(', ')})`;
+    return (
+        <div className="card flex flex-col justify-content-center align-items-center" key={key} style={{ background: gradientString }}>
+          <div className="flex flex-col justify-content-center align-items-center bg-light bg-gradient rounded px-3 py-2">
+            <div>
+              <p className='fw-bold fs-4 text-center'>{thisColorPalette.name}</p>
+            </div>
+              <p className="text-center">{thisColorPalette.description}</p>
+          </div>
+        </div>
+    )
+  });
 
   return (
     <>
@@ -62,8 +101,8 @@ const Profile = (props) => {
           <div className="profile-header">
             <img src={me} alt="Profile" className="profile-picture" />
             <div>
-              <h1>{userProfileState.name}</h1>
-              <h1>{userProfileState.email}</h1>
+              <h1>{currentUser.displayName}</h1>
+              <h1>{currentUser.email}</h1>
             </div>
           </div>
           <div className="profile-form">
@@ -84,7 +123,13 @@ const Profile = (props) => {
             <button onClick={handleSaveProfile}>Save Profile</button>
           </div>
           <div className="card-section">
-            <h2>Colors</h2>
+            <h2>Your Color Palettes</h2>
+            <div className="card-container">
+              {colorPaletteCards}
+            </div>
+          </div>
+          <div className="card-section">
+            <h2>Your Colors</h2>
             <div className="card-container">
               {userProfileState.colors.map((color, index) => (
                 <div key={index} className="card" style={{ backgroundColor: color.hexCode || '#f5f5f5' }}>

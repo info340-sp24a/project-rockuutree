@@ -1,0 +1,198 @@
+{
+    "LightSpring": {
+        "name": "Light Spring",
+        "description": "Light Spring palettes are characterized by light, warm, and bright colors. These colors often include pastel shades and delicate hues that reflect the fresh, vibrant feel of springtime.",
+        "colors": [
+            { "name": "Light Peach", "hexCode": "#FFE0B3", "description": "Bright red" },
+            { "name": "Peach Puff", "hexCode": "#FFDAB9", "description": "Bright green" },
+            { "name": "Light Yellow", "hexCode": "#FFFAE3", "description": "Bright blue" },
+            { "name": "Light Lemon", "hexCode": "#FFFFCC", "description": "Bright green" },
+            { "name": "Moccasin", "hexCode": "#FFE4B5", "description": "Bright green" },
+            { "name": "Light Goldenrod", "hexCode": "#EEDD82", "description": "Bright green" },
+            { "name": "Lavender Blush", "hexCode": "#FFF0F5", "description": "Bright green" },
+            { "name": "Light Goldenrod Yellow", "hexCode": "#FAFAD2", "description": "Bright green" },
+            { "name": "Lemon Chiffon", "hexCode": "#FFFACD", "description": "Bright green" },
+            { "name": "Navajo White", "hexCode": "#FFDEAD", "description": "Bright green" }
+        ]
+    },
+    "WarmSpring": {
+        "name": "Warm Spring",
+        "description": "Warm Spring palettes feature warm and bright colors that exude a sunny and cheerful vibe. These palettes include golden yellows, peachy pinks, and warm greens that are reminiscent of the blooming season.",
+        "colors": [
+            { "name": "Gold", "hexCode": "#FFD700", "description": "Bright red" },
+            { "name": "Orange", "hexCode": "#FFA500", "description": "Bright green" },
+            { "name": "Dark Orange", "hexCode": "#FF8C00", "description": "Bright blue" },
+            { "name": "Peach Puff", "hexCode": "#FFDAB9", "description": "Bright green" },
+            { "name": "Coral", "hexCode": "#FF7F50", "description": "Bright green" },
+            { "name": "Tomato", "hexCode": "#FF6347", "description": "Bright green" },
+            { "name": "Light Salmon", "hexCode": "#FFA07A", "description": "Bright green" },
+            { "name": "Lemon Chiffon", "hexCode": "#FFFACD", "description": "Bright green" },
+            { "name": "Moccasin", "hexCode": "#FFE4B5", "description": "Bright green" },
+            { "name": "Light Pink", "hexCode": "#FFB6C1", "description": "Bright green" }
+        ]
+    },
+    "ClearSpring": {
+        "name": "Clear Spring",
+        "description": "Clear Spring palettes are known for their bright, warm, and clear colors. These colors are vibrant and have a high contrast, making them ideal for a crisp and lively appearance.",
+        "colors": [
+            { "name": "Red", "hexCode": "#FF0000", "description": "Bright red" },
+            { "name": "Green", "hexCode": "#00FF00", "description": "Bright green" },
+            { "name": "Blue", "hexCode": "#0000FF", "description": "Bright blue" },
+            { "name": "Crimson", "hexCode": "#DC143C", "description": "Crimson" },
+            { "name": "Orange", "hexCode": "#FFA500", "description": "Orange" },
+            { "name": "Gold", "hexCode": "#FFD700", "description": "Gold" },
+            { "name": "Deep Pink", "hexCode": "#FF1493", "description": "Deep pink" },
+            { "name": "Fuchsia", "hexCode": "#FF00FF", "description": "Fuchsia" },
+            { "name": "Turquoise", "hexCode": "#40E0D0", "description": "Turquoise" },
+            { "name": "Lime", "hexCode": "#00FF00", "description": "Lime" }
+        ]
+    },
+    "CoolWinter": {
+        "name": "Cool Winter",
+        "description": "Cool Winter palettes include cool, deep, and vibrant colors. These palettes feature icy blues, deep purples, and stark whites, evoking the crisp, clear essence of winter.",
+        "colors": [
+            { "name": "Royal Blue", "hexCode": "#4169E1", "description": "Royal blue" },
+            { "name": "Navy Blue", "hexCode": "#000080", "description": "Navy blue" },
+            { "name": "Indigo", "hexCode": "#4B0082", "description": "Indigo" },
+            { "name": "Deep Sky Blue", "hexCode": "#00BFFF", "description": "Deep sky blue" },
+            { "name": "Dodger Blue", "hexCode": "#1E90FF", "description": "Dodger blue" },
+            { "name": "Medium Blue", "hexCode": "#0000CD", "description": "Medium blue" },
+            { "name": "Dark Slate Blue", "hexCode": "#483D8B", "description": "Dark slate blue" },
+            { "name": "Slate Blue", "hexCode": "#6A5ACD", "description": "Slate blue" },
+            { "name": "Cornflower Blue", "hexCode": "#6495ED", "description": "Cornflower blue" },
+            { "name": "Light Sky Blue", "hexCode": "#87CEFA", "description": "Light sky blue" }
+        ]
+    },
+    "ClearWinter": {
+        "name": "Clear Winter",
+        "description": "Clear Winter palettes are composed of bright, cool, and highly contrasting colors. These colors are sharp and clear, often including jewel tones and pure hues that reflect the clarity of winter.",
+        "colors": [
+            { "name": "Ruby", "hexCode": "#E0115F", "description": "Ruby" },
+            { "name": "Sapphire", "hexCode": "#0F52BA", "description": "Sapphire" },
+            { "name": "Emerald", "hexCode": "#50C878", "description": "Emerald" },
+            { "name": "Amethyst", "hexCode": "#9966CC", "description": "Amethyst" },
+            { "name": "Cobalt Blue", "hexCode": "#0047AB", "description": "Cobalt blue" },
+            { "name": "Turquoise", "hexCode": "#40E0D0", "description": "Turquoise" },
+            { "name": "Royal Blue", "hexCode": "#4169E1", "description": "Royal blue" },
+            { "name": "Fuchsia", "hexCode": "#FF00FF", "description": "Fuchsia" },
+            { "name": "Crimson", "hexCode": "#DC143C", "description": "Crimson" },
+            { "name": "Emerald Green", "hexCode": "#50C878", "description": "Emerald green" }
+        ]
+    },
+    "DeepWinter": {
+        "name": "Deep Winter",
+        "description": "Deep Winter palettes are characterized by deep, cool, and intense colors. These palettes often include dark blues, rich blacks, and deep reds, embodying the richness and depth of winter.",
+        "colors": [
+            { "name": "Navy Blue", "hexCode": "#000080", "description": "Navy blue" },
+            { "name": "Midnight Blue", "hexCode": "#191970", "description": "Midnight blue" },
+            { "name": "Royal Blue", "hexCode": "#4169E1", "description": "Royal blue" },
+            { "name": "Dark Slate Blue", "hexCode": "#483D8B", "description": "Dark slate blue" },
+            { "name": "Indigo", "hexCode": "#4B0082", "description": "Indigo" },
+            { "name": "Dark Violet", "hexCode": "#9400D3", "description": "Dark violet" },
+            { "name": "Purple", "hexCode": "#800080", "description": "Purple" },
+            { "name": "Deep Pink", "hexCode": "#FF1493", "description": "Deep pink" },
+            { "name": "Maroon", "hexCode": "#800000", "description": "Maroon" },
+            { "name": "Black", "hexCode": "#000000", "description": "Black" }
+        ]
+    },
+    "SoftAutumn": {
+        "name": "Soft Autumn",
+        "description": "Soft Autumn palettes feature soft, warm, and muted colors. These palettes include earthy tones, gentle browns, and subdued greens, reflecting the mellow and cozy feeling of autumn.",
+        "colors": [
+            { "name": "Dark Olive Green", "hexCode": "#556B2F", "description": "Dark olive green" },
+            { "name": "Saddle Brown", "hexCode": "#8B4513", "description": "Saddle brown" },
+            { "name": "Sienna", "hexCode": "#A0522D", "description": "Sienna" },
+            { "name": "Tan", "hexCode": "#D2B48C", "description": "Tan" },
+            { "name": "Rosy Brown", "hexCode": "#BC8F8F", "description": "Rosy brown" },
+            { "name": "Peru", "hexCode": "#CD853F", "description": "Peru" },
+            { "name": "Burly Wood", "hexCode": "#DEB887", "description": "Burly wood" },
+            { "name": "Sandy Brown", "hexCode": "#F4A460", "description": "Sandy brown" },
+            { "name": "Chocolate", "hexCode": "#D2691E", "description": "Chocolate" },
+            { "name": "Dark Red", "hexCode": "#8B0000", "description": "Dark red" }
+        ]
+    },
+    "WarmAutumn": {
+        "name": "Warm Autumn",
+        "description": "Warm Autumn palettes are known for their warm, rich, and muted colors. These palettes encompass the deep reds, burnt oranges, and golden browns that symbolize the warmth and richness of autumn.",
+        "colors": [
+            { "name": "Sienna", "hexCode": "#A0522D", "description": "Sienna" },
+            { "name": "Saddle Brown", "hexCode": "#8B4513", "description": "Saddle brown" },
+            { "name": "Chocolate", "hexCode": "#D2691E", "description": "Chocolate" },
+            { "name": "Firebrick", "hexCode": "#B22222", "description": "Firebrick" },
+            { "name": "Orange Red", "hexCode": "#FF4500", "description": "Orange red" },
+            { "name": "Indian Red", "hexCode": "#CD5C5C", "description": "Indian red" },
+            { "name": "Sandy Brown", "hexCode": "#F4A460", "description": "Sandy brown" },
+            { "name": "Goldenrod", "hexCode": "#DAA520", "description": "Goldenrod" },
+            { "name": "Tan", "hexCode": "#D2B48C", "description": "Tan" },
+            { "name": "Brown", "hexCode": "#A52A2A", "description": "Brown" }
+        ]
+    },
+    "DeepAutumn": {
+        "name": "Deep Autumn",
+        "description": "Deep Autumn palettes are comprised of deep, warm, and rich colors. These palettes often include dark olive greens, deep browns, and maroons, capturing the deep and earthy essence of autumn.",
+        "colors": [
+            { "name": "Dark Red", "hexCode": "#8B0000", "description": "Dark red" },
+            { "name": "Firebrick", "hexCode": "#B22222", "description": "Firebrick" },
+            { "name": "Brown", "hexCode": "#A52A2A", "description": "Brown" },
+            { "name": "Maroon", "hexCode": "#800000", "description": "Maroon" },
+            { "name": "Saddle Brown", "hexCode": "#8B4513", "description": "Saddle brown" },
+            { "name": "Sienna", "hexCode": "#A0522D", "description": "Sienna" },
+            { "name": "Chocolate", "hexCode": "#D2691E", "description": "Chocolate" },
+            { "name": "Peru", "hexCode": "#CD853F", "description": "Peru" },
+            { "name": "Saddle Brown", "hexCode": "#8B4513", "description": "Saddle brown" },
+            { "name": "Dark Red", "hexCode": "#8B0000", "description": "Dark red" }
+        ]
+    },
+    "CoolSummer": {
+        "name": "Cool Summer",
+        "description": "Cool Summer palettes include cool, light, and soft colors. These palettes feature pastel blues, soft lavenders, and gentle pinks, reflecting the cool and serene nature of summer.",
+        "colors": [
+            { "name": "Light Sky Blue", "hexCode": "#87CEFA", "description": "Light sky blue" },
+            { "name": "Sky Blue", "hexCode": "#87CEEB", "description": "Sky blue" },
+            { "name": "Powder Blue", "hexCode": "#B0E0E6", "description": "Powder blue" },
+            { "name": "Light Steel Blue", "hexCode": "#B0C4DE", "description": "Light steel blue" },
+            { "name": "Alice Blue", "hexCode": "#F0F8FF", "description": "Alice blue" },
+            { "name": "Lavender", "hexCode": "#E6E6FA", "description": "Lavender" },
+            { "name": "Thistle", "hexCode": "#D8BFD8", "description": "Thistle" },
+            { "name": "Light Gray", "hexCode": "#D3D3D3", "description": "Light gray" },
+            { "name": "Gainsboro", "hexCode": "#DCDCDC", "description": "Gainsboro" },
+            { "name": "White", "hexCode": "#FFFFFF", "description": "White" }
+        ]
+    },
+    "LightSummer": {
+        "name": "Light Summer",
+        "description": "Light Summer palettes are characterized by light, cool, and muted colors. These palettes include soft pastel hues, gentle blues, and cool grays, evoking the breezy and soft atmosphere of summer.",
+        "colors": [
+            { "name": "Light Cyan", "hexCode": "#E0FFFF", "description": "Light cyan" },
+            { "name": "Azure", "hexCode": "#F0FFFF", "description": "Azure" },
+            { "name": "Light Steel Blue", "hexCode": "#B0C4DE", "description": "Light steel blue" },
+            { "name": "Powder Blue", "hexCode": "#B0E0E6", "description": "Powder blue" },
+            { "name": "Light Blue", "hexCode": "#ADD8E6", "description": "Light blue" },
+            { "name": "Slate Gray", "hexCode": "#708090", "description": "Slate gray" },
+            { "name": "Light Slate Gray", "hexCode": "#778899", "description": "Light slate gray" },
+            { "name": "Light Steel Blue", "hexCode": "#B0C4DE", "description": "Light steel blue" },
+            { "name": "Light Blue", "hexCode": "#ADD8E6", "description": "Light blue" },
+            { "name": "Light Cyan", "hexCode": "#E0FFFF", "description": "Light cyan" }
+        ]
+    },
+    "SoftSummer": {
+        "name": "Soft Summer",
+        "description": "Soft Summer palettes feature soft, cool, and muted colors. These palettes include muted blues, dusty pinks, and soft greens, capturing the calm and hazy feel of summer.",
+        "colors": [
+            { "name": "Light Cyan", "hexCode": "#E0FFFF", "description": "Light cyan" },
+            { "name": "Azure", "hexCode": "#F0FFFF", "description": "Azure" },
+            { "name": "Light Steel Blue", "hexCode": "#B0C4DE", "description": "Light steel blue" },
+            { "name": "Powder Blue", "hexCode": "#B0E0E6", "description": "Powder blue" },
+            { "name": "Light Blue", "hexCode": "#ADD8E6", "description": "Light blue" },
+            { "name": "Slate Gray", "hexCode": "#708090", "description": "Slate gray" },
+            { "name": "Light Slate Gray", "hexCode": "#778899", "description": "Light slate gray" },
+            { "name": "Light Steel Blue", "hexCode": "#B0C4DE", "description": "Light steel blue" },
+            { "name": "Light Blue", "hexCode": "#ADD8E6", "description": "Light blue" },
+            { "name": "Light Cyan", "hexCode": "#E0FFFF", "description": "Light cyan" }
+        ]
+    }
+}
+    
+    
+    
+    

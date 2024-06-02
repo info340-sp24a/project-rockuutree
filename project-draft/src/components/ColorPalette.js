@@ -10,15 +10,18 @@ import jewelry from '../assets/jewelry.jpeg';
 import tanning from '../assets/tanning.jpeg';
 import colors from '../assets/colors.jpeg';
 import '../css/style.css';
+import { getDatabase, ref, push as firebasePush, set as firebaseSet, child, get as firebaseGet } from 'firebase/database';
+import { useEffect } from 'react';
+
 
 
 const ColorPaletteQuiz = (props) => {
-  const { changeUserColorPalette } = props;
+  const { changeUserColorPalette, currentUser} = props;
   return (
     <div>
       <NavBar />
       <main>
-        <Quiz changeUserColorPalette={changeUserColorPalette}/>
+        <Quiz changeUserColorPalette={changeUserColorPalette} currentUser={currentUser} />
       </main>
       <Footer />
     </div>
@@ -29,6 +32,30 @@ function Quiz(props) {
   const { changeUserColorPalette } = props;
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
+  const [palettes, setPalettes] = useState([]);
+  const { currentUser } = props;
+  console.log(currentUser.uid);
+
+
+  const db = getDatabase();
+  const paletteRef = firebasePush(ref(db, `users/${currentUser.uid}/palettes`)); //an object of tasks 
+  useEffect(() => {
+    const dbRef = ref(getDatabase());
+    // gets the children of palettes key
+    firebaseGet(child(dbRef, `users/${currentUser.uid}/palettes`))
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          const data = [];
+          snapshot.forEach((childSnapshot) => {
+            data.push(childSnapshot.val());
+          });
+          setPalettes(data);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, [currentUser.uid]);
 
   const options = {
     hairColor: ['Blonde', 'Brown', 'Black', 'Red'],
@@ -63,7 +90,10 @@ function Quiz(props) {
   const submit = () => {
     const result = calculateResult(answers)[0];
     console.log('Final result:', result);
-    changeUserColorPalette(result)
+    changeUserColorPalette(result);
+    if (!palettes.includes(result)) {
+      firebaseSet(paletteRef, result);
+    }
   };
 
   const calculateResult = (answers) => {
