@@ -2,12 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './components/homepage/homepage';
+import HomePage from './components/Homepage.js';
 // import StyleQuizPage from './components/styles-page/StyleCardList';
 // import PaletteAnalysisPage from './components/PaletteAnalysisPage';
-import StyleQuiz from './components/stylequiz/StyleQuiz.js';
-import StylePage from './components/StylePages/StylePage.js';
-import { StyleCardDetailPage } from './components/StylePages/StyleCardDetailPage.js';
+import StyleQuiz from './components/StyleQuiz.js';
+import StylePage from './components/StylePage.js';
+import { StyleCardDetailPage } from './components/StyleCardDetailPage.js';
 
 function App(props) {
   const {style_data} = props;

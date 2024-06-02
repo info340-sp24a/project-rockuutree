@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import NavBar from './Nav';
-import { Footer } from './Footer';
+import NavBar from './Nav.js';
+import { Footer } from './Footer.js';
+import { StyleCard } from './StyleCardList.js';
 import Jeans from '../assets/jeansGraphic.jpg';
 import Tops from '../assets/typeofTops.jpg';
 import Shoes from '../assets/typeofShoes.jpg';
@@ -8,10 +9,7 @@ import Colors from '../assets/colorCategories.jpg';
 import Clothes from '../assets/typeofClothes.jpg';
 import Outerwear from '../assets/typeofOuterwear.jpg';
 import Accessories from '../assets/typeofAccessories.jpg';
-import BusinessImage from '../assets/businessOutfit.jpg';
-import StreetwearImage from '../assets/streetwearOutfit.jpg';
-import OpiumImage from '../assets/opiumOutfit.jpg';
-import MinimalistImage from '../assets/minimalistOutfit.jpg';
+import { RelatedStyles } from './StyleCardDetailPage';
 
 const questions = [
     {
@@ -58,151 +56,108 @@ const questions = [
     },
 ];
 
-const results = [
-    {
-        id: 1,
-        title: 'Business',
-        keywords: ['Slim', 'Fitted', 'Loafers', 'Monochrome', 'Neutral', 'Sweater', 'Dress Shirt'],
-        image: BusinessImage
-    },
-    {
-        id: 2,
-        title: 'Streetwear',
-        keywords: ['Baggy', 'Relaxed', 'Sneakers', 'Neutral', 'Minimal Jewelry', 'Work Jacket', 'Leather Jacket'],
-        image: StreetwearImage
-    },
-    {
-        id: 3,
-        title: 'Opium',
-        keywords: ['Relaxed', 'Cropped', 'Regular', 'Long Sleeves', 'Bulky', 'Monochrome', 'Statement Jewelry'],
-        image: OpiumImage
-    },
-    {
-        id: 4,
-        title: 'Minimalist',
-        keywords: ['Straight', 'Regular', 'Sneakers', 'T-shirts', 'Neutral', 'Minimal Jewelry', 'Nothing'],
-        image: MinimalistImage
-    },
-];
-
-const calculateResult = (responses) => {
-    const resultPoints = new Array(results.length).fill(0);
-
-    responses.forEach((response) => {
-        results.forEach((result, resultIndex) => {
-            if (result.keywords.includes(response)) {
-                resultPoints[resultIndex] += 1;
+const calculateResult = (quizAnswers, styleData) => {
+    const scoreStyle = (style, answers) => {
+        let score = 0;
+        style.style_options.forEach(option => {
+            if (answers.includes(option)) {
+                score += 1;
             }
         });
-    });
+        return score;
+    };
 
-    const maxIndex = resultPoints.indexOf(Math.max(...resultPoints));
-    return results[maxIndex];
+    let bestMatch = null;
+    let highestScore = 0;
+    styleData.forEach(style => {
+        const score = scoreStyle(style, quizAnswers);
+        if (score > highestScore) {
+            highestScore = score;
+            bestMatch = style;
+        }
+    });
+    return bestMatch;
 };
 
-const StyleQuiz = () => {
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [responses, setResponses] = useState([]);
-    const [finalResult, setFinalResult] = useState(null);
+export function StyleQuiz(props) {
+    const { style_data } = props;
+    const [step, setStep] = useState(0);
+    const [quizAnswers, setQuizAnswers] = useState([]);
+    const [quizStarted, setQuizStarted] = useState(false);
+    const [quizFinished, setQuizFinished] = useState(false);
+    const [resultStyle, setResultStyle] = useState(null);
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
 
-    const handleResponseChange = (questionId, option) => {
-        setResponses(prevResponses => {
-            const updatedResponses = [...prevResponses];
-            updatedResponses[questionId] = option;
-            return updatedResponses;
-        });
+    const handleStartQuiz = () => {
+        setQuizStarted(true);
     };
 
-    const handleNextQuestion = () => {
-        if (currentQuestionIndex === questions.length - 1) {
-            const result = calculateResult(responses);
-            setFinalResult(result);
+    const handleAnswer = (answer) => {
+        setSelectedAnswer(answer);
+    };
+
+    const handleNext = () => {
+        const newAnswers = [...quizAnswers];
+        newAnswers[step] = selectedAnswer;
+        setQuizAnswers(newAnswers);
+        setSelectedAnswer(null);
+        if (step < questions.length - 1) {
+            setStep(step + 1);
         } else {
-            setCurrentQuestionIndex(prevIndex => prevIndex + 1);
+            const result = calculateResult(newAnswers, style_data);
+            setResultStyle(result);
+            setQuizFinished(true);
         }
     };
 
-    const handlePreviousQuestion = () => {
-        if (currentQuestionIndex > 0) {
-            setCurrentQuestionIndex(prevIndex => prevIndex - 1);
+    const handleBack = () => {
+        if (step > 0) {
+            setStep(step - 1);
+            const newAnswers = [...quizAnswers];
+            newAnswers.pop();
+            setQuizAnswers(newAnswers);
+            setSelectedAnswer(newAnswers[step - 1] || null);
         }
-    };
-
-    const handleSubmit = () => {
-        const result = calculateResult(responses);
-        setFinalResult(result);
     };
 
     return (
-        <>
+        <div>
             <NavBar />
             <main>
-                <p className="text-center h1 fw-semibold fs-1">Style Quiz</p>
-                <div className="back w-75 shadow-sm d-flex flex-column">
-                    {finalResult ? (
-                        <>
-                            <div className="position-relative">
-                                <p className="h2 text-center">Your style is:</p>
-                            </div>
-                            <div className="text-center">
-                                <img className="img-fluid rounded" src={finalResult.image} alt={finalResult.title} />
-                            </div>
-                            <div>
-                                <p className="fs-4 text-center fw-bold">{finalResult.title}</p>
-                            </div>
-                        </>
-                    ) : (
-                        <>
-                            <div className="position-relative">
-                                <p className="h2 text-center">Question {currentQuestionIndex + 1}</p>
-                                {currentQuestionIndex > 0 && (
-                                    <span className="position-absolute top-0 start-0 material-symbols-outlined" onClick={handlePreviousQuestion}>arrow_back</span>
-                                )}
-                            </div>
-                            <div className="text-center">
-                                <img className="img-fluid rounded" src={questions[currentQuestionIndex].image} alt={`Question ${currentQuestionIndex + 1}`} />
-                            </div>
-                            <div>
-                                <p className="fs-4 text-center">{questions[currentQuestionIndex].question}</p>
-                            </div>
-                            <div className="choices row justify-content-center">
-                                {questions[currentQuestionIndex].options.map((option, index) => (
-                                    <div className="col-md-4 mb-3" key={index}>
-                                        <div className="form-check selection rounded px-5 py-2">
-                                            <input 
-                                                className="form-check-input" 
-                                                type="radio" 
-                                                name={`question-${currentQuestionIndex}`} 
-                                                id={`option-${index}`} 
-                                                value={option} 
-                                                onChange={() => handleResponseChange(currentQuestionIndex, option)}
-                                            />
-                                            <label className="form-check-label" htmlFor={`option-${index}`}>
-                                                {option}
-                                            </label>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            {currentQuestionIndex === questions.length - 1 && (
-                                <div className="quiz-bottom" onClick={handleSubmit}>
-                                    <p className="h5 fw-bold">Submit</p>
-                                    <span className="material-symbols-outlined mb-1">arrow_forward</span>
-                                </div>
-                            )}
-                            {currentQuestionIndex < questions.length - 1 && (
-                                <div className="quiz-bottom" onClick={handleNextQuestion}>
-                                    <p className="h5 fw-bold">Next</p>
-                                    <span className="material-symbols-outlined mb-1">arrow_forward</span>
-                                </div>
-                            )}
-                        </>
-                    )}
-                </div>
+                {!quizStarted ? (
+                    <div>
+                        <button onClick={handleStartQuiz}>Start Quiz</button>
+                    </div>
+                ) : quizFinished ? (
+                    <div>
+                        <h1>Your Style: {resultStyle.Style_Name}</h1>
+                        <div className='style-card'>
+                            <StyleCard style_data={resultStyle} />
+                            <h2 className="style-page-deatil-subheader">Related Styles</h2>
+                            <RelatedStyles relatedStyles={resultStyle.Related_Styles} styleData={style_data} />
+                        </div>
+                    </div>
+                ) : (
+                    <div>
+                        <h2>{questions[step].question}</h2>
+                        <img src={questions[step].image} alt="question illustration" />
+                        <div>
+                            {questions[step].options.map((option, index) => (
+                                <button key={index} onClick={() => handleAnswer(option)} style={{ backgroundColor: selectedAnswer === option ? '#9A8C98' : '' }}>
+                                    {option}
+                                </button>
+                            ))}
+                        </div>
+                        <div>
+                            {step > 0 && <button onClick={handleBack}>Back</button>}
+                            <button onClick={handleNext} disabled={!selectedAnswer}>Next</button>
+                        </div>
+                    </div>
+                )}
             </main>
             <Footer />
-        </>
+        </div>
     );
-};
+}
 
 export default StyleQuiz;
