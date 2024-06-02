@@ -31,142 +31,142 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 /* End of Sign In */
 /* Nav Bar */
 nav {
-display: flex;
-background-color: #9a8c98;
-top: 0;
-width: 100%;
-position: absolute;
-justify-content: space-between;
-padding-top: 1rem;
-margin: auto;
-align-items: center;
-padding-bottom: 1rem;
+  display: flex;
+  background-color: #9a8c98;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin: auto;
+  align-items: center;
+  padding-bottom: 1rem;
 }
 
 .components_header {
-display: none;
+  display: none;
 }
 
 nav a {
-color: #faf9f6;
-padding-right: 1em;
-text-decoration: none;
+  color: #faf9f6;
+  padding-right: 1em;
+  text-decoration: none;
 }
 
 nav .logo {
-padding-right: 4em;
-padding-left: 1rem;
-font-size: 1.5rem;
-font-weight: bold;
+  padding-right: 4em;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .hamburger-menu {
-display: block;
-margin-left: auto;
+  display: block;
+  margin-left: auto;
 }
 
 .menu-tab {
-position: fixed;
-top: 0;
-right: 0;
-bottom: 0;
-width: 250px;
-background-color: #9a8c98;
-box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
-padding: 16px;
-z-index: 1000;
-transition: transform 0.3s ease-in-out;
-transform: translateX(100%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #9a8c98;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
 }
 
 .menu-tab.open {
-transform: translateX(0);
+  transform: translateX(0);
 }
 
 .menu-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .menu-header .logo {
-font-size: 1.5rem;
-font-weight: bold;
-color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 .close-icon {
-cursor: pointer;
+  cursor: pointer;
 }
 
 .close-icon span {
-font-size: 24px;
-color: #fff;
+  font-size: 24px;
+  color: #fff;
 }
 
 .menu-tab ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-text-align: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 .menu-tab li {
-margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .menu-tab a {
-text-decoration: none;
-color: #fff;
-font-size: 16px;
-transition: color 0.3s;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
 .menu-tab a:hover {
-color: #007bff;
+  color: #007bff;
 }
 
 .menu-tab-divider {
-display: block;
-height: 1px;
-padding: 0;
-margin: 1em -8px 8px;
-list-style: none;
-background: rgba(224, 224, 224, 0.5);
-border: 0;
+  display: block;
+  height: 1px;
+  padding: 0;
+  margin: 1em -8px 8px;
+  list-style: none;
+  background: rgba(224, 224, 224, 0.5);
+  border: 0;
 }
 
 .menu-tab-footer {
-margin-top: 2em;
+  margin-top: 2em;
 }
 
 .menu-tab-footer .footer-links {
-list-style: none;
-padding: 0;
-margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .menu-tab-footer .footer-links li, .menu-tab-footer p {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .menu-tab-footer .footer-links a, .menu-tab-footer p {
-text-decoration: none;
-color: #fff;
-font-size: 14px;
-transition: color 0.3s;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: color 0.3s;
 }
 
 .menu-tab-footer .footer-links a {
-color: #007bff;
+  color: #007bff;
 }
 
 .menu-icon {
-width: 20px;
-height: 20px;
-margin-right: 8px;
-vertical-align: text-bottom;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: text-bottom;
 }
 
 
@@ -591,35 +591,6 @@ code {
 
 /* End of Homepage */
 
-/* Landing */
-
-.landing-logo {
-  font-size: 5.5em;
-}
-
-.form-group {
-  width: 66%;
-}
-
-.log-in-section {
-  position: absolute;
-  top: 15%;
-  padding-left: 1em;
-  width: 100%;
-}
-
-.landing-btn {
-  padding: 0.5em 2em;
-  font-size: 16px;
-}
-
-/* profile.css */
-.profile-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 h1 {
   font-size: 24px;
   margin-bottom: 20px;
@@ -837,9 +808,7 @@ h2 {
     .menu-tab ul li:nth-child(5) {
       display: none;
     }
-
-    
-}
+  }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media (min-width: 600px) {

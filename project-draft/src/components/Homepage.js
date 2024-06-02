@@ -1,24 +1,22 @@
 import React, { useState } from 'react';
+import '../index.css';
 import { Link } from 'react-router-dom';
-import '../css/homestyle.css';
 import techImage from '../assets/tech.jpeg';
 import hoodieImage from '../assets/hoodie.png';
 import Lottie from "react-lottie";
 import animationData from "../assets/bounce.json";
-import NavBar from './Nav.js';
-import { Footer } from './Footer.js';
+import NavBar from './Nav';
+import { Footer } from './Footer';
 
 const HomePage = (props) => {
-  const { currentUser } = props;
   /* Nav Bar Stuff */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
   return (
     <>
-      <NavBar currentUser={currentUser} />
+      <NavBar currentUser={this.props.currentUser} />
       <main>
         <div className="home_container">
 
