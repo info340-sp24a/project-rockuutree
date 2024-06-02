@@ -69,8 +69,8 @@ function App(props) {
         />
 
         <Route path="/palette-analysis/quiz" element={<ColorPaletteQuiz currentUser={currentUser} changeUserColorPalette={changeUserColorPalette}/>} />
-        <Route path="/palette-analysis" element={<IntroductionPage />} />
-        <Route path="/palette-analysis/results" element={<ColorResultsPage result={userColorPalette}/>} />
+        <Route path="/palette-analysis" element={<IntroductionPage currentUser={currentUser} />} />
+        <Route path="/palette-analysis/results" element={<ColorResultsPage result={userColorPalette} currentUser={currentUser}/>} />
       </Routes>
     </Router>
   );

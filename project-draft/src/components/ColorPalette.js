@@ -19,7 +19,7 @@ const ColorPaletteQuiz = (props) => {
   const { changeUserColorPalette, currentUser} = props;
   return (
     <div>
-      <NavBar />
+      <NavBar currentUser={currentUser}/>
       <main>
         <Quiz changeUserColorPalette={changeUserColorPalette} currentUser={currentUser} />
       </main>
