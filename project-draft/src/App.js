@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import HomePage from './components/Homepage';
-import Profile from './components/Profile';
 import Profile from './components/Profile';
 import StylePage from './components/StylePage';
 import StyleQuiz from './components/StyleQuiz';
