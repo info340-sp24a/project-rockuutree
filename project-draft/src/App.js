@@ -4,6 +4,9 @@ import HomePage from './components/Homepage';
 import Profile from './components/Profile';
 import StylePage from './components/StylePage';
 import StyleQuiz from './components/StyleQuiz';
+import ColorPaletteQuiz from './components/ColorPalette';
+import ColorResultsPage from './components/ColorPaletteResults';
+import IntroductionPage from './components/ColorPaletteIntroductionPage';
 import SignInPage from './components/SignIn';
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
@@ -20,6 +23,11 @@ initializeApp(firebaseConfig);
 
 function App(props) {
   const { style_data } = props;
+  const [userColorPalette, setUserColorPalette] = useState(null);
+
+  function changeUserColorPalette(colorPalette) {
+    setUserColorPalette(colorPalette);
+  }
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -57,6 +65,10 @@ function App(props) {
           path="/sign-in"
           element={<SignInPage currentUser={currentUser} loginCallback={setCurrentUser} />}
         />
+
+        <Route path="/palette-analysis/quiz" element={<ColorPaletteQuiz changeUserColorPalette={changeUserColorPalette}/>} />
+        <Route path="/palette-analysis" element={<IntroductionPage />} />
+        <Route path="/palette-analysis/results" element={<ColorResultsPage result={userColorPalette}/>} />
       </Routes>
     </Router>
   );

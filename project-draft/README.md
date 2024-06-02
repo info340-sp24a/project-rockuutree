@@ -4,6 +4,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+## Dependencies
+``
+npm install
+npm install react-lottie
+npm install react-router-dom
+``
+
 In the project directory, you can run:
 
 ### `npm start`

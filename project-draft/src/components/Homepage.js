@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import '../index.css';
 import { Link } from 'react-router-dom';
+import '../css/homestyle.css';
 import techImage from '../assets/tech.jpeg';
 import hoodieImage from '../assets/hoodie.png';
 import Lottie from "react-lottie";
 import animationData from "../assets/bounce.json";
-import NavBar from './Nav';
-import { Footer } from './Footer';
+import NavBar from './Nav.js';
+import { Footer } from './Footer.js';
 
 const HomePage = (props) => {
   const { currentUser } = props;
@@ -41,7 +41,7 @@ const HomePage = (props) => {
                 </p>
                 <div>                
                 </div>
-                <Link to="/palette" className="quiz" aria-label="Toggle Style">
+                <Link to="/palette-analysis" className="quiz" aria-label="Toggle Style">
                   Palette Quiz
                 </Link>
               </div>
@@ -92,7 +92,7 @@ const HomePage = (props) => {
           <div className="home_card mb-4">
             <div className="bottom">
               <h3>Want to Explore and Experiment?</h3>
-                <Link to="/palette" className="explore" aria-label="Toggle Color">
+                <Link to="/palette-analysis" className="explore" aria-label="Toggle Color">
                   Color Palettes
                 </Link>
                 <Link to="/styles" className="explore" aria-label="Toggle Style Closet">

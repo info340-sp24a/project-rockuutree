@@ -244,6 +244,57 @@ main {
 
 /* Style Quiz */
 
+.quiz-bottom-left:hover {
+  background-color: #e0d3cd;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.quiz-bottom-right:hover {
+  background-color: #e0d3cd;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.btn-option {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-option:hover {
+  background-color: #C9ADA7;
+  color: #fff;
+}
+
+.btn-option.selected {
+  background-color: #C9ADA7;
+  color: #fff;
+  border: 1px solid #C9ADA7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  
+}
+.question-img {
+  height: auto;
+  max-width: 100%;
+  border-radius: 5px;
+}
+.style-description {
+  background-color: #f5ede9;
+  color: #22223B;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  text-align: left;
+}
+
 /* End of Style Quiz*/
 /* Style Page */
 
