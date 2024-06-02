@@ -10,6 +10,9 @@ import jewelry from '../assets/jewelry.jpeg';
 import tanning from '../assets/tanning.jpeg';
 import colors from '../assets/colors.jpeg';
 import '../css/style.css';
+import Lottie from 'react-lottie';
+import animationData from "../assets/loadingStyle.json";
+import { useNavigate } from 'react-router-dom';
 
 
 const ColorPaletteQuiz = (props) => {
@@ -29,6 +32,8 @@ function Quiz(props) {
   const { changeUserColorPalette } = props;
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const options = {
     hairColor: ['Blonde', 'Brown', 'Black', 'Red'],
@@ -60,10 +65,16 @@ function Quiz(props) {
     setCurrentQuestion(currentQuestion + 1);
   };
 
+
   const submit = () => {
+    setIsLoading(true);
     const result = calculateResult(answers)[0];
     console.log('Final result:', result);
     changeUserColorPalette(result)
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate('/palette-analysis/results')
+    }, 2000);
   };
 
   const calculateResult = (answers) => {
@@ -132,21 +143,41 @@ function Quiz(props) {
   };
 
   const renderQuestion = () => {
-    const question = questionData[currentQuestion];
-    return (
-      <Question 
-        questionNumber= {question.questionNumber} 
-        question= {question.question} 
-        image= {question.image} 
-        alt = {question.alt}
-        options= {question.options} 
-        back= {back} 
-        next= {next} 
-        handleAnswer= {handleAnswer} 
-        selectedAnswer= {answers[question.questionNumber]} 
-        submit= {submit} 
-      />
-    );
+    if (isLoading) {
+      return (
+        <div>
+          <Lottie
+            options={{
+              loop: true,
+              autoplay: true,
+              animationData: animationData,
+              rendererSettings: {
+                preserveAspectRatio: 'xMidYMid slice',
+              },
+            }}
+            isClickToPauseDisabled={true}
+            height='100%'
+            width='100%'
+          />
+        </div>
+      );
+    } else {
+      const question = questionData[currentQuestion];
+      return (
+        <Question
+          questionNumber={question.questionNumber}
+          question={question.question}
+          image={question.image}
+          alt={question.alt}
+          options={question.options}
+          back={back}
+          next={next}
+          handleAnswer={handleAnswer}
+          selectedAnswer={answers[question.questionNumber]}
+          submit={submit}
+        />
+      );
+    }
   };
 
   return (
@@ -206,11 +237,9 @@ function Question({ questionNumber, question, image, alt, options, back, next, h
             <div></div>
           )}
           {questionNumber === "6" ? (
-            <Link to="/palette-analysis/results">
               <div className="center">
                 <button onClick={submit} className="rounded px-5 py-2 all-buttons rounded">Submit</button>
               </div>
-            </Link>
           ) : (
             <div className="quiz-bottom-right">
               <button onClick={next} className="bg-transparent border border-0">
