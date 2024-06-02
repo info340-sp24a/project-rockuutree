@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 export function StyleCard(props){
     const { style_data } = props;
 
@@ -15,7 +16,7 @@ export function StyleCard(props){
                     <p className='long-description'>{style_data.Description}</p>
                     <p className='short-description'>{style_data.Short_Description}</p>
                     <p className='common-clothing-pieces'>{`Common Clothing Pieces: ${style_data.Common_Clothing_Pieces}`}</p>
-                    <button className='read-more-button'>Read More</button>
+                    <p className='read-more-button'><a href=''>Read More</a></p>
                 </div>
             </div>
         </div>
@@ -33,7 +34,6 @@ export function StyleCardList(props){
             {styleCardList}
         </div>
     );
-
     
 }
 
