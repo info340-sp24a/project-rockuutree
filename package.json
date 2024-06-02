@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "bootstrap": "^5.3.3",
-    "react-lottie": "^1.2.4",
-    "react-router-dom": "^6.23.1"
-  }
-}
