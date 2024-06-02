@@ -16,7 +16,7 @@ import softSummer from '../assets/softsummer.png'
 
 import NavBar from './Nav.js';
 import {Footer} from './Footer.js';
-import '../css/style.css';
+import '../index.css';
 
 
 export default function ColorResultsPage(props) {

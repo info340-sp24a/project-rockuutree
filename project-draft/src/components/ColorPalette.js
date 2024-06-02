@@ -9,7 +9,7 @@ import veins from '../assets/veins.jpeg';
 import jewelry from '../assets/jewelry.jpeg';
 import tanning from '../assets/tanning.jpeg';
 import colors from '../assets/colors.jpeg';
-import '../css/style.css';
+import '../index.css';
 import Lottie from 'react-lottie';
 import animationData from "../assets/loadingStyle.json";
 import { useNavigate } from 'react-router-dom';

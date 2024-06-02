@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import seasonalColorWheel from '../assets/season-color-wheel.jpeg';
 import NavBar from './Nav.js';
 import {Footer} from './Footer.js';
-import '../css/style.css';
+import '../index.css';
 
 
 export default function IntroductionPage(props) {

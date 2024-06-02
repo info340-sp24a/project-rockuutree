@@ -554,7 +554,7 @@ code {
 .home_container .home_card .left-container .image-content .overlay {
   position: absolute;
   border-radius: 14px;
-  padding: .5rem .75rem;
+  padding: 0rem .75rem;
 }
 
 .home_container .home_card .left-container .image-content .overlay.overlay-2 {
@@ -761,6 +761,7 @@ h2 {
     .left-container .rack {
         width: 100%;
         height: auto;
+        padding-top: 1rem;
         padding-left: 0;
     }
 
@@ -775,19 +776,19 @@ h2 {
     .home_container .home_card .left-container .image-content .overlay {
       position: absolute;
       border-radius: 14px;
-      padding: .75rem 1.5rem;
+      padding: 0rem 1.25rem;
     }
-
+  
     .home_container .home_card .left-container .image-content .overlay.overlay-2 {
-        top: 60%;
-        left: 5%;
-        transform: scale(.8);
+      top: 50%;
+      left: 0%;
+      transform: scale(.8);
     }
-
+  
     .home_container .home_card .left-container .image-content .overlay.overlay-1 {
-        right: -5%;
-        top: 35%;
-        transform: scale(.8);
+      top: 30%;
+      right: -5%;
+      transform: scale(.8);
     }
 
     .home_card .bottom {
@@ -1028,6 +1029,14 @@ nav {
 .home_card {
   padding: 4rem;
 }
+
+.home_container .home_card .left-container .image-content .overlay.overlay-2 {
+  top: 40%;
+}
+
+.home_container .home_card .left-container .image-content .overlay.overlay-1 {
+  top: 20%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -1049,6 +1058,18 @@ nav {
   padding: 0rem 2rem;
 }
 
+.home_container .home_card .left-container .image-content .overlay.overlay-2 {
+  top: 60%;
+  left: 5%;
+  transform: scale(1.1);
+}
+
+.home_container .home_card .left-container .image-content .overlay.overlay-1 {
+  top: 30%;
+  right: 10%;
+  transform: scale(1.1);
+}
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -1060,10 +1081,14 @@ nav {
     display: block;
 }
 
+.home_container .home_card .left-container .image-content .overlay.overlay-2 {
+  top: 60%;
+  left: 5%;
+}
+
 .home_container .home_card .left-container .image-content .overlay.overlay-1 {
-  right: -5%;
-  top: 35%;
-  transform: scale(.8);
+  top: 30%;
+  right: 10%;
 }
 
 .left-container .rack {

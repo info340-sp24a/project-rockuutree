@@ -16,7 +16,7 @@ const HomePage = (props) => {
   };
   return (
     <>
-      <NavBar currentUser={this.props.currentUser} />
+      <NavBar />
       <main>
         <div className="home_container">
 
@@ -39,7 +39,7 @@ const HomePage = (props) => {
                 </p>
                 <div>                
                 </div>
-                <Link to="/palette-analysis" className="quiz" aria-label="Toggle Style">
+                <Link to="/palette" className="quiz" aria-label="Toggle Style">
                   Palette Quiz
                 </Link>
               </div>
@@ -62,13 +62,13 @@ const HomePage = (props) => {
                 />
                 <div className="overlay overlay-1 aos-init" data-aos="fade-left" aria-label="Successful Overlay">
                   <p className="title">
-                    3m<span></span>+
+                    3m+
                   </p>
                   <span className="sub-title">Successful queries</span>
                 </div>
                 <div className="overlay overlay-2 aos-init" data-aos="fade-right" aria-label="Supported Overlay">
                   <p className="title">
-                    250<span>+</span>
+                    250+
                   </p>
                   <span className="sub-title">Supported users</span>
                 </div>
@@ -90,7 +90,7 @@ const HomePage = (props) => {
           <div className="home_card mb-4">
             <div className="bottom">
               <h3>Want to Explore and Experiment?</h3>
-                <Link to="/palette-analysis" className="explore" aria-label="Toggle Color">
+                <Link to="/palette" className="explore" aria-label="Toggle Color">
                   Color Palettes
                 </Link>
                 <Link to="/styles" className="explore" aria-label="Toggle Style Closet">
