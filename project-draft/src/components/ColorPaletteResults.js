@@ -1,5 +1,5 @@
+
 import React from 'react';
-import seasonalColorWheel from '../assets/season-color-wheel.jpeg';
 import lightSpring from '../assets/lightspring.png'
 import warmSpring from '../assets/warmspring.png'
 import clearSpring from '../assets/clearspring.png'

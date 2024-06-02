@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import seasonalColorWheel from '../assets/season-color-wheel.jpeg';

@@ -8,15 +8,17 @@ import animationData from "../assets/bounce.json";
 import NavBar from './Nav.js';
 import { Footer } from './Footer.js';
 
-const HomePage = () => {
+const HomePage = (props) => {
+  const { currentUser } = props;
   /* Nav Bar Stuff */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <>
-      <NavBar />
+      <NavBar currentUser={currentUser} />
       <main>
         <div className="home_container">
 
