@@ -13,7 +13,7 @@ function StylePage(props){
     const { style_data } = props;
     return(
         <div className='style-page'>
-            <NavBar/>
+            <NavBar currentUser={props.currentUser} />
             <main>
                 <StyleCardList style_data={style_data} />
             </main>

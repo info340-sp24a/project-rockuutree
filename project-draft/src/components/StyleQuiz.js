@@ -115,7 +115,7 @@ const calculateResult = (responses) => {
     return results[maxIndex];
 };
 
-const StyleQuiz = () => {
+const StyleQuiz = (props) => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [responses, setResponses] = useState([]);
     const [finalResult, setFinalResult] = useState(null);
@@ -158,7 +158,7 @@ const StyleQuiz = () => {
 
     return (
         <>
-            <NavBar />
+             <NavBar currentUser={props.currentUser} />
             <main>
                 <p className="text-center h1 fw-semibold fs-1">Style Quiz</p>
                 <div className="back w-75 shadow-sm d-flex flex-column">

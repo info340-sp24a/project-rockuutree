@@ -50,18 +50,18 @@ function App(props) {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage currentUser={currentUser} />} />
         <Route
           path="/styles"
-          element={currentUser ? <StylePage style_data={style_data} /> : <Navigate to="/sign-in" />}
+          element={<StylePage currentUser={currentUser} style_data={style_data}/>}
         />
         <Route
           path="/style-quiz"
-          element={currentUser ? <StyleQuiz /> : <Navigate to="/sign-in" />}
+          element={<StyleQuiz currentUser={currentUser} />}
         />
         <Route
           path="/profile"
-          element={currentUser ? <Profile /> : <Navigate to="/sign-in" />}
+          element={<Profile currentUser={currentUser} />}
         />
         <Route
           path="/sign-in"
