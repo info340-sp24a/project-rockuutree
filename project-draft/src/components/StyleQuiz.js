@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from './Nav.js';
 import { Footer } from './Footer.js';
+import {StyleCard} from './StyleCardList.js';
+import {RelatedStyles} from './StyleCardDetailPage.js';
 import Jeans from '../assets/jeansGraphic.jpg';
 import Tops from '../assets/typeofTops.jpg';
 import Shoes from '../assets/typeofShoes.jpg';
@@ -67,57 +69,31 @@ const questions = [
     },
 ];
 
-const results = [
-    {
-        id: 1,
-        title: 'Business',
-        keywords: ['Slim', 'Fitted', 'Loafers', 'Monochrome', 'Neutral', 'Sweater', 'Dress Shirt'],
-        image: BusinessImage,
-        description: "The Business style is polished, professional, and sophisticated, ideal for office environments and formal settings. Think tailored suits, crisp shirts, pencil skirts, blazers, and classic accessories like ties, cufflinks, and leather shoes.",
-        alt: 'Business style'
-    },
-    {
-        id: 2,
-        title: 'Streetwear',
-        keywords: ['Baggy', 'Relaxed', 'Sneakers', 'Neutral', 'Minimal Jewelry', 'Work Jacket', 'Leather Jacket'],
-        image: StreetwearImage,
-        description: "Streetwear is casual, trendy, and inspired by urban culture, often featuring bold graphics and comfortable fits. Choose graphic tees, hoodies, joggers, sneakers, baseball caps, and oversized outerwear, often incorporating popular brand logos and vibrant patterns.",
-        alt: 'Streetwear style'
-    },
-    {
-        id: 3,
-        title: 'Opium',
-        keywords: ['Relaxed', 'Cropped', 'Regular', 'Long Sleeves', 'Bulky', 'Monochrome', 'Statement Jewelry'],
-        image: OpiumImage,
-        description: "The Opium style is luxurious, dramatic, and edgy, inspired by high fashion and avant-garde designs. Opt for bold, statement pieces such as velvet blazers, silk blouses, intricate embroidery, dark florals, and unique accessories that stand out.",
-        alt: 'Opium style'
-    },
-    {
-        id: 4,
-        title: 'Minimalist',
-        keywords: ['Straight', 'Regular', 'Sneakers', 'T-shirts', 'Neutral', 'Minimal Jewelry', 'Nothing'],
-        image: MinimalistImage,
-        description: "The Minimalist style is clean, simple, and understated, focusing on quality over quantity and neutral color palettes. Select well-fitted basics like plain tees, tailored trousers, monochrome outfits, and versatile pieces that can be easily mixed and matched, emphasizing functionality and a sleek look.",
-        alt: 'Minimalist Style'
-    },
-];
-
-const calculateResult = (responses) => {
-    const resultPoints = new Array(results.length).fill(0);
-
-    responses.forEach((response) => {
-        results.forEach((result, resultIndex) => {
-            if (result.keywords.includes(response)) {
-                resultPoints[resultIndex] += 1;
+const calculateResult = (quizAnswers, styleData) => {
+    const scoreStyle = (style, answers) => {
+        let score = 0;
+        style.style_options.forEach(option => {
+            if (answers.includes(option)) {
+                score += 1;
             }
         });
-    });
+        return score;
+    };
 
-    const maxIndex = resultPoints.indexOf(Math.max(...resultPoints));
-    return results[maxIndex];
+    let bestMatch = null;
+    let highestScore = 0;
+    styleData.forEach(style => {
+        const score = scoreStyle(style, quizAnswers);
+        if (score > highestScore) {
+            highestScore = score;
+            bestMatch = style;
+        }
+    });
+    return bestMatch;
 };
 
-const StyleQuiz = (props) => {
+export function StyleQuiz(props) {
+    const { style_data } = props;
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [responses, setResponses] = useState([]);
     const [finalResult, setFinalResult] = useState(null);
@@ -134,8 +110,9 @@ const StyleQuiz = (props) => {
 
     const handleNextQuestion = () => {
         if (currentQuestionIndex === questions.length - 1) {
-            const result = calculateResult(responses);
-            setFinalResult(result)
+            const result = calculateResult(responses, style_data);
+            setFinalResult(result);
+            saveResultToDatabase(result);
         } else {
             setCurrentQuestionIndex(prevIndex => prevIndex + 1);
             setSelectedOption(null); // Reset the selected option
@@ -145,28 +122,33 @@ const StyleQuiz = (props) => {
     const handlePreviousQuestion = () => {
         if (currentQuestionIndex > 0) {
             setCurrentQuestionIndex(prevIndex => prevIndex - 1);
+            setSelectedOption(responses[currentQuestionIndex - 1] || null); // Restore previous selected option
         }
     };
 
     const handleSubmit = () => {
-        const result = calculateResult(responses);
+        const result = calculateResult(responses, style_data);
         setFinalResult(result);
+        saveResultToDatabase(result);
+    };
+
+    const saveResultToDatabase = (result) => {
+        const db = getDatabase();
+        const resultsRef = ref(db, 'quizResults');
+        firebasePush(resultsRef, result);
     };
 
     useEffect(() => {
-        // Reset the selected option when the current question changes
         setSelectedOption(responses[currentQuestionIndex] || null);
     }, [currentQuestionIndex, responses]);
 
-
     return (
         <>
-             <NavBar currentUser={props.currentUser} />
+            <NavBar />
             <main>
                 <p className="text-center h1 fw-semibold fs-1">Style Quiz</p>
                 <div className="back w-75 shadow-sm d-flex flex-column">
                     {finalResult ? (
-                        <>
                         <div className="text-center">
                             <div className="position-relative">
                                 <p className="h2 fw-bold">Your style is:</p>
@@ -175,13 +157,14 @@ const StyleQuiz = (props) => {
                                 <img className="img-fluid rounded" src={finalResult.image} alt={finalResult.alt} />
                             </div>
                             <div>
-                                <p className="fs-4 fw-bold">{finalResult.title}</p>
+                                <p className="fs-4 fw-bold">{finalResult.Style_Name}</p>
                             </div>
-                            <div className="style-description">
-                                <p>{finalResult.description}</p>
+                            <div className='style-quiz-result'>
+                            <StyleCard className='style-quiz-main-result'style_data={finalResult} />
+                            <h2 className="style-page-deatil-subheader">Related Styles</h2>
+                            <RelatedStyles className='style-quiz-related-results' relatedStyles={finalResult.Related_Styles} styleData={style_data} />
                             </div>
                         </div>
-                        </>
                     ) : (
                         <>
                             <div className="position-relative">
@@ -206,7 +189,7 @@ const StyleQuiz = (props) => {
                                 ))}
                             </div>
                             <div className="d-flex justify-content-between">
-                                {currentQuestionIndex > 0 ? (
+                                {currentQuestionIndex > 0 && (
                                     <div className="quiz-bottom-left">
                                         <button onClick={handlePreviousQuestion} className="bg-transparent border border-0">
                                             <div className="d-flex">
@@ -215,8 +198,6 @@ const StyleQuiz = (props) => {
                                             </div>
                                         </button>
                                     </div>
-                                ) : (
-                                    <div></div>
                                 )}
                                 {currentQuestionIndex < questions.length - 1 && (
                                     <div className="quiz-bottom-right">
@@ -246,6 +227,6 @@ const StyleQuiz = (props) => {
             <Footer />
         </>
     );
-};
+}
 
 export default StyleQuiz;

@@ -63,7 +63,7 @@ function App(props) {
         />
         <Route
           path="/profile"
-          element={<Profile currentUser={currentUser} />}
+          element={<Profile currentUser={currentUser}  style_data={style_data}/>}
         />
         <Route
           path="/sign-in"
