@@ -5,6 +5,7 @@ import me from '../assets/default_pfp.png';
 import NavBar from './Nav';
 import { getUserProfile, updateUserProfile, addColorCard, addStyleCard } from './User';
 import { getDatabase, ref, child, get as firebaseGet, push as firebasePush, onValue} from "firebase/database";
+import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage";
 import { getAuth, updateProfile } from "firebase/auth";
 import { useEffect } from 'react';
 import colorPalettes from "../assets/color_palettes.json"
@@ -20,6 +21,8 @@ const Profile = (props) => {
   const [newHexCode, setNewHexCode] = useState('');
   const [newStyleName, setNewStyleName] = useState('');
   const [newStyleDescription, setNewStyleDescription] = useState('');
+  const [imageFile, setImageFile] = useState(undefined)
+  const [imageUrl, setImageUrl] = useState(currentUser.userImg)
 
   const handleSaveProfile = () => {
     setName(newName)
@@ -32,6 +35,26 @@ const Profile = (props) => {
       });
   };
 
+    //image uploading!
+    const handleChange = (event) => {
+      if(event.target.files.length > 0 && event.target.files[0]) {
+        const imageFile = event.target.files[0]
+        setImageFile(imageFile);
+        setImageUrl(URL.createObjectURL(imageFile));
+      }
+    }
+  
+    const handleImageUpload = async (event) => {
+      const storage = getStorage();
+      const imageRef = storageRef(storage, "userImages/" + currentUser.uid + ".png");
+
+      await uploadBytes(imageRef, imageFile)
+
+      const url = await getDownloadURL(imageRef);
+
+      await updateProfile(currentUser, {photoURL: url})
+    }
+
   // gets the user's palettes from Firebase Realtime Database
   useEffect(() => {
     const dbRef = ref(getDatabase());
@@ -39,12 +62,8 @@ const Profile = (props) => {
     firebaseGet(child(dbRef, `users/${currentUser.uid}/palettes`))
       .then((snapshot) => {
         if (snapshot.exists()) {
-          console.log(snapshot)
           const data = [];
           snapshot.forEach((childSnapshot) => {
-            console.log("child:", childSnapshot)
-            console.log("child key:", childSnapshot.key)
-            console.log("child value:", childSnapshot.val())
             data.push({ key: childSnapshot.key, value: childSnapshot.val() });
           });
           setPalettes(data);
@@ -64,9 +83,6 @@ const Profile = (props) => {
       if (snapshot.exists()) {
         const data = [];
         snapshot.forEach((childSnapshot) => {
-          console.log("child:", childSnapshot)
-          console.log("child key:", childSnapshot.key)
-          console.log("child value:", childSnapshot.val())
           data.push({ key: childSnapshot.key, value: childSnapshot.val() });
         });
         setProfileColors(data);
@@ -99,7 +115,6 @@ const Profile = (props) => {
   };
 
   const colorCards = profileColors.map(({key, value}) => {
-    console.log(key, value);
     const [colorName, hexCode] = Object.entries(value)[0];
     return (
         <div className="grid-item flex flex-col justify-content-center align-items-center" key={key} style={{ background: "#" + hexCode }}>
@@ -123,7 +138,16 @@ const Profile = (props) => {
       <main>
         <div className="profile-container">
           <div className="profile-header">
-            <img src={me} alt="Profile" className="profile-picture" />
+            <div className="d-flex flex-column">
+              <div>
+                <img src={imageUrl || me} alt="Profile" className="profile-picture" />
+              </div>
+              <div>
+                <label htmlFor="imageUploadInput" className="btn btn-sm btn-secondary me-2">Choose Image</label>
+                <button className="btn btn-sm btn-success" onClick={handleImageUpload}>Save to Profile</button>
+                <input type="file" name="image" id="imageUploadInput" className="d-none" onChange={handleChange}/>
+              </div>
+            </div>
             <div>
               <h1>{name}</h1>
               <h1>{currentUser.email}</h1>
