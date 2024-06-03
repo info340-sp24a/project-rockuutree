@@ -197,7 +197,7 @@ const StyleQuiz = (props) => {
                                 {questions[currentQuestionIndex].options.map((option, index) => (
                                     <div className="col-md-4 mb-3" key={index}>
                                         <button 
-                                            className={`btn btn-option fw-bold ${selectedOption === option ? 'selected' : ''}`}
+                                            className={`btn-option fw-bold ${selectedOption === option ? 'selected' : ''}`}
                                             onClick={() => handleResponseChange(currentQuestionIndex, option)}
                                         >
                                             {option}
