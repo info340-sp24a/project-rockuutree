@@ -2,10 +2,6 @@
     box-sizing: border-box;
     margin: 0;
   }
-
-  p {
-    margin: 0px 0px;
-  }
   
   body {
     background-color: #fff;
@@ -1475,4 +1471,8 @@ nav {
     padding: 7rem;
 }
   
+}
+
+p {
+  margin: 0px 0px;
 }
