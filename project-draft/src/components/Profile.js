@@ -82,7 +82,7 @@ const Profile = (props) => {
     const thisColorPalette = colorPalettes[value];
     const gradientString = `linear-gradient(to right, ${thisColorPalette.colors.slice(0, 3).map(color => color.hexCode).join(', ')})`;
     return (
-        <div className="card flex flex-col justify-content-center align-items-center" key={key} style={{ background: gradientString }}>
+        <div className="grid-item flex flex-col justify-content-center align-items-center" key={key} style={{ background: gradientString }}>
           <div className="flex flex-col justify-content-center align-items-center bg-light bg-gradient rounded px-3 py-2">
             <div>
               <p className='fw-bold fs-4 text-center'>{thisColorPalette.name}</p>
@@ -124,7 +124,7 @@ const Profile = (props) => {
           </div>
           <div className="card-section">
             <h2>Your Color Palettes</h2>
-            <div className="card-container">
+            <div className="profile-card-section">
               {colorPaletteCards}
             </div>
           </div>
