@@ -8,10 +8,11 @@ import '../index.css';
 
 
 export default function IntroductionPage(props) {
+  const { currentUser } = props
+  
     return (
       <>
-        <NavBar/>
-
+      <NavBar currentUser={currentUser} />
         <main>
           <div className="d-flex flex-column text-center quiz-intro w-100 pt-5 mt-5">
             <div div className="text-white fw-semibold">

@@ -12,6 +12,8 @@ import BusinessImage from '../assets/businessOutfit.jpg';
 import StreetwearImage from '../assets/streetwearOutfit.jpg';
 import OpiumImage from '../assets/opiumOutfit.jpg';
 import MinimalistImage from '../assets/minimalistOutfit.jpg';
+import { getDatabase, ref, push as firebasePush } from 'firebase/database';
+
 
 const questions = [
     {
@@ -133,7 +135,7 @@ const StyleQuiz = (props) => {
     const handleNextQuestion = () => {
         if (currentQuestionIndex === questions.length - 1) {
             const result = calculateResult(responses);
-            setFinalResult(result);
+            setFinalResult(result)
         } else {
             setCurrentQuestionIndex(prevIndex => prevIndex + 1);
             setSelectedOption(null); // Reset the selected option
@@ -155,6 +157,7 @@ const StyleQuiz = (props) => {
         // Reset the selected option when the current question changes
         setSelectedOption(responses[currentQuestionIndex] || null);
     }, [currentQuestionIndex, responses]);
+
 
     return (
         <>
