@@ -10,10 +10,6 @@ import Colors from '../assets/colorCategories.jpg';
 import Clothes from '../assets/typeofClothes.jpg';
 import Outerwear from '../assets/typeofOuterwear.jpg';
 import Accessories from '../assets/typeofAccessories.jpg';
-import BusinessImage from '../assets/businessOutfit.jpg';
-import StreetwearImage from '../assets/streetwearOutfit.jpg';
-import OpiumImage from '../assets/opiumOutfit.jpg';
-import MinimalistImage from '../assets/minimalistOutfit.jpg';
 import { getDatabase, ref, push as firebasePush } from 'firebase/database';
 
 
@@ -188,13 +184,13 @@ export function StyleQuiz(props) {
                                     </div>
                                 ))}
                             </div>
-                            <div className="d-flex justify-content-between">
+                            <div className={`d-flex ${currentQuestionIndex > 0 ? 'justify-content-between' : 'justify-content-end'}`}>
                                 {currentQuestionIndex > 0 && (
                                     <div className="quiz-bottom-left">
                                         <button onClick={handlePreviousQuestion} className="bg-transparent border border-0">
                                             <div className="d-flex">
                                                 <span className="material-symbols-outlined">arrow_back</span>
-                                                <p className="h5 fw-bold mt-2">Back</p>
+                                                <p className="h5 fw-bold">Back</p>
                                             </div>
                                         </button>
                                     </div>
@@ -203,7 +199,7 @@ export function StyleQuiz(props) {
                                     <div className="quiz-bottom-right">
                                         <button onClick={handleNextQuestion} className="bg-transparent border border-0">
                                             <div className="d-flex">
-                                                <p className="h5 fw-bold mt-2">Next</p>
+                                                <p className="h5 fw-bold">Next</p>
                                                 <span className="material-symbols-outlined mb-1">arrow_forward</span>
                                             </div>
                                         </button>
@@ -213,7 +209,7 @@ export function StyleQuiz(props) {
                                     <div className="quiz-bottom-right">
                                         <button onClick={handleSubmit} className="bg-transparent border border-0">
                                             <div className="d-flex">
-                                                <p className="h5 fw-bold mt-2">Submit</p>
+                                                <p className="h5 fw-bold">Submit</p>
                                                 <span className="material-symbols-outlined mb-1">arrow_forward</span>
                                             </div>
                                         </button>
