@@ -16,7 +16,7 @@ const HomePage = (props) => {
   };
   return (
     <>
-      <NavBar />
+      <NavBar currentUser={props.currentUser}/>
       <main>
         <div className="home_container">
 

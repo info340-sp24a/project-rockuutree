@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import lightSpring from '../assets/lightspring.png'
 import warmSpring from '../assets/warmspring.png'
@@ -20,11 +21,11 @@ import '../index.css';
 
 
 export default function ColorResultsPage(props) {
-    const { result } = props;
+    const { result, currentUser } = props;
     return (
       <>
         <div>
-        <NavBar />
+        <NavBar currentUser={currentUser}/>
         <main>
             <Result result={result}/>
         </main>

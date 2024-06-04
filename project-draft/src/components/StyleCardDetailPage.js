@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
-import NavBar from "./Nav";
-import { Footer } from "./Footer";
+import NavBar from './Nav.js'
+import { Footer } from "./Footer.js"
 import { StyleCard } from "./StyleCardList";
 import StoreCardList from './StoreCardList';
 
