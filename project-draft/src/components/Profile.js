@@ -145,11 +145,6 @@ const Profile = (props) => {
               <div>
                 <img src={imageUrl || me} alt="Profile" className="profile-picture" />
               </div>
-              <div>
-                <label htmlFor="imageUploadInput" className="btn btn-sm btn-secondary me-2">Choose Image</label>
-                <button className="btn btn-sm btn-success" onClick={handleImageUpload}>Save to Profile</button>
-                <input type="file" name="image" id="imageUploadInput" className="d-none" onChange={handleChange}/>
-              </div>
             </div>
             <div>
               <h1>{name}</h1>
