@@ -37,11 +37,11 @@ function Quiz(props) {
   const [answers, setAnswers] = useState({});
   const [palettes, setPalettes] = useState([]);
   const { currentUser } = props;
-  console.log(currentUser.uid);
 
 
   const db = getDatabase();
-  const paletteRef = firebasePush(ref(db, `users/${currentUser.uid}/palettes`)); //an object of tasks 
+  const paletteRef = firebasePush(ref(db, `users/${currentUser.uid}/palettes`));
+
   useEffect(() => {
     const dbRef = ref(getDatabase());
     // gets the children of palettes key
@@ -59,6 +59,7 @@ function Quiz(props) {
         console.error(error);
       });
   }, [currentUser.uid]);
+  
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
