@@ -1,28 +1,31 @@
-// Profile.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../index.css';
 import me from '../assets/default_pfp.png';
 import NavBar from './Nav';
 import { getUserProfile, updateUserProfile, addColorCard, addStyleCard } from './User';
-import { getDatabase, ref, child, get as firebaseGet, push as firebasePush, onValue} from "firebase/database";
+import { getDatabase, ref, onValue, child, get as firebaseGet, push as firebasePush } from "firebase/database";
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage";
 import { getAuth, updateProfile } from "firebase/auth";
-import { useEffect } from 'react';
-import colorPalettes from "../assets/color_palettes.json"
+import colorPalettes from "../assets/color_palettes.json";
+import { StyleCard } from './StyleCardList';
 
 const Profile = (props) => {
-  const { currentUser } = props;
-  const [palettes, setPalettes] = useState([]);
+    const { currentUser, style_data } = props;
+    const [palettes, setPalettes] = useState([]);
   const [profileColors, setProfileColors] = useState([]);
-  const [userProfileState, setUserProfileState] = useState(getUserProfile());
-  const [newName, setNewName] = useState(null);
-  const [name, setName] = useState(currentUser.displayName);
-  const [newColorName, setNewColorName] = useState('');
-  const [newHexCode, setNewHexCode] = useState('');
-  const [newStyleName, setNewStyleName] = useState('');
-  const [newStyleDescription, setNewStyleDescription] = useState('');
+    const [userProfileState, setUserProfileState] = useState(getUserProfile());
+    const [newName, setNewName] = useState(null);
+    const [name, setName] = useState(currentUser.displayName);
+    const [newColorName, setNewColorName] = useState('');
+    const [newHexCode, setNewHexCode] = useState('');
+    const [newStyleName, setNewStyleName] = useState('');
+    const [newStyleDescription, setNewStyleDescription] = useState('');
   const [imageFile, setImageFile] = useState(undefined)
   const [imageUrl, setImageUrl] = useState(currentUser.userImg)
+    const [favoriteStyles, setFavoriteStyles] = useState([]);
+
+    const auth = getAuth();
+    const user = auth.currentUser;
 
   const handleSaveProfile = () => {
     setName(newName)
@@ -91,11 +94,12 @@ const Profile = (props) => {
   }, []);
 
   const colorPaletteCards = palettes.map(({ key, value }) => {
+    console.log(palettes);
     const thisColorPalette = colorPalettes[value];
     const gradientString = `linear-gradient(to right, ${thisColorPalette.colors.slice(0, 3).map(color => color.hexCode).join(', ')})`;
     return (
-      <div className="grid-item flex flex-col justify-content-center align-items-center" key={key} style={{ background: gradientString }}>
-        <div className="flex flex-col justify-content-center align-items-center bg-light bg-gradient rounded px-3 py-2">
+      <div className="grid-item d-flex flex-col justify-content-center align-items-center" key={key} style={{ background: gradientString }}>
+        <div className="d-flex flex-column justify-content-center align-items-center bg-light bg-gradient rounded px-3 py-2">
           <div>
             <p className='fw-bold fs-4 text-center'>{thisColorPalette.name}</p>
           </div>
@@ -117,7 +121,7 @@ const Profile = (props) => {
   const colorCards = profileColors.map(({key, value}) => {
     const [colorName, hexCode] = Object.entries(value)[0];
     return (
-        <div className="grid-item flex flex-col justify-content-center align-items-center" key={key} style={{ background: "#" + hexCode }}>
+        <div className="grid-item d-flex flex-col justify-content-center align-items-center" key={key} style={{ background: "#" + hexCode }}>
           <div className="flex flex-col justify-content-center align-items-center bg-light bg-gradient rounded px-3 py-2">
             <div>
               <p className='fw-bold fs-4 text-center'>{colorName}</p>
