@@ -140,7 +140,7 @@ export function StyleQuiz(props) {
 
     return (
         <>
-            <NavBar />
+            <NavBar currentUser={props.currentUser}/>
             <main>
                 <p className="text-center h1 fw-semibold fs-1">Style Quiz</p>
                 <div className="back w-75 shadow-sm d-flex flex-column">

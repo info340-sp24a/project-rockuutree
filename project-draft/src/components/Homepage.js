@@ -17,7 +17,6 @@ const HomePage = (props) => {
   return (
     <>
       <NavBar currentUser={props.currentUser}/>
-      <NavBar currentUser={props.currentUser}/>
       <main>
         <div className="home_container">
 

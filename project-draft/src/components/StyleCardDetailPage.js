@@ -23,7 +23,7 @@ export function StyleCardDetailPage(props){
 
     return(
         <div className="style-card-detail-page">
-            <NavBar/>
+            <NavBar currentUser={props.currentUser}/>
             <main>
                     <h1 className="style-page-title">{style.Style_Name}</h1>
                     <div className="main-image-detail-container">
