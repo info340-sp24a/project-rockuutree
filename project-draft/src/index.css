@@ -925,6 +925,10 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.components_header {
+  display: none;
+}
+
 @media (min-width: 598px) {
   .animationDecor {
     height: 400px;
@@ -1418,6 +1422,12 @@ h2 {
       .quiz-question {
           font-size: 24px;
       }
+
+      .quiz-intro {
+        background-color: #4A4E69;
+        width: 66%;
+        border-radius: 25px;
+    }
   
   }
   @media (min-width: 768px) {
@@ -1440,13 +1450,13 @@ h2 {
       .quiz-question {
           font-size: 30px;
       }
+
+      .quiz-intro {
+        background-color: #4A4E69;
+        width: 50%;
+        border-radius: 25px;
+    }
   
-  }
-  
-  .quiz-intro {
-      background-color: #4A4E69;
-      width: 100%;
-      border-radius: 25px;
   }
   
   .all-buttons {

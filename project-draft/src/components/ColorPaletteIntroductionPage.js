@@ -14,7 +14,8 @@ export default function IntroductionPage(props) {
       <>
       <NavBar currentUser={currentUser} />
         <main>
-          <div className="d-flex flex-column text-center quiz-intro w-100 pt-5 mt-5">
+          <div className="d-flex justify-content-center">
+          <div className="d-flex flex-column text-center quiz-intro pt-5 mt-5">
             <div div className="text-white fw-semibold">
               <p className="fs-2 px-5 py-4 pt-2">
                 Find Out Which Colors Reflect Your Unique Style!
@@ -51,6 +52,7 @@ export default function IntroductionPage(props) {
                 </button>
               </Link>
             </div>
+          </div>
           </div>
         </main>
 
