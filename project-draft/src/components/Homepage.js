@@ -17,6 +17,7 @@ const HomePage = (props) => {
   return (
     <>
       <NavBar currentUser={props.currentUser}/>
+      <NavBar currentUser={props.currentUser}/>
       <main>
         <div className="home_container">
 
@@ -39,7 +40,7 @@ const HomePage = (props) => {
                 </p>
                 <div>                
                 </div>
-                <Link to="/palette" className="quiz" aria-label="Toggle Style">
+                <Link to="/palette-analysis" className="quiz" aria-label="Toggle Style">
                   Palette Quiz
                 </Link>
               </div>
@@ -90,7 +91,7 @@ const HomePage = (props) => {
           <div className="home_card mb-4">
             <div className="bottom">
               <h3>Want to Explore and Experiment?</h3>
-                <Link to="/palette-quiz" className="explore" aria-label="Toggle Color">
+                <Link to="/palette-analysis" className="explore" aria-label="Toggle Color">
                   Color Palettes
                 </Link>
                 <Link to="/styles" className="explore" aria-label="Toggle Style Closet">
