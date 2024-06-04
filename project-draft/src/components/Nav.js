@@ -34,11 +34,11 @@ const NavBar = (props) => {
          <Link to="/">styleU</Link>
        </div>
        <div className="components_header text-center">
-         <Link to="/" className="nav-link">Home</Link>
-         <Link to="/style-quiz" className="nav-link">Style Quiz</Link>
-         <Link to="/palette-analysis" className="nav-link">Color Analysis Quiz</Link>
-         <Link to="/styles" className="nav-link">Styles</Link>
-         <Link to="/palette" className="nav-link">Palette</Link>
+         <Link to="/" className="nav-link text-light">Home</Link>
+         <Link to="/style-quiz" className="nav-link text-light">Style Quiz</Link>
+         <Link to="/palette-analysis" className="nav-link text-light">Color Analysis Quiz</Link>
+         <Link to="/styles" className="nav-link text-light">Styles</Link>
+         <Link to="/palette" className="nav-link text-light">Palette</Link>
 
        </div>
        <div className="hamburger-menu" onClick={toggleMenu} aria-label="Toggle Menu">
