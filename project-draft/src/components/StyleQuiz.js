@@ -190,7 +190,7 @@ export function StyleQuiz(props) {
                                         <button onClick={handlePreviousQuestion} className="bg-transparent border border-0">
                                             <div className="d-flex">
                                                 <span className="material-symbols-outlined">arrow_back</span>
-                                                <p className="h5 fw-bold">Back</p>
+                                                <p className="h5 fw-bold mt-2">Back</p>
                                             </div>
                                         </button>
                                     </div>
@@ -199,7 +199,7 @@ export function StyleQuiz(props) {
                                     <div className="quiz-bottom-right">
                                         <button onClick={handleNextQuestion} className="bg-transparent border border-0">
                                             <div className="d-flex">
-                                                <p className="h5 fw-bold">Next</p>
+                                                <p className="h5 fw-bold mt-2">Next</p>
                                                 <span className="material-symbols-outlined mb-1">arrow_forward</span>
                                             </div>
                                         </button>
@@ -209,7 +209,7 @@ export function StyleQuiz(props) {
                                     <div className="quiz-bottom-right">
                                         <button onClick={handleSubmit} className="bg-transparent border border-0">
                                             <div className="d-flex">
-                                                <p className="h5 fw-bold">Submit</p>
+                                                <p className="h5 fw-bold mt-2">Submit</p>
                                                 <span className="material-symbols-outlined mb-1">arrow_forward</span>
                                             </div>
                                         </button>
