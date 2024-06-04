@@ -10,13 +10,14 @@ import { Footer } from './Footer';
 
 const HomePage = (props) => {
   /* Nav Bar Stuff */
+  const { currentUser } = props;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
     <>
-      <NavBar />
+      <NavBar currentUser={currentUser}/>
       <main>
         <div className="home_container">
 
