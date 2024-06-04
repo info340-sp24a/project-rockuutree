@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import lightSpring from '../assets/lightspring.png'
 import warmSpring from '../assets/warmspring.png'
@@ -18,6 +16,7 @@ import softSummer from '../assets/softsummer.png'
 import NavBar from './Nav.js';
 import {Footer} from './Footer.js';
 import '../index.css';
+import { Link } from 'react-router-dom';
 
 
 export default function ColorResultsPage(props) {
@@ -110,7 +109,10 @@ function Result(props) {
                 <img className="img-fluid rounded px-3" src={resultData.image} alt="Question illustration"/>
             </div>
             <div className="position-relative">
-                <p className="text-center text-size pt-4 px-2">{resultData.description}</p>
+                <p className="text-center text-size pt-4 px-2 fw-semibold">{resultData.description}</p>
+            </div>
+            <div className="d-flex flex-column align-items-center">
+                <Link to="/profile"><button className="all-buttons rounded fs-3 fw-semibold px-4 py-2 my-2">Go build your profile!</button></Link>
             </div>
         </div>
     )
