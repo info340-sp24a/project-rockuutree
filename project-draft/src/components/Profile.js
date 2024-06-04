@@ -2,27 +2,25 @@ import React, { useState, useEffect } from 'react';
 import '../index.css';
 import me from '../assets/default_pfp.png';
 import NavBar from './Nav';
-import { getUserProfile, updateUserProfile, addColorCard, addStyleCard } from './User';
 import { getDatabase, ref, onValue, child, get as firebaseGet, push as firebasePush } from "firebase/database";
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage";
 import { getAuth, updateProfile } from "firebase/auth";
 import colorPalettes from "../assets/color_palettes.json";
-import { StyleCard } from './StyleCardList';
 
 const Profile = (props) => {
-    const { currentUser, style_data } = props;
+    const { currentUser } = props;
     const [palettes, setPalettes] = useState([]);
-  const [profileColors, setProfileColors] = useState([]);
-    const [userProfileState, setUserProfileState] = useState(getUserProfile());
+    const [profileColors, setProfileColors] = useState([]);
     const [newName, setNewName] = useState(null);
     const [name, setName] = useState(currentUser.displayName);
     const [newColorName, setNewColorName] = useState('');
     const [newHexCode, setNewHexCode] = useState('');
     const [newStyleName, setNewStyleName] = useState('');
     const [newStyleDescription, setNewStyleDescription] = useState('');
-  const [imageFile, setImageFile] = useState(undefined)
-  const [imageUrl, setImageUrl] = useState(currentUser.userImg)
-    const [favoriteStyles, setFavoriteStyles] = useState([]);
+    const [imageFile, setImageFile] = useState(undefined)
+    const [imageUrl, setImageUrl] = useState(currentUser.userImg)
+    const [profileStyles, setProfileStyles] = useState([]);
+
 
     const auth = getAuth();
     const user = auth.currentUser;
@@ -131,10 +129,41 @@ const Profile = (props) => {
     )
   });
 
+  useEffect(() => {
+    const db = getDatabase();
+    const colorsRef = ref(db, `users/${currentUser.uid}/styles`); //an object of tasks
+    // gets the children of colors key
+    onValue(colorsRef, (snapshot) => {
+      if (snapshot.exists()) {
+        const data = [];
+        snapshot.forEach((childSnapshot) => {
+          data.push({ key: childSnapshot.key, value: childSnapshot.val() });
+        });
+        setProfileStyles(data);
+      }
+  })
+  }, []);
+
+  const styleCards = profileStyles.map(({key, value}) => {
+    const [styleName, styleDescription] = Object.entries(value)[0];
+    return (
+        <div key={key} className="card">
+          <div className="card-content">
+            <h3>{styleName}</h3>
+            <p>{styleDescription}</p>
+          </div>
+        </div>
+    )
+  });
+
   const handleAddStyleCard = () => {
-    const result = {[newColorName]: newHexCode};
-    firebasePush(result);
-  }
+    const db = getDatabase();
+    const stylesRef = ref(db, `users/${currentUser.uid}/styles`); //an object of tasks
+    const result = {[newStyleName]: newStyleDescription};
+    firebasePush(stylesRef, result);
+    setNewStyleName('');
+    setNewStyleDescription('')
+  };
 
   return (
     <>
@@ -146,11 +175,11 @@ const Profile = (props) => {
               <div>
                 <img src={imageUrl || me} alt="Profile" className="profile-picture" />
               </div>
-              <div>
+              {/* <div>
                 <label htmlFor="imageUploadInput" className="btn btn-sm btn-secondary me-2">Choose Image</label>
                 <button className="btn btn-sm btn-success" onClick={handleImageUpload}>Save to Profile</button>
                 <input type="file" name="image" id="imageUploadInput" className="d-none" onChange={handleChange}/>
-              </div>
+              </div> */}
             </div>
             <div>
               <h1>{name}</h1>
@@ -197,14 +226,7 @@ const Profile = (props) => {
           <div className="card-section">
             <h2>Styles</h2>
             <div className="card-container">
-              {userProfileState.styles.map((style, index) => (
-                <div key={index} className="card">
-                  <div className="card-content">
-                    <h3>{style.name}</h3>
-                    <p>{style.description}</p>
-                  </div>
-                </div>
-              ))}
+              {styleCards}
             </div>
             <div className="add-card-form">
               <input
