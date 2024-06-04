@@ -11,6 +11,7 @@ import SignInPage from './components/SignIn';
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import StyleCardDetailPage from './components/StyleCardDetailPage';
+import Palette from './components/Palette';
 
 
 const firebaseConfig = {
@@ -63,13 +64,15 @@ function App(props) {
         />
         <Route
           path="/profile"
-          element={<Profile currentUser={currentUser} />}
+          element={<Profile currentUser={currentUser}  style_data={style_data}/>}
         />
         <Route
           path="/sign-in"
           element={<SignInPage currentUser={currentUser} loginCallback={setCurrentUser} />}
         />
 
+
+        <Route path="/palette" element={<Palette currentUser={currentUser} changeUserColorPalette={changeUserColorPalette}/>} />
         <Route path="/palette-analysis/quiz" element={<ColorPaletteQuiz currentUser={currentUser} changeUserColorPalette={changeUserColorPalette}/>} />
         <Route path="/palette-analysis" element={<IntroductionPage currentUser={currentUser} />} />
         <Route path="/palette-analysis/results" element={<ColorResultsPage result={userColorPalette} currentUser={currentUser}/>} />
